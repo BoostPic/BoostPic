@@ -1,4 +1,19 @@
 // main.js
+const PicGo = require("picgo");
+const picgo = new PicGo();
+
+
+function detectPasteKeyboard(params) {}
+
+function distinguishClipboardContent(params) {}
+
+function uploadPastedImage(params) {}
+
+function detectEnterKeyboard(params) {}
+
+function detectSearchClick(params) {}
+
+function main(params) {}
 
 function my_clock(el) {
   var today = new Date();
@@ -15,3 +30,12 @@ function my_clock(el) {
 
 var clock_div = document.getElementById("clock_div");
 my_clock(clock_div);
+
+document.addEventListener("DOMContentLoaded", () => {
+  "use strict";
+
+  document.addEventListener("keydown", event => {
+    console.log(event.key);
+  });
+});
+
