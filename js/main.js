@@ -1,4 +1,4 @@
-// my_clock.js
+// main.js
 
 function my_clock(el) {
   var today = new Date();
