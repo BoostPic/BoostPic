@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": ["*://www.google.com/imghp", "*://images.google.com/"],
-      "js": ["js/bundle.js"]
+      "js": ["js/picgo.js"]
     }
   ],
   "icons": {

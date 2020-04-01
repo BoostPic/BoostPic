@@ -1,17 +1,9 @@
 "use strict";
 
-const PicGo = require("picgo");
-const picgo = new PicGo();
+// const PicGo = require("picgo");
+// const picgo = new PicGo();
 
-var imgUrl = "";
-
-const uploadState = [
-  "  Image uploading .",
-  "  Image uploading ..",
-  "  Image uploading ..."
-];
-
-console.log("Prepare");
+console.log("Execution commences");
 
 const searchbyimagebtn = document.querySelector("div.LM8x9c");
 
@@ -27,12 +19,25 @@ searchbyimagebtn.addEventListener("click", () => {
 
     imgUrlTextBox.addEventListener("click", () => {
       const options = {
-        eventType: "keydown",
+        eventOneType: "keydown",
+        eventTwoType: "paste",
         keystrokeDelay: 1000
       };
 
-      keyMapper([uploadImage, detectEnter], options);
+      keyMapper([retrieveImageFromClipboardAsBlob, detectEnter], options);
     });
+  }, 300);
+});
+
+// clean text box content when Search by Image box loses focus
+document.addEventListener("click", () => {
+  setTimeout(() => {
+    var searchbyimageDiv = document.querySelector("#QDMvGf");
+    if (searchbyimageDiv == null || searchbyimageDiv.style.display == "none") {
+      var imgUrlText = document.getElementById("Ycyxxc");
+      imgUrlText.value = "";
+      console.log("Clean text box content");
+    }
   }, 300);
 });
 
@@ -42,15 +47,19 @@ function keyMapper(callbackList, options) {
     options.keystrokeDelay >= 300 &&
     options.keystrokeDelay;
   const keystrokeDelay = delay || 1000;
-  const eventType =
-    (options.hasOwnProperty("eventType") && options.eventType) || "keydown";
+  const eventOneType =
+    (options.hasOwnProperty("eventOneType") && options.eventOneType) ||
+    "keydown";
+  const eventTwoType =
+    (options.hasOwnProperty("eventTwoType") && options.eventTwoType) || "paste";
 
   let state = {
     buffer: [],
     lastKeyTime: Date.now()
   };
 
-  document.addEventListener(eventType, event => {
+  // Used only for "enter" key press
+  document.addEventListener(eventOneType, event => {
     const key = event.key.toLowerCase();
 
     let buffer = [];
@@ -75,9 +84,131 @@ function keyMapper(callbackList, options) {
         pasteimageurlDiv.style.display == "") &&
       uploadanimageDiv.style.display == "none"
     ) {
-      callbackList.forEach(callback => callback(buffer));
+      // callbackList.forEach(callback => callback(buffer));
+      callbackList[1](buffer);
     }
   });
+
+  // Listen to paste event and get image data
+  window.addEventListener(
+    eventTwoType,
+    event => {
+      // make sure that Search By Image Box is displayed and focuses on Paste image URL.
+      var searchbyimageDiv = document.querySelector("#QDMvGf");
+      var pasteimageurlDiv = document.querySelector("#dRSWfb");
+      var uploadanimageDiv = document.querySelector("#FQt3Wc");
+      if (
+        (searchbyimageDiv.style.display == "block" ||
+          searchbyimageDiv.style.display == "") &&
+        (pasteimageurlDiv.style.display == "block" ||
+          pasteimageurlDiv.style.display == "") &&
+        uploadanimageDiv.style.display == "none"
+      ) {
+        // callbackList.forEach(callback => callback(buffer));
+        callbackList[0](event, uploadImage);
+      }
+    },
+    false
+  );
+}
+
+function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
+  if (pasteEvent.clipboardData == false) {
+    if (typeof callback == "function") {
+      callback(undefined);
+    }
+  }
+
+  var items = pasteEvent.clipboardData.items;
+
+  if (items == undefined) {
+    if (typeof callback == "function") {
+      callback(undefined);
+    }
+  }
+
+  console.log(items[0]);
+
+  // Analyze the first item at the clipboard
+  if (items[0].type == "text/plain") {
+    var textString = "";
+    items[0].getAsString(e => {
+      console.log(e);
+      textString = e;
+
+      // User pastes an image url
+      if (
+        textString.startsWith("http") &&
+        textString.match(/\.(jpeg|jpg|gif|png|svg)$/)
+      ) {
+        console.log("User pastes an image url");
+        callback(undefined);
+      }
+      // User pastes base64 data
+      else if (textString.startsWith("data:image")) {
+        console.log("User pastes base64 data");
+        callback(undefined);
+      }
+      // exception
+      else {
+        var imgUrlText = document.getElementById("Ycyxxc");
+        imgUrlText.value = "  Not an image url or no image at clipboard ";
+        console.log("Not an image url or no image at clipboard");
+        callback(undefined);
+      }
+    });
+  } else if (items[0].type.indexOf("image") != -1) {
+    // Retrieve image on clipboard as blob
+    const blob = items[0].getAsFile();
+    if (typeof callback == "function") {
+      callback(blob);
+    }
+  } else {
+    var imgUrlText = document.getElementById("Ycyxxc");
+    imgUrlText.value = "  Not an image url or no image at clipboard ";
+    console.log("Not an image url or no image at clipboard");
+    callback(undefined);
+  }
+}
+
+function uploadImage(imageBlob) {
+  if (imageBlob) {
+    console.log("UploadImage begins");
+    var imgUrlText = document.getElementById("Ycyxxc");
+    const uploadState = [
+      "  Image uploading .",
+      "  Image uploading ..",
+      "  Image uploading ..."
+    ];
+    const showLoadingState = new Promise((resolve, reject) => {
+      console.log("Showing loading state");
+      resolve(uploadState, imgUrlText);
+    });
+    imgUrlText.value = "  Image uploading ";
+    const refreshIntervalId = setInterval(() => {
+      showLoadingState
+        .then(LoadingStateOne)
+        .then(LoadingStateTwo)
+        .then(LoadingStateThree);
+    }, 1600);
+
+    // Prepare image blob url to send to background.js
+
+    // Crossbrowser support for URL
+    const URLObj = window.URL || webkitURL;
+
+    // Creates a DOMString containing a URL representing the object given in the parameter
+    // namely the original Blob
+    const blobUrl = URLObj.createObjectURL(imageBlob);
+    console.log(blobUrl);
+    chrome.runtime.sendMessage(blobUrl, res => {
+      clearInterval(refreshIntervalId);
+      var imgUrlText = document.getElementById("Ycyxxc");
+      var imgUrl = res;
+      imgUrlText.value = imgUrl;
+      console.log(imgUrl);
+    });
+  }
 }
 
 function LoadingStateOne(message) {
@@ -107,60 +238,9 @@ function LoadingStateThree(message) {
   });
 }
 
-function uploadImage(keySequence) {
-  const userInput = keySequence.join("").toLowerCase();
-
-  if (userInput == "controlv" || userInput == "commandv") {
-    console.log("Enter uploadImage");
-    setTimeout(() => {
-      var imgUrlText = document.getElementById("Ycyxxc");
-
-      const textString = String(imgUrlText.value);
-
-      if (textString == "" && imgUrl == "") {
-        const showLoadingState = new Promise((resolve, reject) => {
-          console.log("Showing loading state");
-          resolve(uploadState, imgUrlText);
-        });
-        imgUrlText.value = "  Image uploading ";
-        const refreshIntervalId = setInterval(() => {
-          showLoadingState
-            .then(LoadingStateOne)
-            .then(LoadingStateTwo)
-            .then(LoadingStateThree);
-        }, 1600);
-        picgo
-          .upload()
-          .then(() => {
-            clearInterval(refreshIntervalId);
-            var imgUrlText = document.getElementById("Ycyxxc");
-            imgUrl = picgo.output[0].imgUrl;
-            imgUrlText.value = imgUrl;
-            console.log(imgUrl);
-          })
-          .catch(() => {
-            clearInterval(refreshIntervalId);
-            var imgUrlText = document.getElementById("Ycyxxc");
-            imgUrlText.value = "  No image is copied at Clipboard ";
-            console.log("No image is copied at Clipboard ");
-          });
-      } else if (textString.startsWith("http")) {
-        // User pastes Image URL. Do nothing.
-        console.log("User pastes a http link");
-        return;
-      } else {
-        var imgUrlText = document.getElementById("Ycyxxc");
-        imgUrlText.value = "  Not an image url or no image at clipboard ";
-        console.log("Not an image url or no image at clipboard");
-      }
-    }, 500);
-  }
-}
-
 function detectEnter(keySequence) {
   const userInput = keySequence.join("").toLowerCase();
   if (userInput == "enter") {
     console.log('Detect "Enter"');
-    imgUrl = "";
   }
 }
