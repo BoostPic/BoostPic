@@ -1,3 +1,5 @@
+// From https://medium.com/javascript-in-plain-english/how-to-detect-a-sequence-of-keystrokes-in-javascript-83ec6ffd8e93
+
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
 
