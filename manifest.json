@@ -3,10 +3,11 @@
   "name": "ImageSearchGo",
   "version": "1.0",
   "description": "Unleash the possibility to search Google Image quickly and incredibly, with copy & paste.",
+  "author": "Leslie Wong",
   "content_scripts": [
     {
       "matches": ["*://www.google.com/imghp", "*://images.google.com/"],
-      "js": ["js/main.js"]
+      "js": ["js/bundle.js"]
     }
   ],
   "icons": {
