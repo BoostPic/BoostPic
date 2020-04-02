@@ -21,23 +21,12 @@ searchbyimagebtn.addEventListener("click", () => {
       const options = {
         eventOneType: "keydown",
         eventTwoType: "paste",
+        eventThreeType: "click",
         keystrokeDelay: 1000
       };
 
       keyMapper([retrieveImageFromClipboardAsBlob, detectEnter], options);
     });
-  }, 300);
-});
-
-// clean text box content when Search by Image box loses focus
-document.addEventListener("click", () => {
-  setTimeout(() => {
-    var searchbyimageDiv = document.querySelector("#QDMvGf");
-    if (searchbyimageDiv == null || searchbyimageDiv.style.display == "none") {
-      var imgUrlText = document.getElementById("Ycyxxc");
-      imgUrlText.value = "";
-      console.log("Clean text box content");
-    }
   }, 300);
 });
 
@@ -52,6 +41,9 @@ function keyMapper(callbackList, options) {
     "keydown";
   const eventTwoType =
     (options.hasOwnProperty("eventTwoType") && options.eventTwoType) || "paste";
+  const eventThreeType =
+    (options.hasOwnProperty("eventThreeType") && options.eventThreeType) ||
+    "paste";
 
   let state = {
     buffer: [],
@@ -71,7 +63,10 @@ function keyMapper(callbackList, options) {
       buffer = [...state.buffer, key];
     }
     console.log(buffer);
-    state = { buffer: buffer, lastKeyTime: currentTime };
+    state = {
+      buffer: buffer,
+      lastKeyTime: currentTime
+    };
 
     // make sure that Search By Image Box is displayed and focuses on Paste image URL.
     var searchbyimageDiv = document.querySelector("#QDMvGf");
@@ -110,6 +105,21 @@ function keyMapper(callbackList, options) {
     },
     false
   );
+
+  // clean text box content when Search by Image box loses focus
+  document.addEventListener(eventThreeType, () => {
+    setTimeout(() => {
+      var searchbyimageDiv = document.querySelector("#QDMvGf");
+      if (
+        searchbyimageDiv == null ||
+        searchbyimageDiv.style.display == "none"
+      ) {
+        var imgUrlText = document.getElementById("Ycyxxc");
+        imgUrlText.value = "";
+        console.log("Clean text box content");
+      }
+    }, 300);
+  });
 }
 
 function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
