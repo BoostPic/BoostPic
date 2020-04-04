@@ -6,7 +6,11 @@
   "author": "Leslie Wong",
   "content_scripts": [
     {
-      "matches": ["*://www.google.com/imghp", "*://images.google.com/"],
+      "matches": [
+        "*://www.google.com/imghp",
+        "*://images.google.com/*",
+        "*://www.google.com.hk/imghp"
+      ],
       "js": ["js/picgo.js"]
     }
   ],
@@ -24,7 +28,7 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["js/background.js"]
-  },
-  "permissions": ["tabs"]
+    "scripts": ["js/background.js"],
+    "persistent": false
+  }
 }
