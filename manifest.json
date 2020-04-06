@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "ImageSearchGo",
   "version": "1.0",
-  "description": "Unleash the possibility to search Google Image quickly and incredibly, with copy & paste.",
+  "description": "Unfetter the possibility to search Google Image quickly and incredibly, with copy & paste.",
   "author": "Leslie Wong",
   "content_scripts": [
     {
