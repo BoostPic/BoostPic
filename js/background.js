@@ -32,7 +32,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           .then((contents) => {
             if (contents != "") {
               const responseJSON = JSON.parse(contents);
-              sendResponse(responseJSON.data.url);
+              if (responseJSON.code === "success") {
+                sendResponse(responseJSON.data.url);
+              } else if (responseJSON.code === "image_repeated") {
+                sendResponse(responseJSON.images);
+              }
               console.log("Contents", responseJSON);
             }
           })
