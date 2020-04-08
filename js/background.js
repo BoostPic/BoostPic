@@ -39,11 +39,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           .catch((error) => {
             if (error instanceof TimeoutError) {
               object.abort();
-              sendResponse(error);
+              sendResponse("Timeout Error. Please try again");
               console.log(error);
             }
             console.log("XHR Error :", error);
-            sendResponse(error);
+            sendResponse("Some error happened. Please try again");
           });
 
         // console.log(`Send Response: ${imgUrl}`);
@@ -136,8 +136,8 @@ function getSMMSImageUrl(blobData, apiToken) {
     if (xhr.readyState == 4 && xhr.status == 200) {
       console.log(xhr.responseText);
       const responseJson = JSON.parse(xhr.responseText);
-      //   return responseJson.data.url;
-      return "200";
+      return responseJson.data.url;
+      // return "200";
     }
   };
   xhr.send(formData);
