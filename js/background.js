@@ -43,11 +43,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           .catch((error) => {
             if (error instanceof TimeoutError) {
               object.abort();
-              sendResponse("Timeout Error. Please try again");
+              sendResponse("  Timeout Error. Please try again");
               console.log(error);
             }
             console.log("XHR Error :", error);
-            sendResponse("Some error happened. Please try again");
+            sendResponse("  Some error happened. Please try again");
           });
 
         // console.log(`Send Response: ${imgUrl}`);
