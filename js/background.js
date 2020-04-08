@@ -40,7 +40,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             if (error instanceof TimeoutError) {
               object.abort();
               sendResponse(error);
-              return console.log(error);
+              console.log(error);
             }
             console.log("XHR Error :", error);
             sendResponse(error);
