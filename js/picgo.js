@@ -215,11 +215,11 @@ function uploadImage(imageBlob) {
     const blobUrl = URLObj.createObjectURL(imageBlob);
     console.log(blobUrl);
     chrome.runtime.sendMessage(blobUrl, (res) => {
-      var something = clearInterval(refreshIntervalId);
-      console.log(refreshIntervalId);
+      imgUrl = res;
+      clearInterval(refreshIntervalId);
+      console.log("Stop uploading state message");
       // var imgUrlText = document.getElementById("Ycyxxc");
       // imgUrl will tirgger LoadingStateThree function to display image url
-      imgUrl = res;
       // imgUrlText.value = "";
       // while (imgUrlText.value !== imgUrl) {
       //   imgUrlText.value = imgUrl;
