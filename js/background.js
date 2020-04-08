@@ -13,7 +13,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         console.log(base64data);
 
         // base64 to blob object to upload, inspired from https://ourcodeworld.com/articles/read/322/how-to-convert-a-base64-image-into-a-image-file-and-upload-it-with-an-asynchronous-form-using-jquery
-
         // Split the base64 string in data and contentType
         const block = base64data.split(";");
         // Get the content type of the image
@@ -24,9 +23,46 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         const blobData = b64toBlob(realData, contentType);
 
         const apiToken = "rd1v9rtYAyQW7yHgykZvj97S3LygVW0I";
-        const imgUrl = getSMMSImageUrl(blobData, apiToken);
-        console.log(`Send Response: ${imgUrl}`);
-        sendResponse(imgUrl);
+        // const imgUrl = getSMMSImageUrl(blobData, apiToken, sendResponse);
+
+        // Learned from http://liubin.org/promises-book/#race-delay-timeout
+        var object = cancelableXHR(blobData, apiToken);
+        // main
+        timeoutPromise(object.promise, 8000)
+          .then((contents) => {
+            if (contents != "") {
+              const responseJSON = JSON.parse(contents);
+              sendResponse(responseJSON.data.url);
+              console.log("Contents", responseJSON);
+            }
+          })
+          .catch((error) => {
+            if (error instanceof TimeoutError) {
+              object.abort();
+              return console.log(error);
+            }
+            console.log("XHR Error :", error);
+          });
+
+        // console.log(`Send Response: ${imgUrl}`);
+        // sendResponse(imgUrl);
+
+        // const sendImgUrl = new Promise((resolve, reject) => {
+        //   resolve(blobData, apiToken);
+        // });
+        // sendImgUrl.then(getSMMSImageUrl).then(sendResponse);
+
+        // const showLoadingState = new Promise((resolve, reject) => {
+        //   console.log("Showing loading state");
+        //   resolve(uploadState, imgUrlText);
+        // });
+        // imgUrlText.value = "  Image uploading ";
+        // const refreshIntervalId = setInterval(() => {
+        //   showLoadingState
+        //     .then(LoadingStateOne)
+        //     .then(LoadingStateTwo)
+        //     .then(LoadingStateThree);
+        // }, 1600);
       };
     });
   }
@@ -76,15 +112,15 @@ function b64toBlob(b64Data, contentType, sliceSize) {
   return blob;
 }
 
-function base64ToArrayBuffer(base64) {
-  var binary_string = window.atob(base64);
-  var len = binary_string.length;
-  var bytes = new Uint8Array(len);
-  for (var i = 0; i < len; i++) {
-    bytes[i] = binary_string.charCodeAt(i);
-  }
-  return bytes.buffer;
-}
+// function base64ToArrayBuffer(base64) {
+//   var binary_string = window.atob(base64);
+//   var len = binary_string.length;
+//   var bytes = new Uint8Array(len);
+//   for (var i = 0; i < len; i++) {
+//     bytes[i] = binary_string.charCodeAt(i);
+//   }
+//   return bytes.buffer;
+// }
 
 function getSMMSImageUrl(blobData, apiToken) {
   const xhr = new XMLHttpRequest();
@@ -130,3 +166,77 @@ function getSMMSImageUrl(blobData, apiToken) {
 //   };
 //   xhr.send();
 // }
+
+function copyOwnFrom(target, source) {
+  Object.getOwnPropertyNames(source).forEach(function (propName) {
+    Object.defineProperty(
+      target,
+      propName,
+      Object.getOwnPropertyDescriptor(source, propName)
+    );
+  });
+  return target;
+}
+function TimeoutError() {
+  var superInstance = Error.apply(null, arguments);
+  copyOwnFrom(this, superInstance);
+}
+TimeoutError.prototype = Object.create(Error.prototype);
+TimeoutError.prototype.constructor = TimeoutError;
+function delayPromise(ms) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, ms);
+  });
+}
+function timeoutPromise(promise, ms) {
+  var timeout = delayPromise(ms).then(function () {
+    return Promise.reject(
+      new TimeoutError("Operation timed out after " + ms + " ms")
+    );
+  });
+  return Promise.race([promise, timeout]);
+}
+function cancelableXHR(blobData, apiToken) {
+  const xhr = new XMLHttpRequest();
+
+  var promise = new Promise(function (resolve, reject) {
+    const uploadUrl = "https://sm.ms/api/v2/upload";
+    const formData = new FormData();
+    formData.append("smfile", blobData, "image.png");
+    formData.append("file_id", "0");
+    xhr.open("POST", uploadUrl, true);
+    xhr.setRequestHeader("Authorization", apiToken);
+    xhr.send(formData);
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        if (xhr.responseText != "") {
+          resolve(xhr.responseText);
+          console.log(xhr.responseText);
+        }
+        // const responseJson = JSON.parse(xhr.responseText);
+        // //   return responseJson.data.url;
+        // return "200";
+      }
+      // else {
+      //   reject(new Error(xhr.statusText));
+      // }
+    };
+    xhr.onerror = () => {
+      reject(new Error(xhr.statusText));
+    };
+    xhr.onabort = () => {
+      reject(new Error("abort this request"));
+    };
+  });
+  var abort = function () {
+    // execute abort if request not end
+    // https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+    if (xhr.readyState !== XMLHttpRequest.UNSENT) {
+      xhr.abort();
+    }
+  };
+  return {
+    promise: promise,
+    abort: abort,
+  };
+}

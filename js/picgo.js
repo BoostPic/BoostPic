@@ -3,6 +3,9 @@
 // const PicGo = require("picgo");
 // const picgo = new PicGo();
 
+// set imgUrl to golbal to be compaible with the upload state chain promise interval function
+var imgUrl = "";
+
 console.log("Execution commences");
 
 const searchbyimagebtn = document.querySelector("div.LM8x9c");
@@ -22,7 +25,7 @@ searchbyimagebtn.addEventListener("click", () => {
         eventOneType: "keydown",
         eventTwoType: "paste",
         eventThreeType: "click",
-        keystrokeDelay: 1000
+        keystrokeDelay: 1000,
       };
 
       keyMapper([retrieveImageFromClipboardAsBlob, detectEnter], options);
@@ -47,11 +50,11 @@ function keyMapper(callbackList, options) {
 
   let state = {
     buffer: [],
-    lastKeyTime: Date.now()
+    lastKeyTime: Date.now(),
   };
 
   // Used only for "enter" key press
-  document.addEventListener(eventOneType, event => {
+  document.addEventListener(eventOneType, (event) => {
     const key = event.key.toLowerCase();
 
     let buffer = [];
@@ -65,7 +68,7 @@ function keyMapper(callbackList, options) {
     console.log(buffer);
     state = {
       buffer: buffer,
-      lastKeyTime: currentTime
+      lastKeyTime: currentTime,
     };
 
     // make sure that Search By Image Box is displayed and focuses on Paste image URL.
@@ -87,7 +90,7 @@ function keyMapper(callbackList, options) {
   // Listen to paste event and get image data
   window.addEventListener(
     eventTwoType,
-    event => {
+    (event) => {
       // make sure that Search By Image Box is displayed and focuses on Paste image URL.
       var searchbyimageDiv = document.querySelector("#QDMvGf");
       var pasteimageurlDiv = document.querySelector("#dRSWfb");
@@ -142,7 +145,7 @@ function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
   // Analyze the first item at the clipboard
   if (items[0].type == "text/plain") {
     var textString = "";
-    items[0].getAsString(e => {
+    items[0].getAsString((e) => {
       console.log(e);
       textString = e;
 
@@ -188,7 +191,7 @@ function uploadImage(imageBlob) {
     const uploadState = [
       "  Image uploading .",
       "  Image uploading ..",
-      "  Image uploading ..."
+      "  Image uploading ...",
     ];
     const showLoadingState = new Promise((resolve, reject) => {
       console.log("Showing loading state");
@@ -211,12 +214,17 @@ function uploadImage(imageBlob) {
     // namely the original Blob
     const blobUrl = URLObj.createObjectURL(imageBlob);
     console.log(blobUrl);
-    chrome.runtime.sendMessage(blobUrl, res => {
-      clearInterval(refreshIntervalId);
-      var imgUrlText = document.getElementById("Ycyxxc");
-      var imgUrl = res;
-      imgUrlText.value = imgUrl;
-      console.log(imgUrl);
+    chrome.runtime.sendMessage(blobUrl, (res) => {
+      var something = clearInterval(refreshIntervalId);
+      console.log(refreshIntervalId);
+      // var imgUrlText = document.getElementById("Ycyxxc");
+      // imgUrl will tirgger LoadingStateThree function to display image url
+      imgUrl = res;
+      // imgUrlText.value = "";
+      // while (imgUrlText.value !== imgUrl) {
+      //   imgUrlText.value = imgUrl;
+      //   console.log(imgUrl);
+      // }
     });
   }
 }
@@ -243,7 +251,14 @@ function LoadingStateThree(message) {
   return new Promise((resolve, reject) => {
     console.log(`Loading state: ${message[2]}`);
     var imgUrlText = document.getElementById("Ycyxxc");
-    imgUrlText.value = message[2];
+    if (imgUrl != "") {
+      imgUrlText.value = imgUrl;
+      console.log(imgUrl);
+      // For next upload image operation
+      imgUrl = "";
+    } else {
+      imgUrlText.value = message[2];
+    }
     setTimeout(resolve, 500, message);
   });
 }
