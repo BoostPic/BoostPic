@@ -7,9 +7,9 @@
   "content_scripts": [
     {
       "matches": [
-        "*://www.google.com/imghp",
+        "*://www.google.com/imghp*",
         "*://images.google.com/*",
-        "*://www.google.com.hk/imghp"
+        "*://www.google.com.hk/imghp*"
       ],
       "js": ["js/picgo.js"]
     }
