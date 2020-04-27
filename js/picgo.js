@@ -8,11 +8,27 @@ var imgUrl = "";
 
 console.log("Execution commences");
 
-const searchbyimagebtn = document.querySelector("div.LM8x9c");
+var searchbyimagebtn = document.querySelector("div.LM8x9c");
+// suitable for google image homepage and the page of search by image results
+if (searchbyimagebtn) {
+  var imgUrlTextBoxId = "#Ycyxxc";
+  var searchbyimageDivId = "#QDMvGf";
+  var pasteimageurlDivId = "#dRSWfb";
+  var uploadanimageDivId = "#FQt3Wc";
+} else {
+  // suitable for the image tab page of google search results via vanilla string search
+  searchbyimagebtn = document.querySelector("div.mp5Tqb");
+  var imgUrlTextBoxId = "input.TIjxY";
+  var searchbyimageDivId = "div.fWfAye";
+  var pasteimageurlDivId = "div.P9ipme[jsname='zMVKPd']";
+  var uploadanimageDivId = "div.P9ipme[jsname='EBSqGc']";
+}
+
+console.log(searchbyimagebtn);
 
 searchbyimagebtn.addEventListener("click", () => {
   setTimeout(() => {
-    const imgUrlTextBox = document.getElementById("Ycyxxc");
+    const imgUrlTextBox = document.querySelector(imgUrlTextBoxId);
     if (imgUrlTextBox == null) {
       console.log("Search by image box not show up!");
       return;
@@ -72,9 +88,9 @@ function keyMapper(callbackList, options) {
     };
 
     // make sure that Search By Image Box is displayed and focuses on Paste image URL.
-    var searchbyimageDiv = document.querySelector("#QDMvGf");
-    var pasteimageurlDiv = document.querySelector("#dRSWfb");
-    var uploadanimageDiv = document.querySelector("#FQt3Wc");
+    var searchbyimageDiv = document.querySelector(searchbyimageDivId);
+    var pasteimageurlDiv = document.querySelector(pasteimageurlDivId);
+    var uploadanimageDiv = document.querySelector(uploadanimageDivId);
     if (
       (searchbyimageDiv.style.display == "block" ||
         searchbyimageDiv.style.display == "") &&
@@ -92,9 +108,9 @@ function keyMapper(callbackList, options) {
     eventTwoType,
     (event) => {
       // make sure that Search By Image Box is displayed and focuses on Paste image URL.
-      var searchbyimageDiv = document.querySelector("#QDMvGf");
-      var pasteimageurlDiv = document.querySelector("#dRSWfb");
-      var uploadanimageDiv = document.querySelector("#FQt3Wc");
+      var searchbyimageDiv = document.querySelector(searchbyimageDivId);
+      var pasteimageurlDiv = document.querySelector(pasteimageurlDivId);
+      var uploadanimageDiv = document.querySelector(uploadanimageDivId);
       if (
         (searchbyimageDiv.style.display == "block" ||
           searchbyimageDiv.style.display == "") &&
@@ -112,12 +128,12 @@ function keyMapper(callbackList, options) {
   // clean text box content when Search by Image box loses focus
   document.addEventListener(eventThreeType, () => {
     setTimeout(() => {
-      var searchbyimageDiv = document.querySelector("#QDMvGf");
+      var searchbyimageDiv = document.querySelector(searchbyimageDivId);
       if (
         searchbyimageDiv == null ||
         searchbyimageDiv.style.display == "none"
       ) {
-        var imgUrlText = document.getElementById("Ycyxxc");
+        var imgUrlText = document.querySelector(imgUrlTextBoxId);
         imgUrlText.value = "";
         console.log("Clean text box content");
       }
@@ -164,7 +180,7 @@ function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
       }
       // exception
       else {
-        var imgUrlText = document.getElementById("Ycyxxc");
+        var imgUrlText = document.querySelector(imgUrlTextBoxId);
         imgUrlText.value = "  Not an image url or no image at clipboard ";
         console.log("Not an image url or no image at clipboard");
         callback(undefined);
@@ -177,7 +193,7 @@ function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
       callback(blob);
     }
   } else {
-    var imgUrlText = document.getElementById("Ycyxxc");
+    var imgUrlText = document.querySelector(imgUrlTextBoxId);
     imgUrlText.value = "  Not an image url or no image at clipboard ";
     console.log("Not an image url or no image at clipboard");
     callback(undefined);
@@ -189,7 +205,7 @@ function uploadImage(imageBlob) {
     // clear imgUrl first to prevent error
     imgUrl = "";
     console.log("UploadImage begins");
-    var imgUrlText = document.getElementById("Ycyxxc");
+    var imgUrlText = document.querySelector(imgUrlTextBoxId);
     const uploadState = [
       "  Image uploading .",
       "  Image uploading ..",
@@ -227,12 +243,12 @@ function uploadImage(imageBlob) {
       clearInterval(refreshIntervalId);
       // To prevent that it happens to halt at "  Image uploading ..."
       setTimeout(() => {
-        var imgUrlText = document.getElementById("Ycyxxc");
+        var imgUrlText = document.querySelector(imgUrlTextBoxId);
         imgUrlText.value = imgUrl;
       }, 1000);
 
       console.log("Stop uploading state message");
-      // var imgUrlText = document.getElementById("Ycyxxc");
+      // var imgUrlText = document.querySelector(imgUrlTextBoxId);
       // imgUrl will tirgger LoadingStateThree function to display image url
       // imgUrlText.value = "";
       // while (imgUrlText.value !== imgUrl) {
@@ -253,7 +269,7 @@ function chainError(err) {
 function LoadingStateOne(message) {
   return new Promise((resolve, reject) => {
     console.log(`Loading state: ${message[0]}`);
-    var imgUrlText = document.getElementById("Ycyxxc");
+    var imgUrlText = document.querySelector(imgUrlTextBoxId);
     if (imgUrl == "") {
       imgUrlText.value = message[0];
       setTimeout(resolve, 500, message);
@@ -267,7 +283,7 @@ function LoadingStateOne(message) {
 function LoadingStateTwo(message) {
   return new Promise((resolve, reject) => {
     console.log(`Loading state: ${message[1]}`);
-    var imgUrlText = document.getElementById("Ycyxxc");
+    var imgUrlText = document.querySelector(imgUrlTextBoxId);
     if (imgUrl == "") {
       imgUrlText.value = message[1];
       setTimeout(resolve, 500, message);
@@ -281,7 +297,7 @@ function LoadingStateTwo(message) {
 function LoadingStateThree(message) {
   return new Promise((resolve, reject) => {
     console.log(`Loading state: ${message[2]}`);
-    var imgUrlText = document.getElementById("Ycyxxc");
+    var imgUrlText = document.querySelector(imgUrlTextBoxId);
     if (imgUrl == "") {
       imgUrlText.value = message[2];
       setTimeout(resolve, 500, message);
