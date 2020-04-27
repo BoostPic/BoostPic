@@ -65,7 +65,7 @@ function keyMapper(callbackList, options) {
     } else {
       buffer = [...state.buffer, key];
     }
-    console.log(buffer);
+    // console.log(buffer);
     state = {
       buffer: buffer,
       lastKeyTime: currentTime,
@@ -186,6 +186,8 @@ function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
 
 function uploadImage(imageBlob) {
   if (imageBlob) {
+    // clear imgUrl first to prevent error
+    imgUrl = "";
     console.log("UploadImage begins");
     var imgUrlText = document.getElementById("Ycyxxc");
     const uploadState = [
@@ -195,14 +197,19 @@ function uploadImage(imageBlob) {
     ];
     const showLoadingState = new Promise((resolve, reject) => {
       console.log("Showing loading state");
-      resolve(uploadState, imgUrlText);
+      if (imgUrl == "") {
+        resolve(uploadState);
+      } else {
+        imgUrlText.value = imgUrl;
+        reject("Image url received!");
+      }
     });
     imgUrlText.value = "  Image uploading ";
     const refreshIntervalId = setInterval(() => {
       showLoadingState
-        .then(LoadingStateOne)
-        .then(LoadingStateTwo)
-        .then(LoadingStateThree);
+        .then(LoadingStateOne, chainError)
+        .then(LoadingStateTwo, chainError)
+        .then(LoadingStateThree, chainError);
     }, 1600);
 
     // Prepare image blob url to send to background.js
@@ -216,7 +223,14 @@ function uploadImage(imageBlob) {
     console.log(blobUrl);
     chrome.runtime.sendMessage(blobUrl, (res) => {
       imgUrl = res;
+      console.log(imgUrl);
       clearInterval(refreshIntervalId);
+      // To prevent that it happens to halt at "  Image uploading ..."
+      setTimeout(() => {
+        var imgUrlText = document.getElementById("Ycyxxc");
+        imgUrlText.value = imgUrl;
+      }, 1000);
+
       console.log("Stop uploading state message");
       // var imgUrlText = document.getElementById("Ycyxxc");
       // imgUrl will tirgger LoadingStateThree function to display image url
@@ -229,12 +243,24 @@ function uploadImage(imageBlob) {
   }
 }
 
+// stop the promise chain, construed from Vinnyq12,
+// https://stackoverflow.com/questions/20714460/break-promise-chain-and-call-a-function-based-on-the-step-in-the-chain-where-it#comment70198570_35503793
+function chainError(err) {
+  console.log(err);
+  return Promise.reject(err);
+}
+
 function LoadingStateOne(message) {
   return new Promise((resolve, reject) => {
     console.log(`Loading state: ${message[0]}`);
     var imgUrlText = document.getElementById("Ycyxxc");
-    imgUrlText.value = message[0];
-    setTimeout(resolve, 500, message);
+    if (imgUrl == "") {
+      imgUrlText.value = message[0];
+      setTimeout(resolve, 500, message);
+    } else {
+      imgUrlText.value = imgUrl;
+      reject("Image url received!");
+    }
   });
 }
 
@@ -242,8 +268,13 @@ function LoadingStateTwo(message) {
   return new Promise((resolve, reject) => {
     console.log(`Loading state: ${message[1]}`);
     var imgUrlText = document.getElementById("Ycyxxc");
-    imgUrlText.value = message[1];
-    setTimeout(resolve, 500, message);
+    if (imgUrl == "") {
+      imgUrlText.value = message[1];
+      setTimeout(resolve, 500, message);
+    } else {
+      imgUrlText.value = imgUrl;
+      reject("Image url received!");
+    }
   });
 }
 
@@ -251,15 +282,13 @@ function LoadingStateThree(message) {
   return new Promise((resolve, reject) => {
     console.log(`Loading state: ${message[2]}`);
     var imgUrlText = document.getElementById("Ycyxxc");
-    if (imgUrl != "") {
-      imgUrlText.value = imgUrl;
-      console.log(imgUrl);
-      // For next upload image operation
-      imgUrl = "";
-    } else {
+    if (imgUrl == "") {
       imgUrlText.value = message[2];
+      setTimeout(resolve, 500, message);
+    } else {
+      imgUrlText.value = imgUrl;
+      reject("Image url received!");
     }
-    setTimeout(resolve, 500, message);
   });
 }
 

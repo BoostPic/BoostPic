@@ -1,5 +1,8 @@
 "use strict";
 
+// Global variable used to distinguish the return result of promise race and construed from https://segmentfault.com/q/1010000012736340. See line 33
+var smmsResponseUrl = "";
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.startsWith("blob")) {
     console.log("RECEIVED");
@@ -30,24 +33,37 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         // main
         timeoutPromise(object.promise, 8000)
           .then((contents) => {
+            smmsResponseUrl = "";
             if (contents != "") {
               const responseJSON = JSON.parse(contents);
               if (responseJSON.code === "success") {
+                smmsResponseUrl = responseJSON.data.url;
                 sendResponse(responseJSON.data.url);
+                console.log("Contents", responseJSON);
+                return;
               } else if (responseJSON.code === "image_repeated") {
+                smmsResponseUrl = responseJSON.images;
                 sendResponse(responseJSON.images);
+                console.log("Contents", responseJSON);
+                return;
               }
-              console.log("Contents", responseJSON);
             }
           })
           .catch((error) => {
             if (error instanceof TimeoutError) {
-              object.abort();
-              sendResponse("  Timeout Error. Please try again");
-              console.log(error);
+              if (smmsResponseUrl.startsWith("http")) {
+                return;
+              } else {
+                object.abort();
+                sendResponse("  Timeout Error. Please try again");
+                promseRaceTimeout = false;
+                console.log(error);
+                return;
+              }
             }
             console.log("XHR Error :", error);
             sendResponse("  Some error happened. Please try again");
+            return;
           });
 
         // console.log(`Send Response: ${imgUrl}`);
@@ -183,17 +199,20 @@ function copyOwnFrom(target, source) {
   });
   return target;
 }
+
 function TimeoutError() {
   var superInstance = Error.apply(null, arguments);
   copyOwnFrom(this, superInstance);
 }
 TimeoutError.prototype = Object.create(Error.prototype);
 TimeoutError.prototype.constructor = TimeoutError;
+
 function delayPromise(ms) {
   return new Promise(function (resolve) {
     setTimeout(resolve, ms);
   });
 }
+
 function timeoutPromise(promise, ms) {
   var timeout = delayPromise(ms).then(function () {
     return Promise.reject(
@@ -202,6 +221,7 @@ function timeoutPromise(promise, ms) {
   });
   return Promise.race([promise, timeout]);
 }
+
 function cancelableXHR(blobData, apiToken) {
   const xhr = new XMLHttpRequest();
 
