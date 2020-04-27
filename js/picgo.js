@@ -246,6 +246,11 @@ function uploadImage(imageBlob) {
         var imgUrlText = document.querySelector(imgUrlTextBoxId);
         imgUrlText.value = imgUrl;
       }, 1000);
+      // double check to clear interval to prevent infinite error loop of LoadingStateOne
+      // Hope it works.
+      setTimeout(() => {
+        clearInterval(refreshIntervalId);
+      }, 500);
 
       console.log("Stop uploading state message");
       // var imgUrlText = document.querySelector(imgUrlTextBoxId);
