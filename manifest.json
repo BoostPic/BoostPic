@@ -16,7 +16,7 @@
         "*://images.google.com/*",
         "*://www.google.com.hk/imghp*"
       ],
-      "js": ["js/picgo.js"]
+      "js": ["js/main.js"]
     }
   ],
   "icons": {
