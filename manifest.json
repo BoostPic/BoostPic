@@ -2,24 +2,39 @@
   "manifest_version": 2,
   "name": "ImageSearchGo",
   "version": "1.0",
-  "description": "Unleash the possibility to search Google Image quickly and incredibly, with copy & paste.",
+  "description": "Unfetter the possibility to search Google Image quickly and incredibly, with copy & paste.",
+  "author": "Leslie Wong",
   "content_scripts": [
     {
-      "matches": ["*://www.google.com/imghp"],
+      "matches": [
+        "*://google.com/imghp*",
+        "*://www.google.com/imghp*",
+        "*://google.com/*tbm=isch*",
+        "*://www.google.com/*tbm=isch*",
+        "*://google.com/*tbs=sbi*",
+        "*://www.google.com/*tbs=sbi*",
+        "*://images.google.com/*",
+        "*://www.google.com.hk/imghp*"
+      ],
       "js": ["js/main.js"]
     }
   ],
   "icons": {
-    "16": "images/icon16.png",
-    "48": "images/icon48.png",
-    "128": "images/icon128.png"
+    "16": "images/imageSearchGo_16.png",
+    "48": "images/imageSearchGo_48.png",
+    "128": "images/imageSearchGo_128.png"
   },
   "browser_action": {
     "default_icon": {
-      "19": "images/icon19.png",
-      "38": "images/icon38.png"
+      "19": "images/imageSearchGo_19.png",
+      "38": "images/imageSearchGo_38.png"
     },
     "default_title": "ImageSearchGo",
     "default_popup": "popup.html"
-  }
+  },
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "permissions": ["https://sm.ms/api/v2/upload"]
 }
