@@ -24,7 +24,7 @@ if (searchbyimagebtn) {
   var uploadanimageDivId = "div.P9ipme[jsname='EBSqGc']";
 }
 
-console.log(searchbyimagebtn);
+// console.log(searchbyimagebtn);
 
 searchbyimagebtn.addEventListener("click", () => {
   setTimeout(() => {

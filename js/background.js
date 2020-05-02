@@ -56,7 +56,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
               } else {
                 object.abort();
                 sendResponse("  Timeout Error. Please try again");
-                promseRaceTimeout = false;
+                // promseRaceTimeout = false;
                 console.log(error);
                 return;
               }
