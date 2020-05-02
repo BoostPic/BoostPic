@@ -1,5 +1,6 @@
 # ImageSearchGo
 
+![ImageSearchGo-landscape-1280.png](https://i.loli.net/2020/05/03/SLKfIsvX9ikBWry.png)
 Unfetter the possibility to search Google Image quickly and incredibly, with copy & paste.
 
 # How it works
