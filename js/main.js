@@ -228,6 +228,15 @@ function uploadImage(imageBlob) {
         .then(LoadingStateThree, chainError);
     }, 1600);
 
+    // In case the following chrome.runtime.sendMessage does not recevie response
+    setTimeout(() => {
+      clearInterval(refreshIntervalId);
+    }, 12000);
+    setTimeout(() => {
+      var imgUrlText = document.querySelector(imgUrlTextBoxId);
+      imgUrlText.value = "  Timeout Error. Please try again";
+    }, 12500);
+
     // Prepare image blob url to send to background.js
 
     // Crossbrowser support for URL
@@ -251,7 +260,6 @@ function uploadImage(imageBlob) {
       setTimeout(() => {
         clearInterval(refreshIntervalId);
       }, 500);
-
       console.log("Stop uploading state message");
       // var imgUrlText = document.querySelector(imgUrlTextBoxId);
       // imgUrl will tirgger LoadingStateThree function to display image url

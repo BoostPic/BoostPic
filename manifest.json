@@ -2,19 +2,20 @@
   "manifest_version": 2,
   "name": "Image Search Go",
   "version": "1.1",
-  "description": "Unfetter the possibility to search Google Image quickly and incredibly, with copy & paste.",
+  "description": "Unfetter the possibility to search Google Images quickly and incredibly, with copy & paste.",
   "author": "Leslie Wong",
   "content_scripts": [
     {
       "matches": [
         "*://google.com/imghp*",
         "*://www.google.com/imghp*",
+        "*://www.google.com.hk/imghp*",
         "*://google.com/*tbm=isch*",
         "*://www.google.com/*tbm=isch*",
         "*://google.com/*tbs=sbi*",
         "*://www.google.com/*tbs=sbi*",
         "*://images.google.com/*",
-        "*://www.google.com.hk/imghp*"
+        "*://images.google.com.hk/*"
       ],
       "js": ["js/main.js"]
     }
