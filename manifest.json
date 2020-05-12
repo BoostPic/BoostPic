@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Image Search Go",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Unfetter the possibility to search Google Images quickly and incredibly, with copy & paste.",
   "author": "Leslie Wong",
   "content_scripts": [
