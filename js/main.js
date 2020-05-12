@@ -234,7 +234,9 @@ function uploadImage(imageBlob) {
     }, 12000);
     setTimeout(() => {
       var imgUrlText = document.querySelector(imgUrlTextBoxId);
-      imgUrlText.value = "  Timeout Error. Please try again";
+      if (!imgUrlText.value.startsWith("http")) {
+        imgUrlText.value = "  Timeout Error. Please try again";
+      }
     }, 12500);
 
     // Prepare image blob url to send to background.js

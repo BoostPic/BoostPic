@@ -1,5 +1,174 @@
 "use strict";
 
+// Detect the current tab url and change tool bar icon to from gray to colorful if it is a google images page.
+
+var tabURL = "";
+var re = "";
+var matchIndicator = false;
+const matchURL = [
+  "://google.com/imghp",
+  "://www.google.com/imghp",
+  "://www.google.com.hk/imghp",
+  "://google.com/.*tbm=isch",
+  "://www.google.com/.*tbm=isch",
+  "://google.com/.*tbs=sbi",
+  "://www.google.com/.*tbs=sbi",
+  "://images.google.com/",
+  "://images.google.com.hk/",
+];
+
+chrome.tabs.onActivated.addListener((tab) => {
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+    tabURL = tabs[0].url;
+    matchIndicator = false;
+    for (var tempUrl in matchURL) {
+      re = new RegExp(matchURL[tempUrl]);
+      if (tabURL.match(re)) {
+        chrome.browserAction.setIcon({
+          path: { "19": "images/imageSearchGo_19.png" },
+        });
+        chrome.browserAction.setIcon({
+          path: { "38": "images/imageSearchGo_38.png" },
+        });
+        matchIndicator = true;
+        break;
+      }
+    }
+    if (!matchIndicator) {
+      chrome.browserAction.setIcon({
+        path: { "19": "images/imageSearchGo_19_gray.png" },
+      });
+      chrome.browserAction.setIcon({
+        path: { "38": "images/imageSearchGo_38_gray.png" },
+      });
+    }
+    console.log(tabs[0].url);
+  });
+  console.log("onActivated");
+});
+
+chrome.tabs.onCreated.addListener((tab) => {
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+    tabURL = tabs[0].url;
+    matchIndicator = false;
+    for (var tempUrl in matchURL) {
+      re = new RegExp(matchURL[tempUrl]);
+      if (tabURL.match(re)) {
+        chrome.browserAction.setIcon({
+          path: { "19": "images/imageSearchGo_19.png" },
+        });
+        chrome.browserAction.setIcon({
+          path: { "38": "images/imageSearchGo_38.png" },
+        });
+        matchIndicator = true;
+        break;
+      }
+    }
+    if (!matchIndicator) {
+      chrome.browserAction.setIcon({
+        path: { "19": "images/imageSearchGo_19_gray.png" },
+      });
+      chrome.browserAction.setIcon({
+        path: { "38": "images/imageSearchGo_38_gray.png" },
+      });
+    }
+    console.log(tabs[0].url);
+  });
+  console.log("onCreated");
+});
+
+chrome.tabs.onUpdated.addListener((tab) => {
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+    tabURL = tabs[0].url;
+    matchIndicator = false;
+    for (var tempUrl in matchURL) {
+      re = new RegExp(matchURL[tempUrl]);
+      if (tabURL.match(re)) {
+        chrome.browserAction.setIcon({
+          path: { "19": "images/imageSearchGo_19.png" },
+        });
+        chrome.browserAction.setIcon({
+          path: { "38": "images/imageSearchGo_38.png" },
+        });
+        matchIndicator = true;
+        break;
+      }
+    }
+    if (!matchIndicator) {
+      chrome.browserAction.setIcon({
+        path: { "19": "images/imageSearchGo_19_gray.png" },
+      });
+      chrome.browserAction.setIcon({
+        path: { "38": "images/imageSearchGo_38_gray.png" },
+      });
+    }
+    console.log(tabs[0].url);
+  });
+  console.log("onUpdated");
+});
+
+chrome.tabs.onMoved.addListener((tab) => {
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+    tabURL = tabs[0].url;
+    matchIndicator = false;
+    for (var tempUrl in matchURL) {
+      re = new RegExp(matchURL[tempUrl]);
+      if (tabURL.match(re)) {
+        chrome.browserAction.setIcon({
+          path: { "19": "images/imageSearchGo_19.png" },
+        });
+        chrome.browserAction.setIcon({
+          path: { "38": "images/imageSearchGo_38.png" },
+        });
+        matchIndicator = true;
+        break;
+      }
+    }
+    if (!matchIndicator) {
+      chrome.browserAction.setIcon({
+        path: { "19": "images/imageSearchGo_19_gray.png" },
+      });
+      chrome.browserAction.setIcon({
+        path: { "38": "images/imageSearchGo_38_gray.png" },
+      });
+    }
+    console.log(tabs[0].url);
+  });
+  console.log("onMoved");
+});
+
+chrome.tabs.onReplaced.addListener((tab) => {
+  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+    tabURL = tabs[0].url;
+    matchIndicator = false;
+    for (var tempUrl in matchURL) {
+      re = new RegExp(matchURL[tempUrl]);
+      if (tabURL.match(re)) {
+        chrome.browserAction.setIcon({
+          path: { "19": "images/imageSearchGo_19.png" },
+        });
+        chrome.browserAction.setIcon({
+          path: { "38": "images/imageSearchGo_38.png" },
+        });
+        matchIndicator = true;
+        break;
+      }
+    }
+    if (!matchIndicator) {
+      chrome.browserAction.setIcon({
+        path: { "19": "images/imageSearchGo_19_gray.png" },
+      });
+      chrome.browserAction.setIcon({
+        path: { "38": "images/imageSearchGo_38_gray.png" },
+      });
+    }
+    console.log(tabs[0].url);
+  });
+  console.log("onReplaced");
+});
+
+// retrive blob url and uplaod image, then send smms url back
+
 // Global variable used to distinguish the return result of promise race and construed from https://segmentfault.com/q/1010000012736340. See line 33
 var smmsResponseUrl = "";
 

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Image Search Go",
-  "version": "1.1",
+  "version": "1.1.2",
   "description": "Unfetter the possibility to search Google Images quickly and incredibly, with copy & paste.",
   "author": "Leslie Wong",
   "content_scripts": [
@@ -27,8 +27,8 @@
   },
   "browser_action": {
     "default_icon": {
-      "19": "images/imageSearchGo_19.png",
-      "38": "images/imageSearchGo_38.png"
+      "19": "images/imageSearchGo_19_gray.png",
+      "38": "images/imageSearchGo_38_gray.png"
     },
     "default_title": "ImageSearchGo",
     "default_popup": "popup.html"
@@ -37,5 +37,5 @@
     "scripts": ["js/background.js"],
     "persistent": false
   },
-  "permissions": ["https://sm.ms/api/v2/upload"]
+  "permissions": ["https://sm.ms/api/v2/upload", "tabs"]
 }
