@@ -313,24 +313,24 @@ function b64toBlob(b64Data, contentType, sliceSize) {
 //   return bytes.buffer;
 // }
 
-function getSMMSImageUrl(blobData, apiToken) {
-  const xhr = new XMLHttpRequest();
-  const uploadUrl = "https://sm.ms/api/v2/upload";
-  const formData = new FormData();
-  formData.append("smfile", blobData, "image.png");
-  formData.append("file_id", "0");
-  xhr.open("POST", uploadUrl, true);
-  xhr.setRequestHeader("Authorization", apiToken);
-  xhr.onreadystatechange = () => {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      console.log(xhr.responseText);
-      const responseJson = JSON.parse(xhr.responseText);
-      return responseJson.data.url;
-      // return "200";
-    }
-  };
-  xhr.send(formData);
-}
+// function getSMMSImageUrl(blobData, apiToken) {
+//   const xhr = new XMLHttpRequest();
+//   const uploadUrl = "https://sm.ms/api/v2/upload";
+//   const formData = new FormData();
+//   formData.append("smfile", blobData, "image.png");
+//   formData.append("file_id", "0");
+//   xhr.open("POST", uploadUrl, true);
+//   xhr.setRequestHeader("Authorization", apiToken);
+//   xhr.onreadystatechange = () => {
+//     if (xhr.readyState == 4 && xhr.status == 200) {
+//       console.log(xhr.responseText);
+//       const responseJson = JSON.parse(xhr.responseText);
+//       return responseJson.data.url;
+//       // return "200";
+//     }
+//   };
+//   xhr.send(formData);
+// }
 
 /*
  *
