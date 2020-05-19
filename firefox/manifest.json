@@ -35,7 +35,7 @@
   },
   "background": {
     "scripts": ["js/background.js"],
-    "persistent": false
+    "persistent": true
   },
   "permissions": ["https://sm.ms/api/v2/upload", "tabs"],
   "applications": {
