@@ -62,7 +62,7 @@ function keyMapper(callbackList, options) {
     (options.hasOwnProperty("eventTwoType") && options.eventTwoType) || "paste";
   const eventThreeType =
     (options.hasOwnProperty("eventThreeType") && options.eventThreeType) ||
-    "paste";
+    "click";
 
   let state = {
     buffer: [],
