@@ -35,7 +35,13 @@
   },
   "background": {
     "scripts": ["js/background.js"],
-    "persistent": false
+    "persistent": true
   },
-  "permissions": ["https://sm.ms/api/v2/upload", "tabs"]
+  "permissions": ["https://sm.ms/api/v2/upload", "tabs"],
+  "applications": {
+    "gecko": {
+      "id": "79917148leslie@gmail.com",
+      "strict_min_version": "42.0"
+    }
+  }
 }

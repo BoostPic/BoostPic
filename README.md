@@ -17,6 +17,12 @@ Uncover the possibility to search Google Image quickly and incredibly, with copy
 
    ![step3](https://i.loli.net/2020/05/03/rbgj9sK2f4dTF7o.png)
 
+# LICENSE
+
+Copyleft © [Leslie Wong](https://github.com/Leslie-Wong-H)
+
+[Apache II](./LICENSE)
+
+
 # Enjoy! &#9829;&#9829;&#9829;
 
-<b>Copylight © [Leslie Wong](https://github.com/Leslie-Wong-H)</b>
