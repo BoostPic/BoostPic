@@ -1,6 +1,19 @@
 # Image Search Go
 
 ![ImageSearchGo-landscape-1280.png](https://i.loli.net/2020/05/03/SLKfIsvX9ikBWry.png)
+
+<p align="center">
+  </br></br>
+  <a href="https://chrome.google.com/webstore/detail/image-search-go/pmpogggmiaehmjempogkkklfckignfgl">
+    <img src="https://i.imgur.com/B0i5sn3.png" alt="Chrome Web Store"></a>
+  <a href="">
+    <img src="https://i.imgur.com/LkA07IB.png" alt="Firefox add-ons"></a>
+  <a href="">
+    <img src="https://i.imgur.com/wK10qEV.png" alt="Opera add-ons">
+</a>
+  </br></br>
+</p>
+
 Uncover the possibility to search Google Image quickly and incredibly, with copy & paste.
 
 # How it works
@@ -23,6 +36,4 @@ Copyleft © [Leslie Wong](https://github.com/Leslie-Wong-H)
 
 [Apache II](./LICENSE)
 
-
 # Enjoy! &#9829;&#9829;&#9829;
-
