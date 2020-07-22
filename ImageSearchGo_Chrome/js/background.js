@@ -21,6 +21,9 @@ const matchURL = [
   "://www.google.co.kr/imghp",
   "://www.google.co.kr/*tbm=isch",
   "://www.google.co.kr/*tbs=sbi",
+  "://www.google.co.jp/imghp",
+  "://www.google.co.jp/*tbm=isch",
+  "://www.google.co.jp/*tbs=sbi",
 ];
 
 chrome.tabs.onActivated.addListener((tab) => {
