@@ -9,6 +9,7 @@ const matchURL = [
   "://images.google.com/",
   "://images.google.com.hk/",
   "://images.google.co.kr/",
+  "://images.google.co.jp/",
   "://google.com/imghp",
   "://google.com/*tbm=isch",
   "://google.com/*tbs=sbi",
