@@ -6,15 +6,21 @@ var tabURL = "";
 var re = "";
 var matchIndicator = false;
 const matchURL = [
-  "://google.com/imghp",
-  "://www.google.com/imghp",
-  "://www.google.com.hk/imghp",
-  "://google.com/.*tbm=isch",
-  "://www.google.com/.*tbm=isch",
-  "://google.com/.*tbs=sbi",
-  "://www.google.com/.*tbs=sbi",
   "://images.google.com/",
   "://images.google.com.hk/",
+  "://images.google.co.kr/",
+  "://google.com/imghp",
+  "://google.com/*tbm=isch",
+  "://google.com/*tbs=sbi",
+  "://www.google.com/imghp",
+  "://www.google.com/*tbm=isch",
+  "://www.google.com/*tbs=sbi",
+  "://www.google.com.hk/imghp",
+  "://www.google.com.hk/*tbm=isch",
+  "://www.google.com.hk/*tbs=sbi",
+  "://www.google.co.kr/imghp",
+  "://www.google.co.kr/*tbm=isch",
+  "://www.google.co.kr/*tbs=sbi",
 ];
 
 chrome.tabs.onActivated.addListener((tab) => {

@@ -9,6 +9,7 @@
       "matches": [
         "*://images.google.com/*",
         "*://images.google.com.hk/*",
+        "*://images.google.co.kr/*",
         "*://google.com/imghp*",
         "*://google.com/*tbm=isch*",
         "*://google.com/*tbs=sbi*",
