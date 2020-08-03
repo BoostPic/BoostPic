@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Image Search Go",
-  "version": "1.1.5",
+  "name": "BoostPic",
+  "version": "2.0.0",
   "description": "Uncover the possibility to search Google Images quickly and incredibly, with copy & paste.",
   "author": "Leslie Wong",
   "content_scripts": [
@@ -31,16 +31,16 @@
     }
   ],
   "icons": {
-    "16": "images/imageSearchGo_16.png",
-    "48": "images/imageSearchGo_48.png",
-    "128": "images/imageSearchGo_128.png"
+    "16": "images/boostPic_16.png",
+    "48": "images/boostPic_48.png",
+    "128": "images/boostPic_128.png"
   },
   "browser_action": {
     "default_icon": {
-      "19": "images/imageSearchGo_19_gray.png",
-      "38": "images/imageSearchGo_38_gray.png"
+      "19": "images/boostPic_19_gray.png",
+      "38": "images/boostPic_38_gray.png"
     },
-    "default_title": "ImageSearchGo",
+    "default_title": "BoostPic",
     "default_popup": "popup.html"
   },
   "background": {

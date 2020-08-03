@@ -1,6 +1,6 @@
-# Image Search Go
+# BoostPic
 
-![ImageSearchGo-landscape-1280.png](https://i.loli.net/2020/05/03/SLKfIsvX9ikBWry.png)
+![BoostPic-landscape-1280.png](https://i.loli.net/2020/05/03/SLKfIsvX9ikBWry.png)
 
 <p align="center">
   </br></br>
@@ -20,7 +20,7 @@ Uncover the possibility to search Google Image quickly and incredibly, with copy
 
 1. For win10: win+shift+s to clip an image, and for mac: shift+command+control+4
 
-   ![ImageSearchGoKeyChain_final.png](https://i.loli.net/2020/05/03/QByDRJIYZwkLvOE.png)
+   ![BoostPicKeyChain_final.png](https://i.loli.net/2020/05/03/QByDRJIYZwkLvOE.png)
 
 2. Enter Google Images, click at the search by image icon, and then click at the text box and press ctrl+v or command+v
 
