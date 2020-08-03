@@ -35,10 +35,10 @@ chrome.tabs.onActivated.addListener((tab) => {
       re = new RegExp(matchURL[tempUrl]);
       if (tabURL.match(re)) {
         chrome.browserAction.setIcon({
-          path: { "19": "images/imageSearchGo_19.png" },
+          path: { "19": "images/boostPic_19.png" },
         });
         chrome.browserAction.setIcon({
-          path: { "38": "images/imageSearchGo_38.png" },
+          path: { "38": "images/boostPic_38.png" },
         });
         matchIndicator = true;
         break;
@@ -46,10 +46,10 @@ chrome.tabs.onActivated.addListener((tab) => {
     }
     if (!matchIndicator) {
       chrome.browserAction.setIcon({
-        path: { "19": "images/imageSearchGo_19_gray.png" },
+        path: { "19": "images/boostPic_19_gray.png" },
       });
       chrome.browserAction.setIcon({
-        path: { "38": "images/imageSearchGo_38_gray.png" },
+        path: { "38": "images/boostPic_38_gray.png" },
       });
     }
     console.log(tabs[0].url);
@@ -65,10 +65,10 @@ chrome.tabs.onCreated.addListener((tab) => {
       re = new RegExp(matchURL[tempUrl]);
       if (tabURL.match(re)) {
         chrome.browserAction.setIcon({
-          path: { "19": "images/imageSearchGo_19.png" },
+          path: { "19": "images/boostPic_19.png" },
         });
         chrome.browserAction.setIcon({
-          path: { "38": "images/imageSearchGo_38.png" },
+          path: { "38": "images/boostPic_38.png" },
         });
         matchIndicator = true;
         break;
@@ -76,10 +76,10 @@ chrome.tabs.onCreated.addListener((tab) => {
     }
     if (!matchIndicator) {
       chrome.browserAction.setIcon({
-        path: { "19": "images/imageSearchGo_19_gray.png" },
+        path: { "19": "images/boostPic_19_gray.png" },
       });
       chrome.browserAction.setIcon({
-        path: { "38": "images/imageSearchGo_38_gray.png" },
+        path: { "38": "images/boostPic_38_gray.png" },
       });
     }
     console.log(tabs[0].url);
@@ -95,10 +95,10 @@ chrome.tabs.onUpdated.addListener((tab) => {
       re = new RegExp(matchURL[tempUrl]);
       if (tabURL.match(re)) {
         chrome.browserAction.setIcon({
-          path: { "19": "images/imageSearchGo_19.png" },
+          path: { "19": "images/boostPic_19.png" },
         });
         chrome.browserAction.setIcon({
-          path: { "38": "images/imageSearchGo_38.png" },
+          path: { "38": "images/boostPic_38.png" },
         });
         matchIndicator = true;
         break;
@@ -106,10 +106,10 @@ chrome.tabs.onUpdated.addListener((tab) => {
     }
     if (!matchIndicator) {
       chrome.browserAction.setIcon({
-        path: { "19": "images/imageSearchGo_19_gray.png" },
+        path: { "19": "images/boostPic_19_gray.png" },
       });
       chrome.browserAction.setIcon({
-        path: { "38": "images/imageSearchGo_38_gray.png" },
+        path: { "38": "images/boostPic_38_gray.png" },
       });
     }
     console.log(tabs[0].url);
@@ -125,10 +125,10 @@ chrome.tabs.onMoved.addListener((tab) => {
       re = new RegExp(matchURL[tempUrl]);
       if (tabURL.match(re)) {
         chrome.browserAction.setIcon({
-          path: { "19": "images/imageSearchGo_19.png" },
+          path: { "19": "images/boostPic_19.png" },
         });
         chrome.browserAction.setIcon({
-          path: { "38": "images/imageSearchGo_38.png" },
+          path: { "38": "images/boostPic_38.png" },
         });
         matchIndicator = true;
         break;
@@ -136,10 +136,10 @@ chrome.tabs.onMoved.addListener((tab) => {
     }
     if (!matchIndicator) {
       chrome.browserAction.setIcon({
-        path: { "19": "images/imageSearchGo_19_gray.png" },
+        path: { "19": "images/boostPic_19_gray.png" },
       });
       chrome.browserAction.setIcon({
-        path: { "38": "images/imageSearchGo_38_gray.png" },
+        path: { "38": "images/boostPic_38_gray.png" },
       });
     }
     console.log(tabs[0].url);
@@ -155,10 +155,10 @@ chrome.tabs.onReplaced.addListener((tab) => {
       re = new RegExp(matchURL[tempUrl]);
       if (tabURL.match(re)) {
         chrome.browserAction.setIcon({
-          path: { "19": "images/imageSearchGo_19.png" },
+          path: { "19": "images/boostPic_19.png" },
         });
         chrome.browserAction.setIcon({
-          path: { "38": "images/imageSearchGo_38.png" },
+          path: { "38": "images/boostPic_38.png" },
         });
         matchIndicator = true;
         break;
@@ -166,10 +166,10 @@ chrome.tabs.onReplaced.addListener((tab) => {
     }
     if (!matchIndicator) {
       chrome.browserAction.setIcon({
-        path: { "19": "images/imageSearchGo_19_gray.png" },
+        path: { "19": "images/boostPic_19_gray.png" },
       });
       chrome.browserAction.setIcon({
-        path: { "38": "images/imageSearchGo_38_gray.png" },
+        path: { "38": "images/boostPic_38_gray.png" },
       });
     }
     console.log(tabs[0].url);
