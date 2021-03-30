@@ -46,6 +46,13 @@ searchbyimagebtn.addEventListener("click", () => {
 
       keyMapper([retrieveImageFromClipboardAsBlob, detectEnter], options);
     });
+
+    const event = new MouseEvent('click', {
+      view: window,
+      bubbles: true,
+      cancelable: true
+    });
+    imgUrlTextBox.dispatchEvent(event);
   }, 300);
 });
 

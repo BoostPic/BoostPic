@@ -22,7 +22,7 @@ Uncover the possibility to search Google Image quickly and incredibly, with copy
 
    ![BoostPicKeyChain_final.png](https://i.loli.net/2020/05/03/QByDRJIYZwkLvOE.png)
 
-2. Enter Google Images, click at the search by image icon, and then click at the text box and press ctrl+v or command+v
+2. Enter Google Images, click at the search by image icon, and then press ctrl+v or command+v. 
 
    ![Step1](https://i.loli.net/2020/05/03/Q7Lgxm9HAqJFX1b.png)
 
