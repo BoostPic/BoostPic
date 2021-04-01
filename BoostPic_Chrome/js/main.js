@@ -174,8 +174,8 @@ function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
 
       // User pastes an image url
       if (
-        textString.startsWith("http") &&
-        textString.match(/\.(jpeg|jpg|gif|png|svg)$/)
+        textString.startsWith("http")
+        // && textString.match(/\.(jpeg|jpg|gif|png|svg)$/)
       ) {
         console.log("User pastes an image url");
         callback(undefined);
