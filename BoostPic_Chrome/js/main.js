@@ -47,10 +47,10 @@ searchbyimagebtn.addEventListener("click", () => {
       keyMapper([retrieveImageFromClipboardAsBlob, detectEnter], options);
     });
 
-    const event = new MouseEvent('click', {
+    const event = new MouseEvent("click", {
       view: window,
       bubbles: true,
-      cancelable: true
+      cancelable: true,
     });
     imgUrlTextBox.dispatchEvent(event);
   }, 300);
@@ -248,36 +248,71 @@ function uploadImage(imageBlob) {
 
     // Prepare image blob url to send to background.js
 
+    /* (Browser specific. For Chrome we need to convert Blob to a blobUrl
+        so as to trigger runtime.sendMessage, while for firefox runtime.sendMessage can send blob file directly.)
+        reference: https://stackoverflow.com/questions/24193578/pass-input-file-to-background-script
+    */
+
     // Crossbrowser support for URL
     const URLObj = window.URL || webkitURL;
-
     // Creates a DOMString containing a URL representing the object given in the parameter
     // namely the original Blob
     const blobUrl = URLObj.createObjectURL(imageBlob);
     console.log(blobUrl);
-    chrome.runtime.sendMessage(blobUrl, (res) => {
-      imgUrl = res;
-      console.log(imgUrl);
-      clearInterval(refreshIntervalId);
-      // To prevent that it happens to halt at "  Image uploading ..."
-      setTimeout(() => {
-        var imgUrlText = document.querySelector(imgUrlTextBoxId);
-        imgUrlText.value = imgUrl;
-      }, 1000);
-      // double check to clear interval to prevent infinite error loop of LoadingStateOne
-      // Hope it works.
-      setTimeout(() => {
+
+    // For Firefox add-on
+    const isFirefox = typeof InstallTrigger !== "undefined";
+
+    if (isFirefox) {
+      console.log("come have me");
+      const reader = new FileReader();
+      reader.readAsDataURL(imageBlob);
+      reader.onloadend = function () {
+        const base64data = reader.result;
+        console.log(base64data);
+        chrome.runtime.sendMessage(base64data, (res) => {
+          imgUrl = res;
+          console.log(imgUrl);
+          clearInterval(refreshIntervalId);
+          // To prevent that it happens to halt at "  Image uploading ..."
+          setTimeout(() => {
+            var imgUrlText = document.querySelector(imgUrlTextBoxId);
+            imgUrlText.value = imgUrl;
+          }, 1000);
+          // double check to clear interval to prevent infinite error loop of LoadingStateOne
+          // Hope it works.
+          setTimeout(() => {
+            clearInterval(refreshIntervalId);
+          }, 500);
+          console.log("Stop uploading state message");
+        });
+      };
+    } else {
+      // For chrome extension
+      chrome.runtime.sendMessage(blobUrl, (res) => {
+        imgUrl = res;
+        console.log(imgUrl);
         clearInterval(refreshIntervalId);
-      }, 500);
-      console.log("Stop uploading state message");
-      // var imgUrlText = document.querySelector(imgUrlTextBoxId);
-      // imgUrl will tirgger LoadingStateThree function to display image url
-      // imgUrlText.value = "";
-      // while (imgUrlText.value !== imgUrl) {
-      //   imgUrlText.value = imgUrl;
-      //   console.log(imgUrl);
-      // }
-    });
+        // To prevent that it happens to halt at "  Image uploading ..."
+        setTimeout(() => {
+          var imgUrlText = document.querySelector(imgUrlTextBoxId);
+          imgUrlText.value = imgUrl;
+        }, 1000);
+        // double check to clear interval to prevent infinite error loop of LoadingStateOne
+        // Hope it works.
+        setTimeout(() => {
+          clearInterval(refreshIntervalId);
+        }, 500);
+        console.log("Stop uploading state message");
+        // var imgUrlText = document.querySelector(imgUrlTextBoxId);
+        // imgUrl will tirgger LoadingStateThree function to display image url
+        // imgUrlText.value = "";
+        // while (imgUrlText.value !== imgUrl) {
+        //   imgUrlText.value = imgUrl;
+        //   console.log(imgUrl);
+        // }
+      });
+    }
   }
 }
 
