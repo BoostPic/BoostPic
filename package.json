@@ -1,0 +1,25 @@
+{
+  "name": "boostpic",
+  "version": "2.2.1",
+  "description": "Uncover the possibility to search Google Images quickly and incredibly, with copy & paste.",
+  "main": "BoostPic_Chrome/manifest.json",
+  "scripts": {
+    "build": "sh build.sh",
+    "release": "npm run build && npm run release:chrome",
+    "release:chrome": "npx webstore upload --source=BoostPic_Chrome.zip --auto-publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leslie-Wong-H/BoostPic.git"
+  },
+  "author": "Leslie Wong",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Leslie-Wong-H/BoostPic/issues"
+  },
+  "homepage": "https://github.com/Leslie-Wong-H/BoostPic#readme",
+  "devDependencies": {
+    "chrome-webstore-upload-cli": "^1.2.1"
+  }
+}

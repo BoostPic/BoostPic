@@ -35,10 +35,10 @@ chrome.tabs.onActivated.addListener((tab) => {
       re = new RegExp(matchURL[tempUrl]);
       if (tabURL.match(re)) {
         chrome.browserAction.setIcon({
-          path: { "19": "images/boostPic_19.png" },
+          path: { 19: "images/boostPic_19.png" },
         });
         chrome.browserAction.setIcon({
-          path: { "38": "images/boostPic_38.png" },
+          path: { 38: "images/boostPic_38.png" },
         });
         matchIndicator = true;
         break;
@@ -46,10 +46,10 @@ chrome.tabs.onActivated.addListener((tab) => {
     }
     if (!matchIndicator) {
       chrome.browserAction.setIcon({
-        path: { "19": "images/boostPic_19_gray.png" },
+        path: { 19: "images/boostPic_19_gray.png" },
       });
       chrome.browserAction.setIcon({
-        path: { "38": "images/boostPic_38_gray.png" },
+        path: { 38: "images/boostPic_38_gray.png" },
       });
     }
     console.log(tabs[0].url);
@@ -65,10 +65,10 @@ chrome.tabs.onCreated.addListener((tab) => {
       re = new RegExp(matchURL[tempUrl]);
       if (tabURL.match(re)) {
         chrome.browserAction.setIcon({
-          path: { "19": "images/boostPic_19.png" },
+          path: { 19: "images/boostPic_19.png" },
         });
         chrome.browserAction.setIcon({
-          path: { "38": "images/boostPic_38.png" },
+          path: { 38: "images/boostPic_38.png" },
         });
         matchIndicator = true;
         break;
@@ -76,10 +76,10 @@ chrome.tabs.onCreated.addListener((tab) => {
     }
     if (!matchIndicator) {
       chrome.browserAction.setIcon({
-        path: { "19": "images/boostPic_19_gray.png" },
+        path: { 19: "images/boostPic_19_gray.png" },
       });
       chrome.browserAction.setIcon({
-        path: { "38": "images/boostPic_38_gray.png" },
+        path: { 38: "images/boostPic_38_gray.png" },
       });
     }
     console.log(tabs[0].url);
@@ -95,10 +95,10 @@ chrome.tabs.onUpdated.addListener((tab) => {
       re = new RegExp(matchURL[tempUrl]);
       if (tabURL.match(re)) {
         chrome.browserAction.setIcon({
-          path: { "19": "images/boostPic_19.png" },
+          path: { 19: "images/boostPic_19.png" },
         });
         chrome.browserAction.setIcon({
-          path: { "38": "images/boostPic_38.png" },
+          path: { 38: "images/boostPic_38.png" },
         });
         matchIndicator = true;
         break;
@@ -106,10 +106,10 @@ chrome.tabs.onUpdated.addListener((tab) => {
     }
     if (!matchIndicator) {
       chrome.browserAction.setIcon({
-        path: { "19": "images/boostPic_19_gray.png" },
+        path: { 19: "images/boostPic_19_gray.png" },
       });
       chrome.browserAction.setIcon({
-        path: { "38": "images/boostPic_38_gray.png" },
+        path: { 38: "images/boostPic_38_gray.png" },
       });
     }
     console.log(tabs[0].url);
@@ -125,10 +125,10 @@ chrome.tabs.onMoved.addListener((tab) => {
       re = new RegExp(matchURL[tempUrl]);
       if (tabURL.match(re)) {
         chrome.browserAction.setIcon({
-          path: { "19": "images/boostPic_19.png" },
+          path: { 19: "images/boostPic_19.png" },
         });
         chrome.browserAction.setIcon({
-          path: { "38": "images/boostPic_38.png" },
+          path: { 38: "images/boostPic_38.png" },
         });
         matchIndicator = true;
         break;
@@ -136,10 +136,10 @@ chrome.tabs.onMoved.addListener((tab) => {
     }
     if (!matchIndicator) {
       chrome.browserAction.setIcon({
-        path: { "19": "images/boostPic_19_gray.png" },
+        path: { 19: "images/boostPic_19_gray.png" },
       });
       chrome.browserAction.setIcon({
-        path: { "38": "images/boostPic_38_gray.png" },
+        path: { 38: "images/boostPic_38_gray.png" },
       });
     }
     console.log(tabs[0].url);
@@ -155,10 +155,10 @@ chrome.tabs.onReplaced.addListener((tab) => {
       re = new RegExp(matchURL[tempUrl]);
       if (tabURL.match(re)) {
         chrome.browserAction.setIcon({
-          path: { "19": "images/boostPic_19.png" },
+          path: { 19: "images/boostPic_19.png" },
         });
         chrome.browserAction.setIcon({
-          path: { "38": "images/boostPic_38.png" },
+          path: { 38: "images/boostPic_38.png" },
         });
         matchIndicator = true;
         break;
@@ -166,10 +166,10 @@ chrome.tabs.onReplaced.addListener((tab) => {
     }
     if (!matchIndicator) {
       chrome.browserAction.setIcon({
-        path: { "19": "images/boostPic_19_gray.png" },
+        path: { 19: "images/boostPic_19_gray.png" },
       });
       chrome.browserAction.setIcon({
-        path: { "38": "images/boostPic_38_gray.png" },
+        path: { 38: "images/boostPic_38_gray.png" },
       });
     }
     console.log(tabs[0].url);
@@ -184,7 +184,7 @@ var smmsResponseUrl = "";
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.startsWith("blob")) {
-    console.log("RECEIVED");
+    console.log("CHROME RECEIVED");
     getBase64Url(request).then((res) => {
       console.log("Arrived here");
       // Acquired from https://stackoverflow.com/questions/18650168/convert-blob-to-base64/18650249#
@@ -203,6 +203,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         const realData = block[1].split(",")[1]; // In this case "R0lGODlhPQBEAPeoAJosM...."
         // Convert it to a blob to upload
         const blobData = b64toBlob(realData, contentType);
+
+        // console.log("blobData", blobData);
 
         const apiToken = "rd1v9rtYAyQW7yHgykZvj97S3LygVW0I";
         // const imgUrl = getSMMSImageUrl(blobData, apiToken, sendResponse);
@@ -266,6 +268,60 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         // }, 1600);
       };
     });
+  } else if (request.startsWith("data:image")) {
+    console.log("FIREFOX RECEIVED");
+
+    // Split the base64 string in data and contentType
+    const block = request.split(";");
+    // Get the content type of the image
+    const contentType = block[0].split(":")[1];
+    // get the real base64 content of the file
+    const realData = block[1].split(",")[1]; // In this case "R0lGODlhPQBEAPeoAJosM...."
+    // Convert it to a blob to upload
+    const blobData = b64toBlob(realData, contentType);
+
+    // console.log("blobData", blobData);
+
+    const apiToken = "rd1v9rtYAyQW7yHgykZvj97S3LygVW0I";
+    // const imgUrl = getSMMSImageUrl(blobData, apiToken, sendResponse);
+
+    // Learned from http://liubin.org/promises-book/#race-delay-timeout
+    var object = cancelableXHR(blobData, apiToken);
+    // main
+    timeoutPromise(object.promise, 8000)
+      .then((contents) => {
+        smmsResponseUrl = "";
+        if (contents != "") {
+          const responseJSON = JSON.parse(contents);
+          if (responseJSON.code === "success") {
+            smmsResponseUrl = responseJSON.data.url;
+            sendResponse(responseJSON.data.url);
+            console.log("Contents", responseJSON);
+            return;
+          } else if (responseJSON.code === "image_repeated") {
+            smmsResponseUrl = responseJSON.images;
+            sendResponse(responseJSON.images);
+            console.log("Contents", responseJSON);
+            return;
+          }
+        }
+      })
+      .catch((error) => {
+        if (error instanceof TimeoutError) {
+          if (smmsResponseUrl.startsWith("http")) {
+            return;
+          } else {
+            object.abort();
+            sendResponse("  Timeout Error. Please try again");
+            // promseRaceTimeout = false;
+            console.log(error);
+            return;
+          }
+        }
+        console.log("XHR Error :", error);
+        sendResponse("  Some error happened. Please try again");
+        return;
+      });
   }
   return true; // return true to indicate that you want to send a response asynchronously
 });

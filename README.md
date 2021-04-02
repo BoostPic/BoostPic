@@ -6,9 +6,9 @@
   </br></br>
   <a href="https://chrome.google.com/webstore/detail/image-search-go/pmpogggmiaehmjempogkkklfckignfgl">
     <img src="https://i.loli.net/2020/07/04/6h5OLE48wzolUFk.png" alt="Chrome Web Store"></a>
-  <a href="#image-search-go">
+  <a href="#BoostPic">
     <img src="https://i.loli.net/2020/07/04/4JM8Gkh92RCmFbu.png" alt="Firefox add-ons"></a>
-  <a href="#image-search-go">
+  <a href="https://chrome.google.com/webstore/detail/image-search-go/pmpogggmiaehmjempogkkklfckignfgl">
     <img src="https://i.loli.net/2020/07/04/9SWFjvkNafyu3Kq.png" alt="Opera add-ons">
 </a>
   </br></br>
@@ -22,7 +22,7 @@ Uncover the possibility to search Google Image quickly and incredibly, with copy
 
    ![BoostPicKeyChain_final.png](https://i.loli.net/2020/05/03/QByDRJIYZwkLvOE.png)
 
-2. Enter Google Images, click at the search by image icon, and then press ctrl+v or command+v. 
+2. Enter Google Images, click at the search by image icon, and then press ctrl+v or command+v.
 
    ![Step1](https://i.loli.net/2020/05/03/Q7Lgxm9HAqJFX1b.png)
 
