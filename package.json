@@ -6,7 +6,7 @@
   "scripts": {
     "build": "sh build.sh",
     "release": "npm run build && npm run release:chrome",
-    "release:chrome": "npx webstore upload --source=BoostPic_Chrome.zip --auto-publish",
+    "release:chrome": "webstore upload --source=BoostPic_Chrome.zip --auto-publish",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
