@@ -1,1 +1,5 @@
+BoostPic_Chrome.zip
+.DS_Store
+*.un~
 node_modules
+.env
