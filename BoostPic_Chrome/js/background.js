@@ -1,6 +1,6 @@
 "use strict";
 
-// Detect the current tab url and change tool bar icon to from gray to colorful if it is a google images page.
+// Detect the current tab url and change tool bar icon from gray to colorful if it is a google images page.
 
 var tabURL = "";
 var re = "";
