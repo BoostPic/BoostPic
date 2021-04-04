@@ -28,126 +28,31 @@ const matchURL = [
 ];
 
 chrome.tabs.onActivated.addListener((tab) => {
-  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-    tabURL = tabs[0].url;
-    matchIndicator = false;
-    for (var tempUrl in matchURL) {
-      re = new RegExp(matchURL[tempUrl]);
-      if (tabURL.match(re)) {
-        chrome.browserAction.setIcon({
-          path: { 19: "images/boostPic_19.png" },
-        });
-        chrome.browserAction.setIcon({
-          path: { 38: "images/boostPic_38.png" },
-        });
-        matchIndicator = true;
-        break;
-      }
-    }
-    if (!matchIndicator) {
-      chrome.browserAction.setIcon({
-        path: { 19: "images/boostPic_19_gray.png" },
-      });
-      chrome.browserAction.setIcon({
-        path: { 38: "images/boostPic_38_gray.png" },
-      });
-    }
-    console.log(tabs[0].url);
-  });
+  chromeTabsQuery(tab);
   console.log("onActivated");
 });
 
 chrome.tabs.onCreated.addListener((tab) => {
-  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-    tabURL = tabs[0].url;
-    matchIndicator = false;
-    for (var tempUrl in matchURL) {
-      re = new RegExp(matchURL[tempUrl]);
-      if (tabURL.match(re)) {
-        chrome.browserAction.setIcon({
-          path: { 19: "images/boostPic_19.png" },
-        });
-        chrome.browserAction.setIcon({
-          path: { 38: "images/boostPic_38.png" },
-        });
-        matchIndicator = true;
-        break;
-      }
-    }
-    if (!matchIndicator) {
-      chrome.browserAction.setIcon({
-        path: { 19: "images/boostPic_19_gray.png" },
-      });
-      chrome.browserAction.setIcon({
-        path: { 38: "images/boostPic_38_gray.png" },
-      });
-    }
-    console.log(tabs[0].url);
-  });
+  chromeTabsQuery(tab);
   console.log("onCreated");
 });
 
 chrome.tabs.onUpdated.addListener((tab) => {
-  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-    tabURL = tabs[0].url;
-    matchIndicator = false;
-    for (var tempUrl in matchURL) {
-      re = new RegExp(matchURL[tempUrl]);
-      if (tabURL.match(re)) {
-        chrome.browserAction.setIcon({
-          path: { 19: "images/boostPic_19.png" },
-        });
-        chrome.browserAction.setIcon({
-          path: { 38: "images/boostPic_38.png" },
-        });
-        matchIndicator = true;
-        break;
-      }
-    }
-    if (!matchIndicator) {
-      chrome.browserAction.setIcon({
-        path: { 19: "images/boostPic_19_gray.png" },
-      });
-      chrome.browserAction.setIcon({
-        path: { 38: "images/boostPic_38_gray.png" },
-      });
-    }
-    console.log(tabs[0].url);
-  });
+  chromeTabsQuery(tab);
   console.log("onUpdated");
 });
 
 chrome.tabs.onMoved.addListener((tab) => {
-  chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-    tabURL = tabs[0].url;
-    matchIndicator = false;
-    for (var tempUrl in matchURL) {
-      re = new RegExp(matchURL[tempUrl]);
-      if (tabURL.match(re)) {
-        chrome.browserAction.setIcon({
-          path: { 19: "images/boostPic_19.png" },
-        });
-        chrome.browserAction.setIcon({
-          path: { 38: "images/boostPic_38.png" },
-        });
-        matchIndicator = true;
-        break;
-      }
-    }
-    if (!matchIndicator) {
-      chrome.browserAction.setIcon({
-        path: { 19: "images/boostPic_19_gray.png" },
-      });
-      chrome.browserAction.setIcon({
-        path: { 38: "images/boostPic_38_gray.png" },
-      });
-    }
-    console.log(tabs[0].url);
-  });
+  chromeTabsQuery(tab);
   console.log("onMoved");
 });
 
 chrome.tabs.onReplaced.addListener((tab) => {
+  chromeTabsQuery(tab);
+  console.log("onReplaced");
+});
+
+function chromeTabsQuery(tab) {
   chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
     tabURL = tabs[0].url;
     matchIndicator = false;
@@ -174,8 +79,7 @@ chrome.tabs.onReplaced.addListener((tab) => {
     }
     console.log(tabs[0].url);
   });
-  console.log("onReplaced");
-});
+}
 
 // retrive blob url and uplaod image, then send smms url back
 
