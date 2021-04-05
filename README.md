@@ -4,11 +4,11 @@
 
 <p align="center">
   </br></br>
-  <a href="https://chrome.google.com/webstore/detail/image-search-go/pmpogggmiaehmjempogkkklfckignfgl">
+  <a href="https://chrome.google.com/webstore/detail/boostpic/pmpogggmiaehmjempogkkklfckignfgl">
     <img src="https://i.loli.net/2020/07/04/6h5OLE48wzolUFk.png" alt="Chrome Web Store"></a>
   <a href="https://addons.mozilla.org/addon/boostpic/">
     <img src="https://i.loli.net/2020/07/04/4JM8Gkh92RCmFbu.png" alt="Firefox add-ons"></a>
-  <a href="https://chrome.google.com/webstore/detail/image-search-go/pmpogggmiaehmjempogkkklfckignfgl">
+  <a href="https://chrome.google.com/webstore/detail/boostpic/pmpogggmiaehmjempogkkklfckignfgl">
     <img src="https://i.loli.net/2020/07/04/9SWFjvkNafyu3Kq.png" alt="Opera add-ons">
 </a>
   </br></br>
