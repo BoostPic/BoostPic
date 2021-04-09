@@ -1,15 +1,15 @@
 language: node_js
 node_js:
   - '12'
+if: branch = master OR tag IS present
 before_install:
   - npm i -g chrome-webstore-upload-cli web-ext-submit
 deploy:
   provider: script
   script: npm run release
-  email: "79917148leslie@gmail.com"
   on:
     branch: master
     tags: true
-branches:
-  only:
-    - master
+notifications:
+  email:
+    - 79917148leslie@gmail.com
