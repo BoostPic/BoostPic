@@ -1,6 +1,6 @@
 {
   "name": "boostpic",
-  "version": "2.2.6",
+  "version": "2.2.8",
   "description": "Uncover the possibility to search Google Images quickly and incredibly, with copy & paste.",
   "main": "BoostPic_Chrome/manifest.json",
   "scripts": {
@@ -20,6 +20,12 @@
   },
   "homepage": "https://github.com/Leslie-Wong-H/BoostPic#readme",
   "devDependencies": {
-    "chrome-webstore-upload-cli": "^1.2.1"
+    "chrome-webstore-upload-cli": "^1.2.1",
+    "husky": "^4.3.8"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "sh commit-msg"
+    }
   }
 }

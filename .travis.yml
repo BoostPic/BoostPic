@@ -6,6 +6,10 @@ before_install:
 deploy:
   provider: script
   script: npm run release
+  email: "79917148leslie@gmail.com"
   on:
     branch: master
     tags: true
+branches:
+  only:
+    - master
