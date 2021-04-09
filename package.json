@@ -5,8 +5,9 @@
   "main": "BoostPic_Chrome/manifest.json",
   "scripts": {
     "build": "sh build.sh",
-    "release": "npm run build && npm run release:chrome",
+    "release": "npm run build && npm run release:chrome && npm run release:firefox",
     "release:chrome": "webstore upload --source=BoostPic_Chrome.zip --auto-publish",
+    "release:firefox": "web-ext-submit --source-dir BoostPic_Chrome",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -21,7 +22,8 @@
   "homepage": "https://github.com/Leslie-Wong-H/BoostPic#readme",
   "devDependencies": {
     "chrome-webstore-upload-cli": "^1.2.1",
-    "husky": "^4.3.8"
+    "husky": "^4.3.8",
+    "web-ext-submit": "^6.0.0"
   },
   "husky": {
     "hooks": {
