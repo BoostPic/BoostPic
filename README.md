@@ -20,7 +20,7 @@ Uncover the possibility to search Google Image quickly and incredibly, with copy
 
 1. For win10: win+shift+s to clip an image, and for mac: shift+command+control+4
 
-   ![BoostPicKeyChain_final.png](https://i.loli.net/2020/05/03/QByDRJIYZwkLvOE.png)
+   ![BoostPicKeyChain_final.png](https://i.loli.net/2021/04/13/KMokcDyd1nWjBe9.png)
 
 2. Enter Google Images, click at the search by image icon, and then press ctrl+v or command+v.
 
