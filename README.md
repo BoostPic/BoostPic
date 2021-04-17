@@ -14,7 +14,7 @@
   </br></br>
 </p>
 
-Uncover the possibility to search Google Image quickly and incredibly, with copy & paste.
+Uncover the possibility to search Google Image quickly and incredibly, with clip & paste.
 
 # How it works
 

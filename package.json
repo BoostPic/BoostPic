@@ -1,7 +1,7 @@
 {
   "name": "boostpic",
   "version": "2.3.0",
-  "description": "Uncover the possibility to search Google Images quickly and incredibly, with copy & paste.",
+  "description": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.",
   "main": "BoostPic_Chrome/manifest.json",
   "scripts": {
     "build": "sh build.sh",
