@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "BoostPic",
-  "version": "2.3.0",
-  "description": "Uncover the possibility to search Google Images quickly and incredibly, with copy & paste.",
+  "version": "2.3.1",
+  "description": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.",
   "author": "Leslie Wong",
   "content_scripts": [
     {

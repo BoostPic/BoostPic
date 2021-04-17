@@ -50,9 +50,13 @@
   width: 106px;
   height: 26px;
   background-size: 106px 26px;
-  background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/boostpic-logo.svg),
-    url(moz-extension://a605c968-4963-43d1-9e49-684a57a043d0/images/boostpic-logo.svg);
+  background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/boostpic-logo.svg);
   background-repeat: no-repeat;
+}
+@supports (-moz-appearance: none) {
+  ._1nt1u .Y7Uju:before {
+    background-image: url(../images/boostpic-logo.svg);
+  }
 }
 ._1nt1u .Y7Uju:after {
   content: "";
@@ -65,20 +69,36 @@
   width: 79px;
   height: 11px;
   background-size: 79px 11px;
-  background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/for-chrome.png),
-    url(moz-extension://a605c968-4963-43d1-9e49-684a57a043d0/images/for-firefox.png);
+  background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/for-chrome.png);
   background-repeat: no-repeat;
+}
+@supports (-moz-appearance: none) {
+  ._1nt1u .Y7Uju._3nuMC:after {
+    width: 79px;
+    height: 11px;
+    background-size: 79px 11px;
+    background-image: url(../images/for-firefox.png);
+    background-repeat: no-repeat;
+  }
 }
 @media (-webkit-min-device-pixel-ratio: 1.5),
   (-webkit-min-device-pixel-ratio: 1.4375),
-  (min--moz-device-pixel-ratio: 1.5),
-  (min-device-pixel-ratio: 1.5),
   (min-resolution: 1.5dppx),
   (min-resolution: 138dpi) {
   ._1nt1u .Y7Uju._3nuMC:after {
-    background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/for-chrome@2x.png),
-      url(moz-extension://a605c968-4963-43d1-9e49-684a57a043d0/images/for-firefox@2x.png);
+    background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/for-chrome@2x.png);
     background-size: 79px 11px;
+  }
+}
+@supports (-moz-appearance: none) {
+  @media (min--moz-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5),
+    (min-resolution: 1.5dppx),
+    (min-resolution: 138dpi) {
+    ._1nt1u .Y7Uju._3nuMC:after {
+      background-image: url(../images/for-firefox@2x.png);
+      background-size: 79px 11px;
+    }
   }
 }
 ._2BkNA {

@@ -110,6 +110,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
         // console.log("blobData", blobData);
 
+        // Yes, I just bury it here on purpose. SM.MS is a free and public-available image bucket service.
         const apiToken = "rd1v9rtYAyQW7yHgykZvj97S3LygVW0I";
         // const imgUrl = getSMMSImageUrl(blobData, apiToken, sendResponse);
 
