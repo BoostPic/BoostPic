@@ -15,12 +15,13 @@
 }
 ._18flg a,
 ._18flg a:visited {
-  color: #b2b8cc;
+  color: #545d7e;
   transition: color 0.1s;
 }
 ._18flg a:hover,
 ._18flg a:visited:hover {
-  color: #545d7e;
+  color: #b2b8cc;
+  cursor: pointer;
 }
 ._18flg a {
   text-decoration: none;
