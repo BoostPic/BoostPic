@@ -8,7 +8,9 @@ var imgUrl = "";
 
 console.log("Execution commences");
 
-var searchbyimagebtn = document.querySelector("div.LM8x9c");
+var searchbyimagebtn = document.querySelector(
+  "div[aria-label='Search by image']"
+);
 // suitable for google image homepage and the page of search by image results
 if (searchbyimagebtn) {
   var imgUrlTextBoxId = "#Ycyxxc";
