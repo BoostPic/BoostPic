@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "outDir": "BoostPic_Chrome/js",
+    "target": "ES6"
+  },
+  "include": ["BoostPic_Chrome/ts/"]
+}
