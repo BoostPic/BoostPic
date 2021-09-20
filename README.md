@@ -18,7 +18,7 @@ Uncover the possibility to search Google Image quickly and incredibly, with clip
 
 # How it works
 
-1. For win10: win+shift+s to clip an image, and for mac: shift+command+control+4
+1. For win10: win+shift+s to clip an image, and for mac: shift+command+4
 
    ![BoostPicKeyChain_final.png](https://i.loli.net/2021/04/13/KMokcDyd1nWjBe9.png)
 
