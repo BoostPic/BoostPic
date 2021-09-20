@@ -121,7 +121,7 @@ class chromeSmmsMessageListener {
   }
 
   private async getBase64Url(blobUrl: string): Promise<Blob> {
-    var key = await fetch(blobUrl).then((r) => r.blob());
+    const key = await fetch(blobUrl).then((r) => r.blob());
     console.log("Successfully execute getBase64Url");
     return key;
   }
@@ -168,7 +168,7 @@ class chromeSmmsMessageListener {
     promise: Promise<string>,
     ms: number
   ): Promise<string> {
-    var timeout = this.delayPromise(ms).then(function () {
+    const timeout = this.delayPromise(ms).then(function () {
       return Promise.reject(
         new TimeoutError("Operation timed out after " + ms + " ms")
       );
@@ -239,7 +239,7 @@ class chromeSmmsMessageListener {
       const apiToken = "rd1v9rtYAyQW7yHgykZvj97S3LygVW0I";
       // const imgUrl = getSMMSImageUrl(blobData, apiToken, sendResponse);
 
-      var object = this.cancelableXHR(blobData, apiToken);
+      const object = this.cancelableXHR(blobData, apiToken);
       // main
       this.timeoutPromise(object.promise, 8000)
         .then((contents) => {
@@ -308,7 +308,7 @@ class chromeSmmsMessageListener {
 }
 
 function TimeoutError(arguments: string): void {
-  var superInstance = Error.apply(null, arguments);
+  const superInstance = Error.apply(null, arguments);
   copyOwnFrom(this, superInstance);
 }
 TimeoutError.prototype = Object.create(Error.prototype);
