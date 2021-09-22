@@ -9,6 +9,7 @@
     "release": "npm run build && npm run release:chrome && npm run release:firefox",
     "release:chrome": "webstore upload --source=BoostPic_Chrome.zip --auto-publish",
     "release:firefox": "web-ext-submit --source-dir BoostPic_Chrome",
+    "lint": "tsc --noEmit --skipLibCheck",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -30,7 +31,8 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "sh commit-msg"
+      "commit-msg": "sh commit-msg",
+      "pre-commit": "npm run lint"
     }
   }
 }
