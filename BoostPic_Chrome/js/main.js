@@ -136,7 +136,12 @@ class uploadImage {
         setTimeout(() => {
             clearInterval(this.refreshIntervalId);
             if (!imgUrlText.value.startsWith("http")) {
-                imgUrlText.value = "  Timeout Error. Please try again";
+                if (imgUrlText.value.startsWith("  Some")) {
+                    imgUrlText.value = "  Some error happened. Please try again";
+                }
+                else {
+                    imgUrlText.value = "  Timeout Error. Please try again";
+                }
             }
         }, 12000);
         // Prepare image blob url to send to background.js
