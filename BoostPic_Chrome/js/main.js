@@ -12,7 +12,8 @@
  * @email 79917148leslie@gmail.com
  */
 class uploadImage {
-    constructor() {
+    constructor(GoogleImagesDomElements) {
+        this.GoogleImagesDomElements = GoogleImagesDomElements;
         // this.imgUrl is the key to the upload state chain promise interval function
         this.imgUrl = "";
         this.refreshIntervalId = undefined;
@@ -22,7 +23,7 @@ class uploadImage {
     LoadingStateOne(value) {
         return new Promise((resolve, reject) => {
             console.log(`Loading state: ${value[0]}`);
-            var imgUrlText = document.querySelector(imgUrlTextBoxId);
+            var imgUrlText = document.querySelector(this.GoogleImagesDomElements.imgUrlTextBoxId);
             if (this.imgUrl == "") {
                 imgUrlText.value = value[0];
                 this.loadingTimeoutIdPool.push(window.setTimeout(resolve, 500, value));
@@ -40,7 +41,7 @@ class uploadImage {
     LoadingStateTwo(value) {
         return new Promise((resolve, reject) => {
             console.log(`Loading state: ${value[1]}`);
-            var imgUrlText = document.querySelector(imgUrlTextBoxId);
+            var imgUrlText = document.querySelector(this.GoogleImagesDomElements.imgUrlTextBoxId);
             if (this.imgUrl == "") {
                 imgUrlText.value = value[1];
                 this.loadingTimeoutIdPool.push(window.setTimeout(resolve, 500, value));
@@ -58,7 +59,7 @@ class uploadImage {
     LoadingStateThree(value) {
         return new Promise((resolve, reject) => {
             console.log(`Loading state: ${value[2]}`);
-            var imgUrlText = document.querySelector(imgUrlTextBoxId);
+            var imgUrlText = document.querySelector(this.GoogleImagesDomElements.imgUrlTextBoxId);
             if (this.imgUrl == "") {
                 imgUrlText.value = value[2];
                 this.loadingTimeoutIdPool.push(window.setTimeout(resolve, 500, value));
@@ -87,7 +88,7 @@ class uploadImage {
             clearInterval(this.refreshIntervalId);
             // To prevent that it happens to halt at "  Image uploading ..."
             setTimeout(() => {
-                var imgUrlText = document.querySelector(imgUrlTextBoxId);
+                var imgUrlText = document.querySelector(this.GoogleImagesDomElements.imgUrlTextBoxId);
                 imgUrlText.value = this.imgUrl;
             }, 1000);
             // double check to clear interval to prevent infinite error loop of LoadingStateOne
@@ -105,7 +106,7 @@ class uploadImage {
         // clear this.imgUrl first to prevent error
         this.imgUrl = "";
         console.log("UploadImage begins");
-        const imgUrlText = document.querySelector(imgUrlTextBoxId);
+        const imgUrlText = document.querySelector(this.GoogleImagesDomElements.imgUrlTextBoxId);
         const uploadState = [
             "  Image uploading .",
             "  Image uploading ..",
@@ -177,7 +178,7 @@ class uploadImage {
         }
     }
 }
-function keyMapper(callbackList, options) {
+function keyMapper(callbackList, options, GoogleImagesDomElements) {
     const delay = options.hasOwnProperty("keystrokeDelay") &&
         options.keystrokeDelay >= 300 &&
         options.keystrokeDelay;
@@ -208,9 +209,9 @@ function keyMapper(callbackList, options) {
             lastKeyTime: currentTime,
         };
         // make sure that Search By Image Box is displayed and focuses on Paste image URL.
-        var searchbyimageDiv = document.querySelector(searchbyimageDivId);
-        var pasteimageurlDiv = document.querySelector(pasteimageurlDivId);
-        var uploadanimageDiv = document.querySelector(uploadanimageDivId);
+        var searchbyimageDiv = document.querySelector(GoogleImagesDomElements.searchbyimageDivId);
+        var pasteimageurlDiv = document.querySelector(GoogleImagesDomElements.pasteimageurlDivId);
+        var uploadanimageDiv = document.querySelector(GoogleImagesDomElements.uploadanimageDivId);
         if ((searchbyimageDiv.style.display == "block" ||
             searchbyimageDiv.style.display == "") &&
             (pasteimageurlDiv.style.display == "block" ||
@@ -223,34 +224,34 @@ function keyMapper(callbackList, options) {
     // Listen to paste event and get image data
     window.addEventListener(eventTwoType, (event) => {
         // make sure that Search By Image Box is displayed and focuses on Paste image URL.
-        var searchbyimageDiv = document.querySelector(searchbyimageDivId);
-        var pasteimageurlDiv = document.querySelector(pasteimageurlDivId);
-        var uploadanimageDiv = document.querySelector(uploadanimageDivId);
+        var searchbyimageDiv = document.querySelector(GoogleImagesDomElements.searchbyimageDivId);
+        var pasteimageurlDiv = document.querySelector(GoogleImagesDomElements.pasteimageurlDivId);
+        var uploadanimageDiv = document.querySelector(GoogleImagesDomElements.uploadanimageDivId);
         if ((searchbyimageDiv.style.display == "block" ||
             searchbyimageDiv.style.display == "") &&
             (pasteimageurlDiv.style.display == "block" ||
                 pasteimageurlDiv.style.display == "") &&
             uploadanimageDiv.style.display == "none") {
             // callbackList.forEach(callback => callback(buffer));
-            const uploadImageInstance = new uploadImage();
+            const uploadImageInstance = new uploadImage(GoogleImagesDomElements);
             callbackList[0](event, uploadImageInstance.imageBlobSetter.bind(uploadImageInstance));
         }
     }, false);
     // clean text box content when Search by Image box loses focus
     document.addEventListener(eventThreeType, () => {
         setTimeout(() => {
-            var searchbyimageDiv = document.querySelector(searchbyimageDivId);
+            var searchbyimageDiv = document.querySelector(GoogleImagesDomElements.searchbyimageDivId);
             if (searchbyimageDiv == null ||
                 searchbyimageDiv.style.display == "none") {
-                var imgUrlText = document.querySelector(imgUrlTextBoxId);
+                var imgUrlText = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
                 imgUrlText.value = "";
                 console.log("Clean text box content");
             }
         }, 300);
     });
 }
-function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
-    if (pasteEvent.clipboardData == false) {
+function retrieveImageFromClipboardAsBlob(pasteEvent, callback, GoogleImagesDomElements) {
+    if (!pasteEvent.clipboardData) {
         if (typeof callback == "function") {
             callback(null);
         }
@@ -282,7 +283,7 @@ function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
             }
             // exception
             else {
-                var imgUrlText = document.querySelector(imgUrlTextBoxId);
+                var imgUrlText = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
                 imgUrlText.value = "  Not an image url or no image at clipboard ";
                 console.log("Not an image url or no image at clipboard");
                 callback(null);
@@ -297,7 +298,7 @@ function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
         }
     }
     else {
-        var imgUrlText = document.querySelector(imgUrlTextBoxId);
+        var imgUrlText = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
         imgUrlText.value = "  Not an image url or no image at clipboard ";
         console.log("Not an image url or no image at clipboard");
         callback(null);
@@ -309,27 +310,40 @@ function detectEnter(keySequence) {
         console.log('Detect "Enter"');
     }
 }
+/**
+ * *********************
+ */
 console.log("Execution commences");
-var searchbyimagebtn = document.querySelector("div[aria-label='Search by image']");
+/**
+ * *********************
+ */
+const GoogleImagesDomElements = {
+    searchbyimagebtn: document.querySelector("div[aria-label='Search by image']"),
+    imgUrlTextBoxId: "",
+    searchbyimageDivId: "",
+    pasteimageurlDivId: "",
+    uploadanimageDivId: "",
+};
 // suitable for google image homepage and the page of search by image results
-if (searchbyimagebtn) {
-    var imgUrlTextBoxId = "#Ycyxxc";
-    var searchbyimageDivId = "#QDMvGf";
-    var pasteimageurlDivId = "#dRSWfb";
-    var uploadanimageDivId = "#FQt3Wc";
+if (GoogleImagesDomElements.searchbyimagebtn) {
+    GoogleImagesDomElements.imgUrlTextBoxId = "#Ycyxxc";
+    GoogleImagesDomElements.searchbyimageDivId = "#QDMvGf";
+    GoogleImagesDomElements.pasteimageurlDivId = "#dRSWfb";
+    GoogleImagesDomElements.uploadanimageDivId = "#FQt3Wc";
 }
 else {
     // suitable for the image tab page of google search results via vanilla string search
-    searchbyimagebtn = document.querySelector("div.mp5Tqb");
-    var imgUrlTextBoxId = "input.TIjxY";
-    var searchbyimageDivId = "div.fWfAye";
-    var pasteimageurlDivId = "div.P9ipme[jsname='zMVKPd']";
-    var uploadanimageDivId = "div.P9ipme[jsname='EBSqGc']";
+    GoogleImagesDomElements.searchbyimagebtn =
+        document.querySelector("div.mp5Tqb");
+    GoogleImagesDomElements.imgUrlTextBoxId = "input.TIjxY";
+    GoogleImagesDomElements.searchbyimageDivId = "div.fWfAye";
+    GoogleImagesDomElements.pasteimageurlDivId = "div.P9ipme[jsname='zMVKPd']";
+    GoogleImagesDomElements.uploadanimageDivId = "div.P9ipme[jsname='EBSqGc']";
 }
 // console.log(searchbyimagebtn);
-searchbyimagebtn.addEventListener("click", () => {
+GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
     setTimeout(() => {
-        const imgUrlTextBox = document.querySelector(imgUrlTextBoxId);
+        const imgUrlTextBox = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
         if (imgUrlTextBox == null) {
             console.log("Search by image box not show up!");
             return;
@@ -342,7 +356,7 @@ searchbyimagebtn.addEventListener("click", () => {
                 eventThreeType: "click",
                 keystrokeDelay: 1000,
             };
-            keyMapper([retrieveImageFromClipboardAsBlob, detectEnter], options);
+            keyMapper([retrieveImageFromClipboardAsBlob, detectEnter], options, GoogleImagesDomElements);
         });
         const event = new MouseEvent("click", {
             view: window,
