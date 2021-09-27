@@ -313,7 +313,8 @@ function keyMapper(
         const uploadImageInstance = new uploadImage(GoogleImagesDomElements);
         callbackList[0](
           event,
-          uploadImageInstance.imageBlobSetter.bind(uploadImageInstance)
+          uploadImageInstance.imageBlobSetter.bind(uploadImageInstance),
+          GoogleImagesDomElements
         );
       }
     },

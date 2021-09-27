@@ -241,7 +241,7 @@ function keyMapper(callbackList, options, GoogleImagesDomElements) {
             uploadanimageDiv.style.display == "none") {
             // callbackList.forEach(callback => callback(buffer));
             const uploadImageInstance = new uploadImage(GoogleImagesDomElements);
-            callbackList[0](event, uploadImageInstance.imageBlobSetter.bind(uploadImageInstance));
+            callbackList[0](event, uploadImageInstance.imageBlobSetter.bind(uploadImageInstance), GoogleImagesDomElements);
         }
     }, false);
     // clean text box content when Search by Image box loses focus
