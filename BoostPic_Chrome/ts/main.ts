@@ -17,12 +17,14 @@ declare const InstallTrigger: any;
 class uploadImage {
   public imgUrl: string;
   public refreshIntervalId: NodeJS.Timer | undefined;
+  public responseTimeoutId: NodeJS.Timer | undefined;
   public imageBlob: Blob | null;
   public loadingTimeoutIdPool: Array<number>;
   constructor(public GoogleImagesDomElements: GoogleImagesDomElements) {
     // this.imgUrl is the key to the upload state chain promise interval function
     this.imgUrl = "";
     this.refreshIntervalId = undefined;
+    this.responseTimeoutId = undefined;
     this.imageBlob = null;
     this.loadingTimeoutIdPool = [];
   }
@@ -111,6 +113,7 @@ class uploadImage {
       // Hope it works.
       setTimeout(() => {
         clearInterval(this.refreshIntervalId);
+        clearTimeout(this.responseTimeoutId);
       }, 500);
       console.log("Stop uploading state message");
     });
@@ -151,7 +154,7 @@ class uploadImage {
         });
     }, 1600);
     // In case the following chrome.runtime.sendMessage does not recevie response
-    setTimeout(() => {
+    this.responseTimeoutId = setTimeout(() => {
       clearInterval(this.refreshIntervalId);
       if (!imgUrlText.value.startsWith("http")) {
         if (imgUrlText.value.startsWith("  Some")) {
@@ -403,6 +406,33 @@ function detectEnter(keySequence: string[]): void {
   }
 }
 
+const debounce = (callback: Function, interval: number): Function => {
+  let timeCounter = 0;
+  let timeoutId = null;
+  return function (...args) {
+    if (timeCounter === 0) {
+      timeoutId = setTimeout(() => {
+        timeoutId = null;
+        timeCounter = 0;
+      }, interval);
+      timeCounter++;
+      return callback(...args);
+    } else {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          timeoutId = null;
+          timeCounter = 0;
+        }, interval);
+        timeCounter++;
+      } else {
+        timeCounter++;
+        return callback(...args);
+      }
+    }
+  };
+};
+
 interface GoogleImagesDomElements {
   searchbyimagebtn: HTMLElement;
   imgUrlTextBoxId: string;
@@ -445,6 +475,11 @@ if (GoogleImagesDomElements.searchbyimagebtn) {
 
 // console.log(searchbyimagebtn);
 
+const debouncedRetrieveImageFromClipboardAsBlob = debounce(
+  retrieveImageFromClipboardAsBlob,
+  1500
+);
+
 GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
   setTimeout(() => {
     const imgUrlTextBox = document.querySelector(
@@ -466,7 +501,7 @@ GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
       };
 
       keyMapper(
-        [retrieveImageFromClipboardAsBlob, detectEnter],
+        [debouncedRetrieveImageFromClipboardAsBlob, detectEnter],
         options,
         GoogleImagesDomElements
       );

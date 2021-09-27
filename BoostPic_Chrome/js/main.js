@@ -17,6 +17,7 @@ class uploadImage {
         // this.imgUrl is the key to the upload state chain promise interval function
         this.imgUrl = "";
         this.refreshIntervalId = undefined;
+        this.responseTimeoutId = undefined;
         this.imageBlob = null;
         this.loadingTimeoutIdPool = [];
     }
@@ -95,6 +96,7 @@ class uploadImage {
             // Hope it works.
             setTimeout(() => {
                 clearInterval(this.refreshIntervalId);
+                clearTimeout(this.responseTimeoutId);
             }, 500);
             console.log("Stop uploading state message");
         });
@@ -133,7 +135,7 @@ class uploadImage {
             });
         }, 1600);
         // In case the following chrome.runtime.sendMessage does not recevie response
-        setTimeout(() => {
+        this.responseTimeoutId = setTimeout(() => {
             clearInterval(this.refreshIntervalId);
             if (!imgUrlText.value.startsWith("http")) {
                 if (imgUrlText.value.startsWith("  Some")) {
@@ -315,6 +317,34 @@ function detectEnter(keySequence) {
         console.log('Detect "Enter"');
     }
 }
+const debounce = (callback, interval) => {
+    let timeCounter = 0;
+    let timeoutId = null;
+    return function (...args) {
+        if (timeCounter === 0) {
+            timeoutId = setTimeout(() => {
+                timeoutId = null;
+                timeCounter = 0;
+            }, interval);
+            timeCounter++;
+            return callback(...args);
+        }
+        else {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    timeoutId = null;
+                    timeCounter = 0;
+                }, interval);
+                timeCounter++;
+            }
+            else {
+                timeCounter++;
+                return callback(...args);
+            }
+        }
+    };
+};
 /**
  * *********************
  */
@@ -346,6 +376,7 @@ else {
     GoogleImagesDomElements.uploadanimageDivId = "div.P9ipme[jsname='EBSqGc']";
 }
 // console.log(searchbyimagebtn);
+const debouncedRetrieveImageFromClipboardAsBlob = debounce(retrieveImageFromClipboardAsBlob, 1500);
 GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
     setTimeout(() => {
         const imgUrlTextBox = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
@@ -361,7 +392,7 @@ GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
                 eventThreeType: "click",
                 keystrokeDelay: 1000,
             };
-            keyMapper([retrieveImageFromClipboardAsBlob, detectEnter], options, GoogleImagesDomElements);
+            keyMapper([debouncedRetrieveImageFromClipboardAsBlob, detectEnter], options, GoogleImagesDomElements);
         });
         const event = new MouseEvent("click", {
             view: window,
