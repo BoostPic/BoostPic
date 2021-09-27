@@ -317,7 +317,7 @@ function detectEnter(keySequence) {
         console.log('Detect "Enter"');
     }
 }
-const debounce = (callback, interval) => {
+function debounce(callback, interval) {
     let timeCounter = 0;
     let timeoutId = null;
     return function (...args) {
@@ -344,7 +344,7 @@ const debounce = (callback, interval) => {
             }
         }
     };
-};
+}
 /**
  * *********************
  */

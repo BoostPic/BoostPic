@@ -14,6 +14,21 @@
 
 declare const InstallTrigger: any;
 
+interface GoogleImagesDomElements {
+  searchbyimagebtn: HTMLElement;
+  imgUrlTextBoxId: string;
+  searchbyimageDivId: string;
+  pasteimageurlDivId: string;
+  uploadanimageDivId: string;
+}
+
+interface Options {
+  eventOneType: string;
+  eventTwoType: string;
+  eventThreeType: string;
+  keystrokeDelay: number;
+}
+
 class uploadImage {
   public imgUrl: string;
   public refreshIntervalId: NodeJS.Timer | undefined;
@@ -209,13 +224,6 @@ class uploadImage {
   }
 }
 
-interface Options {
-  eventOneType: string;
-  eventTwoType: string;
-  eventThreeType: string;
-  keystrokeDelay: number;
-}
-
 function keyMapper(
   callbackList: Function[],
   options: Options,
@@ -406,7 +414,7 @@ function detectEnter(keySequence: string[]): void {
   }
 }
 
-const debounce = (callback: Function, interval: number): Function => {
+function debounce(callback: Function, interval: number): Function {
   let timeCounter = 0;
   let timeoutId = null;
   return function (...args) {
@@ -431,14 +439,6 @@ const debounce = (callback: Function, interval: number): Function => {
       }
     }
   };
-};
-
-interface GoogleImagesDomElements {
-  searchbyimagebtn: HTMLElement;
-  imgUrlTextBoxId: string;
-  searchbyimageDivId: string;
-  pasteimageurlDivId: string;
-  uploadanimageDivId: string;
 }
 
 /**
