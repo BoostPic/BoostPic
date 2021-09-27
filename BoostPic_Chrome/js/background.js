@@ -276,7 +276,9 @@ class chromeSmmsMessageListener {
     }
 }
 function TimeoutError(arguments) {
-    const superInstance = Error.apply(null, arguments);
+    // TypeError: CreateListFromArrayLike called on non-object
+    // https://stackoverflow.com/a/41354496/8808175
+    const superInstance = Error.apply(null, [arguments]);
     copyOwnFrom(this, superInstance);
 }
 TimeoutError.prototype = Object.create(Error.prototype);
