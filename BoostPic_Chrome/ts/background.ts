@@ -113,6 +113,31 @@ tabDetector.registerAllTabsListeners();
  * retrive blob url and uplaod image, then send smms url back
  *
  */
+interface cancelableXHRObj {
+  promise: Promise<string>;
+  abort: Function;
+}
+
+function TimeoutError(arguments: string): void {
+  // TypeError: CreateListFromArrayLike called on non-object
+  // https://stackoverflow.com/a/41354496/8808175
+  const superInstance = Error.apply(null, [arguments]);
+  copyOwnFrom(this, superInstance);
+}
+TimeoutError.prototype = Object.create(Error.prototype);
+TimeoutError.prototype.constructor = TimeoutError;
+
+function copyOwnFrom(target: any, source: any): any {
+  Object.getOwnPropertyNames(source).forEach(function (propName) {
+    Object.defineProperty(
+      target,
+      propName,
+      Object.getOwnPropertyDescriptor(source, propName)
+    );
+  });
+  return target;
+}
+
 class chromeSmmsMessageListener {
   public smmsResponseUrl: string;
   constructor() {
@@ -305,31 +330,6 @@ class chromeSmmsMessageListener {
       return true; // return true to indicate that you want to send a response asynchronously
     });
   }
-}
-
-function TimeoutError(arguments: string): void {
-  // TypeError: CreateListFromArrayLike called on non-object
-  // https://stackoverflow.com/a/41354496/8808175
-  const superInstance = Error.apply(null, [arguments]);
-  copyOwnFrom(this, superInstance);
-}
-TimeoutError.prototype = Object.create(Error.prototype);
-TimeoutError.prototype.constructor = TimeoutError;
-
-function copyOwnFrom(target: any, source: any): any {
-  Object.getOwnPropertyNames(source).forEach(function (propName) {
-    Object.defineProperty(
-      target,
-      propName,
-      Object.getOwnPropertyDescriptor(source, propName)
-    );
-  });
-  return target;
-}
-
-interface cancelableXHRObj {
-  promise: Promise<string>;
-  abort: Function;
 }
 
 const smmsMessageListener = new chromeSmmsMessageListener();
