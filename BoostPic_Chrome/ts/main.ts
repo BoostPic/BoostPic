@@ -506,7 +506,8 @@ if (GoogleImagesDomElements.searchbyimagebtn) {
   GoogleImagesDomElements.pasteimageurlDivId = "#dRSWfb";
   GoogleImagesDomElements.uploadanimageDivId = "#FQt3Wc";
 } else {
-  // suitable for the image tab page of google search results via vanilla string search
+  // suitable for the image tab page of google search results via vanilla string searc
+  // and custom google images search input box at popup.html
   GoogleImagesDomElements.searchbyimagebtn =
     document.querySelector("div.mp5Tqb");
   GoogleImagesDomElements.imgUrlTextBoxId = "input.TIjxY";
@@ -515,7 +516,7 @@ if (GoogleImagesDomElements.searchbyimagebtn) {
   GoogleImagesDomElements.uploadanimageDivId = "div.P9ipme[jsname='EBSqGc']";
 }
 
-// console.log(searchbyimagebtn);
+// console.log(GoogleImagesDomElements);
 
 const debouncedRetrieveImageFromClipboardAsBlob = debounce(
   retrieveImageFromClipboardAsBlob,
@@ -557,3 +558,34 @@ GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
     imgUrlTextBox.dispatchEvent(event);
   }, 300);
 });
+
+// Special execution for custom google images search
+// input box at popup.html
+if (
+  GoogleImagesDomElements.searchbyimagebtn.getAttribute("place") === "popup"
+) {
+  const event = new MouseEvent("click", {
+    view: window,
+    bubbles: true,
+    cancelable: true,
+  });
+
+  GoogleImagesDomElements.searchbyimagebtn.dispatchEvent(event);
+
+  const getImagesSearchResultBtn = document.querySelector("input.asfTh");
+
+  getImagesSearchResultBtn.addEventListener("click", () => {
+    const imgUrlTextBox = document.querySelector<HTMLInputElement>(
+      GoogleImagesDomElements.imgUrlTextBoxId
+    );
+
+    const textString = imgUrlTextBox.value;
+
+    if (textString.startsWith("http")) {
+      window.open(
+        `https://images.google.com/searchbyimage?image_url=${textString}&encoded_image=&image_content=&filename=&hl=en`,
+        "_blank"
+      );
+    }
+  });
+}
