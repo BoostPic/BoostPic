@@ -572,9 +572,7 @@ if (
 
   GoogleImagesDomElements.searchbyimagebtn.dispatchEvent(event);
 
-  const getImagesSearchResultBtn = document.querySelector("input.asfTh");
-
-  getImagesSearchResultBtn.addEventListener("click", () => {
+  const triggerImageSearch = () => {
     const imgUrlTextBox = document.querySelector<HTMLInputElement>(
       GoogleImagesDomElements.imgUrlTextBoxId
     );
@@ -586,6 +584,20 @@ if (
         `https://images.google.com/searchbyimage?image_url=${textString}&encoded_image=&image_content=&filename=&hl=en`,
         "_blank"
       );
+    }
+  };
+
+  const getImagesSearchResultBtn = document.querySelector("input.asfTh");
+
+  // Click event
+  getImagesSearchResultBtn.addEventListener("click", triggerImageSearch);
+
+  // Enter event
+  document.addEventListener("keydown", (event) => {
+    const key = event.key.toLowerCase();
+
+    if (key === "enter") {
+      triggerImageSearch();
     }
   });
 }
