@@ -444,12 +444,21 @@ if (GoogleImagesDomElements.searchbyimagebtn.getAttribute("place") === "popup") 
         cancelable: true,
     });
     GoogleImagesDomElements.searchbyimagebtn.dispatchEvent(event);
-    const getImagesSearchResultBtn = document.querySelector("input.asfTh");
-    getImagesSearchResultBtn.addEventListener("click", () => {
+    const triggerImageSearch = () => {
         const imgUrlTextBox = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
         const textString = imgUrlTextBox.value;
         if (textString.startsWith("http")) {
             window.open(`https://images.google.com/searchbyimage?image_url=${textString}&encoded_image=&image_content=&filename=&hl=en`, "_blank");
+        }
+    };
+    const getImagesSearchResultBtn = document.querySelector("input.asfTh");
+    // Click event
+    getImagesSearchResultBtn.addEventListener("click", triggerImageSearch);
+    // Enter event
+    document.addEventListener("keydown", (event) => {
+        const key = event.key.toLowerCase();
+        if (key === "enter") {
+            triggerImageSearch();
         }
     });
 }
