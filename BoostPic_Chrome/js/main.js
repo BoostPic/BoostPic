@@ -461,4 +461,9 @@ if (GoogleImagesDomElements.searchbyimagebtn.getAttribute("place") === "popup") 
             triggerImageSearch();
         }
     });
+    const helperBtn = document.querySelector(".help-center-question-guide-container");
+    helperBtn.addEventListener("click", () => {
+        const helperText = document.querySelector("._2BkNA");
+        helperText.classList.toggle("_FG352");
+    });
 }
