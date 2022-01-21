@@ -40,7 +40,7 @@
 }
 ._1nt1u .Y7Uju {
   display: inline-block;
-  top: -5px;
+  top: -13px;
   position: relative;
   white-space: nowrap;
   outline: none;
@@ -181,6 +181,7 @@
   height: 1px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.16);
   transition: height 2s ease, box-shadow 2s linear;
+  transform: translate3d(0, 0, 0);
 }
 ._FG352 {
   background-color: #fff;
