@@ -21,48 +21,12 @@ class uploadImage {
         this.imageBlob = null;
         this.loadingTimeoutIdPool = [];
     }
-    LoadingStateOne(value) {
+    LoadingState(value) {
         return new Promise((resolve, reject) => {
-            console.log(`Loading state: ${value[0]}`);
+            console.log(`Loading state: ${value}`);
             var imgUrlText = document.querySelector(this.GoogleImagesDomElements.imgUrlTextBoxId);
             if (this.imgUrl == "") {
-                imgUrlText.value = value[0];
-                this.loadingTimeoutIdPool.push(window.setTimeout(resolve, 500, value));
-            }
-            else {
-                imgUrlText.value = this.imgUrl;
-                this.loadingTimeoutIdPool.forEach((timer) => {
-                    clearTimeout(timer);
-                });
-                this.loadingTimeoutIdPool.splice(0);
-                reject("Image url received!");
-            }
-        });
-    }
-    LoadingStateTwo(value) {
-        return new Promise((resolve, reject) => {
-            console.log(`Loading state: ${value[1]}`);
-            var imgUrlText = document.querySelector(this.GoogleImagesDomElements.imgUrlTextBoxId);
-            if (this.imgUrl == "") {
-                imgUrlText.value = value[1];
-                this.loadingTimeoutIdPool.push(window.setTimeout(resolve, 500, value));
-            }
-            else {
-                imgUrlText.value = this.imgUrl;
-                this.loadingTimeoutIdPool.forEach((timer) => {
-                    clearTimeout(timer);
-                });
-                this.loadingTimeoutIdPool.splice(0);
-                reject("Image url received!");
-            }
-        });
-    }
-    LoadingStateThree(value) {
-        return new Promise((resolve, reject) => {
-            console.log(`Loading state: ${value[2]}`);
-            var imgUrlText = document.querySelector(this.GoogleImagesDomElements.imgUrlTextBoxId);
-            if (this.imgUrl == "") {
-                imgUrlText.value = value[2];
+                imgUrlText.value = value;
                 this.loadingTimeoutIdPool.push(window.setTimeout(resolve, 500, value));
             }
             else {
@@ -127,9 +91,9 @@ class uploadImage {
         imgUrlText.value = "  Image uploading ";
         this.refreshIntervalId = setInterval(() => {
             showLoadingState
-                .then(this.LoadingStateOne.bind(this), this.chainError.bind(this))
-                .then(this.LoadingStateTwo.bind(this), this.chainError.bind(this))
-                .then(this.LoadingStateThree.bind(this), this.chainError.bind(this))
+                .then(this.LoadingState.bind(this, uploadState[0]), this.chainError.bind(this))
+                .then(this.LoadingState.bind(this, uploadState[1]), this.chainError.bind(this))
+                .then(this.LoadingState.bind(this, uploadState[2]), this.chainError.bind(this))
                 .catch(() => {
                 clearInterval(this.refreshIntervalId);
             });
