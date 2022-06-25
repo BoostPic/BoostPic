@@ -1,7 +1,7 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "BoostPic - Search Google Images on the fly",
-  "version": "3.3.1",
+  "version": "4.0.0",
   "description": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.",
   "author": "Leslie Wong",
   "content_scripts": [
@@ -779,7 +779,7 @@
     "48": "images/boostPic_48.png",
     "128": "images/boostPic_128.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "19": "images/boostPic_19_gray.png",
       "38": "images/boostPic_38_gray.png"
@@ -788,8 +788,9 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["js/background.js"],
-    "persistent": false
+    "service_worker": "js/background.js",
+    "type": "module"
   },
-  "permissions": ["https://sm.ms/api/v2/upload", "tabs"]
+  "permissions": ["tabs"],
+  "host_permissions": ["https://sm.ms/api/v2/upload"]
 }
