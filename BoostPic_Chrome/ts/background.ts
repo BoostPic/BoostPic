@@ -40,22 +40,22 @@ class chromeTabDetector {
       for (let tempUrl in this.matchURL) {
         const re = new RegExp(this.matchURL[tempUrl]);
         if (this.tabURL.match(re)) {
-          chrome.browserAction.setIcon({
-            path: { 19: "images/boostPic_19.png" },
-          });
-          chrome.browserAction.setIcon({
-            path: { 38: "images/boostPic_38.png" },
+          chrome.action.setIcon({
+            path: {
+              19: "../images/boostPic_19.png",
+              38: "../images/boostPic_38.png",
+            },
           });
           this.matchIndicator = true;
           break;
         }
       }
       if (!this.matchIndicator) {
-        chrome.browserAction.setIcon({
-          path: { 19: "images/boostPic_19_gray.png" },
-        });
-        chrome.browserAction.setIcon({
-          path: { 38: "images/boostPic_38_gray.png" },
+        chrome.action.setIcon({
+          path: {
+            19: "../images/boostPic_19_gray.png",
+            38: "../images/boostPic_38_gray.png",
+          },
         });
       }
       console.log(tabs[0].url);
@@ -113,15 +113,14 @@ tabDetector.registerAllTabsListeners();
  * retrive blob url and uplaod image, then send smms url back
  *
  */
-interface cancelableXHRObj {
+interface cancelableFetchObj {
   promise: Promise<string>;
-  abort: Function;
 }
 
-function TimeoutError(arguments: string): void {
+function TimeoutError(args: string): void {
   // TypeError: CreateListFromArrayLike called on non-object
   // https://stackoverflow.com/a/41354496/8808175
-  const superInstance = Error.apply(null, [arguments]);
+  const superInstance = Error.apply(null, [args]);
   copyOwnFrom(this, superInstance);
 }
 TimeoutError.prototype = Object.create(Error.prototype);
@@ -201,9 +200,10 @@ class chromeSmmsMessageListener {
     return Promise.race([promise, timeout]);
   }
 
-  private cancelableXHR(blobData: Blob, apiToken: string): cancelableXHRObj {
-    const xhr = new XMLHttpRequest();
-
+  private cancelableFetch(
+    blobData: Blob,
+    apiToken: string
+  ): cancelableFetchObj {
     const promise = new Promise(function (
       resolve: (value: string) => void,
       reject
@@ -212,33 +212,29 @@ class chromeSmmsMessageListener {
       const formData = new FormData();
       formData.append("smfile", blobData, "image.png");
       formData.append("file_id", "0");
-      xhr.open("POST", uploadUrl, true);
-      xhr.setRequestHeader("Authorization", apiToken);
-      xhr.send(formData);
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-          if (xhr.responseText != "") {
-            resolve(xhr.responseText);
-            console.log(xhr.responseText);
+      fetch(uploadUrl, {
+        method: "POST",
+        headers: {
+          Authorization: apiToken,
+        },
+        body: formData,
+      })
+        .then((response) => {
+          if (!response.ok) {
+            reject(new Error("Network response was not OK"));
           }
-        }
-      };
-      xhr.onerror = () => {
-        reject(new Error(xhr.statusText));
-      };
-      xhr.onabort = () => {
-        reject(new Error("abort this request"));
-      };
+          return response.json();
+        })
+        .then((data) => {
+          resolve(JSON.stringify(data));
+          console.log(JSON.stringify(data));
+        })
+        .catch((error) => {
+          reject(new Error(`Network response was not OK. ${error}`));
+        });
     });
-    const abort = function () {
-      // execute abort if request not end
-      if (xhr.readyState !== XMLHttpRequest.UNSENT) {
-        xhr.abort();
-      }
-    };
     return {
       promise: promise,
-      abort: abort,
     };
   }
 
@@ -264,7 +260,7 @@ class chromeSmmsMessageListener {
       const apiToken = "rd1v9rtYAyQW7yHgykZvj97S3LygVW0I";
       // const imgUrl = getSMMSImageUrl(blobData, apiToken, sendResponse);
 
-      const object = this.cancelableXHR(blobData, apiToken);
+      const object = this.cancelableFetch(blobData, apiToken);
       // main
       this.timeoutPromise(object.promise, 8000)
         .then((contents) => {
@@ -289,14 +285,13 @@ class chromeSmmsMessageListener {
             if (this.smmsResponseUrl.startsWith("http")) {
               return;
             } else {
-              object.abort();
               sendResponse("  Timeout Error. Please try again");
               // promseRaceTimeout = false;
               console.log(error);
               return;
             }
           }
-          console.log("XHR Error :", error);
+          console.log("Fetch Error :", error);
           sendResponse("  Some error happened. Please try again");
           return;
         });
