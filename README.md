@@ -30,6 +30,10 @@ Uncover the possibility to search Google Image quickly and incredibly, with clip
 
    ![step3](https://i.loli.net/2020/05/03/rbgj9sK2f4dTF7o.png)
 
+# Architecture
+
+![Architecture](https://s2.loli.net/2022/09/28/3FgBOJtfUK8ICTA.png)
+
 # LICENSE
 
 Copyleft © [Leslie Wong](https://github.com/Leslie-Wong-H)
