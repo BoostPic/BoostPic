@@ -238,9 +238,9 @@
 }
 ._3JLH2 {
   cursor: default;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; */
   position: relative;
   font-family: Inter;
   font-style: normal;
