@@ -374,7 +374,7 @@ function detectEnter(keySequence: string[]): void {
 }
 
 /**
- * Convert a base64 string in a Blob according to the data and contentType.
+ * Convert a base64 string into a Blob according to the data and contentType.
  *
  * @param b64Data Pure base64 string without contentType
  * @param contentType the content type of the file i.e (image/jpeg - image/png - text/plain)
@@ -516,6 +516,7 @@ GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
 // Special execution for custom google images search
 // input box at popup.html
 if (
+  GoogleImagesDomElements.searchbyimagebtn &&
   GoogleImagesDomElements.searchbyimagebtn.getAttribute("place") === "popup"
 ) {
   const event = new MouseEvent("click", {
@@ -561,6 +562,7 @@ if (
     }
   });
 
+  /* Toggle popup help button */
   const helperBtn = document.querySelector(
     ".help-center-question-guide-container"
   );
@@ -570,4 +572,114 @@ if (
 
     helperText.classList.toggle("_FG352");
   });
+
+  /* Detecting drop event starts */
+  const popupArea = document.querySelector<HTMLDivElement>("div.popup");
+  const droppingDiv = document.querySelector<HTMLDivElement>("div._98szx");
+  const normalDiv = document.querySelector<HTMLDivElement>("div._18flg");
+
+  popupArea.addEventListener(
+    "dragenter",
+    (e) => {
+      console.log("dragenter");
+      e.stopPropagation();
+      e.preventDefault();
+      droppingDiv.style.display = "flex";
+      droppingDiv.style["pointer-events"] = "none";
+      normalDiv.style.visibility = "hidden";
+      normalDiv.style["pointer-events"] = "none";
+      // To prevent dragleave from firing when dragging into a child element
+      document.querySelectorAll(".popup div").forEach((el) => {
+        if (!(el as HTMLElement).style.cssText) {
+          (el as HTMLElement).style.cssText = "pointer-events: none;";
+        }
+      });
+    },
+    true
+  );
+
+  popupArea.addEventListener(
+    "dragover",
+    (e) => {
+      console.log("dragover");
+      e.stopPropagation();
+      e.preventDefault();
+      // Hide popup
+      droppingDiv.style.display = "flex";
+      droppingDiv.style["pointer-events"] = "none";
+      normalDiv.style.visibility = "hidden";
+      normalDiv.style["pointer-events"] = "none";
+      // To prevent dragleave from firing when dragging into a child element
+      document.querySelectorAll(".popup div").forEach((el) => {
+        if (!(el as HTMLElement).style.cssText) {
+          (el as HTMLElement).style.cssText = "pointer-events: none;";
+        }
+      });
+      e.dataTransfer.dropEffect = "copy";
+    },
+    true
+  );
+
+  popupArea.addEventListener("drop", (e) => {
+    console.log("drop");
+    e.stopPropagation();
+    e.preventDefault();
+
+    // Display the popup again
+    const displayPopup = () => {
+      droppingDiv.style.display = "none";
+      droppingDiv.style["pointer-events"] = "";
+      normalDiv.style.visibility = "visible";
+      normalDiv.style["pointer-events"] = "";
+      // Reset child elements to enable pointer-events
+      document.querySelectorAll(".popup div").forEach((el) => {
+        if ((el as HTMLElement).style.cssText === "pointer-events: none;") {
+          (el as HTMLElement).style.cssText = "";
+        }
+      });
+    };
+
+    const file = e.dataTransfer.files[0];
+    if (!file || !file.type.match("image.*")) {
+      const imgUrlText = document.querySelector<HTMLInputElement>(
+        GoogleImagesDomElements.imgUrlTextBoxId
+      );
+      imgUrlText.value = "  Error: File is not an image";
+      console.log("  Error: File is not an image");
+      displayPopup();
+      return;
+    }
+    const uploadImageInstance = new uploadImage(GoogleImagesDomElements);
+    uploadImageInstance.imageBlobSetter.bind(uploadImageInstance)(file);
+    displayPopup();
+  });
+
+  popupArea.addEventListener(
+    "dragleave",
+    (e) => {
+      console.log("dragleave");
+      e.stopPropagation();
+      e.preventDefault();
+      // Make sure that it is the right dragleave event
+      if (
+        ((e as DragEvent).target as HTMLElement)?.className !== "popup" &&
+        !!((e as DragEvent).relatedTarget as HTMLElement)?.className
+      ) {
+        return;
+      }
+      // Display the popup again
+      droppingDiv.style.display = "none";
+      droppingDiv.style["pointer-events"] = "";
+      normalDiv.style.visibility = "visible";
+      normalDiv.style["pointer-events"] = "";
+      // Reset child elements to enable pointer-events
+      document.querySelectorAll(".popup div").forEach((el) => {
+        if ((el as HTMLElement).style.cssText === "pointer-events: none;") {
+          (el as HTMLElement).style.cssText = "";
+        }
+      });
+    },
+    true
+  );
+  /* Detecting drop event ends */
 }
