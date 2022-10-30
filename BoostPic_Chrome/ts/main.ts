@@ -156,7 +156,7 @@ class uploadImage {
 
     // Crossbrowser support for URL
     const URLObj = window.URL || webkitURL;
-    // Creates a DOMString containing a URL representing the object given in the parameter
+    // Create a DOMString containing an URL representing the object given in the parameter
     // namely the original Blob
     const blobUrl = URLObj.createObjectURL(this.imageBlob);
     console.log(blobUrl);

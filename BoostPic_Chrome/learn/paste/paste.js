@@ -34,9 +34,9 @@ function retrieveImageFromClipboardAsBlob(pasteEvent, callback) {
 
 window.addEventListener(
   "paste",
-  function(e) {
+  function (e) {
     // Handle the event
-    retrieveImageFromClipboardAsBlob(e, function(imageBlob) {
+    retrieveImageFromClipboardAsBlob(e, function (imageBlob) {
       // If there's an image, display it in the canvas
       if (imageBlob) {
         var canvas = document.getElementById("mycanvas");
@@ -46,7 +46,7 @@ window.addEventListener(
         var img = new Image();
 
         // Once the image loads, render the img on the canvas
-        img.onload = function() {
+        img.onload = function () {
           // Update dimensions of the canvas with the dimensions of the image
           canvas.width = this.width;
           canvas.height = this.height;
@@ -58,7 +58,7 @@ window.addEventListener(
         // Crossbrowser support for URL
         var URLObj = window.URL || window.webkitURL;
 
-        // Creates a DOMString containing a URL representing the object given in the parameter
+        // Create a DOMString containing an URL representing the object given in the parameter
         // namely the original Blob
         img.src = URLObj.createObjectURL(imageBlob);
       }
