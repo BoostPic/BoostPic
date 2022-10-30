@@ -3,6 +3,25 @@
   overflow: hidden;
   width: 348px;
 }
+._98szx {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: #f0f6ff;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.ZeVBtc {
+  color: rgb(95, 99, 104);
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  max-width: 300px;
+  text-align: center;
+}
 ._18flg {
   font-family: Inter, sans-serif;
   width: 348px;
@@ -219,9 +238,9 @@
 }
 ._3JLH2 {
   cursor: default;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; */
   position: relative;
   font-family: Inter;
   font-style: normal;
