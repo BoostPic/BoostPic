@@ -24,7 +24,7 @@ Uncover the possibility to search Google Images quickly and incredibly, with cli
 
 2. Enter Google Images, click at the search by image icon (or the input box at the extension popup), and then press ctrl+v or command+v.
 
-   ![Step1](https://s2.loli.net/2022/10/30/koh12IfUJMqOVus.png)
+   ![Step1](https://s2.loli.net/2022/10/31/tmUM26hDsRX7Lf9.png)
 
 3. Wait a moment until it returns an URL. If timeout error happens, please delete the error message and ctrl+v or command+v again.
 
