@@ -11,6 +11,15 @@
  * @author Leslie-Wong-H
  * @email 79917148leslie@gmail.com
  */
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 class uploadImage {
     constructor(GoogleImagesDomElements) {
         this.GoogleImagesDomElements = GoogleImagesDomElements;
@@ -159,6 +168,8 @@ function keyMapper(callbackList, options, GoogleImagesDomElements) {
     const eventTwoType = (options.hasOwnProperty("eventTwoType") && options.eventTwoType) || "paste";
     const eventThreeType = (options.hasOwnProperty("eventThreeType") && options.eventThreeType) ||
         "click";
+    const eventFourType = (options.hasOwnProperty("eventFourType") && options.eventFourType) ||
+        "change";
     let state = {
         buffer: [],
         lastKeyTime: Date.now(),
@@ -210,6 +221,19 @@ function keyMapper(callbackList, options, GoogleImagesDomElements) {
             }
         }, 300);
     });
+    // Listen to input file upload event and get image data
+    const inputFileIcon = document.querySelector('.qrBSb input[type="file"]');
+    inputFileIcon.addEventListener(eventFourType, (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        // make sure that Search By Image Box is displayed and focuses on Paste image URL.
+        var searchbyimageDiv = document.querySelector(GoogleImagesDomElements.searchbyimageDivId);
+        if (searchbyimageDiv.style.display == "block" ||
+            searchbyimageDiv.style.display == "") {
+            const uploadImageInstance = new uploadImage(GoogleImagesDomElements);
+            callbackList[2](event, uploadImageInstance.imageBlobSetter.bind(uploadImageInstance), GoogleImagesDomElements);
+        }
+    }, false);
 }
 function retrieveImageFromClipboardAsBlob(pasteEvent, callback, GoogleImagesDomElements) {
     if (!pasteEvent.clipboardData) {
@@ -274,12 +298,39 @@ function retrieveImageFromClipboardAsBlob(pasteEvent, callback, GoogleImagesDomE
         callback(null);
     }
 }
+const debouncedRetrieveImageFromClipboardAsBlob = debounce(retrieveImageFromClipboardAsBlob, 1500);
 function detectEnter(keySequence) {
     const userInput = keySequence.join("").toLowerCase();
     if (userInput == "enter") {
         console.log('Detect "Enter"');
     }
 }
+function retrieveImageFromInputFileIconAsBlob(changeEvent, callback, GoogleImagesDomElements) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const file = changeEvent.target.files[0];
+        if (!file || !file.type.match("image.*")) {
+            if (typeof callback == "function") {
+                callback(null);
+            }
+            else {
+                var imgUrlText = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
+                imgUrlText.value = "  Failed to upload image ";
+                console.log("Failed to upload image");
+            }
+        }
+        const blobURL = URL.createObjectURL(file);
+        const blob = yield fetch(blobURL).then((r) => r.blob());
+        if (typeof callback == "function") {
+            callback(blob);
+        }
+        else {
+            var imgUrlText = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
+            imgUrlText.value = "  Failed to upload image ";
+            console.log("Failed to upload image");
+        }
+    });
+}
+const debouncedRetrieveImageFromInputFileIconAsBlob = debounce(retrieveImageFromInputFileIconAsBlob, 1500);
 /**
  * Convert a base64 string into a Blob according to the data and contentType.
  *
@@ -363,7 +414,6 @@ else {
     GoogleImagesDomElements.searchbyimageDivId = "div.fWfAye";
 }
 // console.log(GoogleImagesDomElements);
-const debouncedRetrieveImageFromClipboardAsBlob = debounce(retrieveImageFromClipboardAsBlob, 1500);
 GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
     setTimeout(() => {
         const imgUrlTextBox = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
@@ -378,9 +428,14 @@ GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
                 eventOneType: "keydown",
                 eventTwoType: "paste",
                 eventThreeType: "click",
+                eventFourType: "change",
                 keystrokeDelay: 1000,
             };
-            keyMapper([debouncedRetrieveImageFromClipboardAsBlob, detectEnter], options, GoogleImagesDomElements);
+            keyMapper([
+                debouncedRetrieveImageFromClipboardAsBlob,
+                detectEnter,
+                debouncedRetrieveImageFromInputFileIconAsBlob,
+            ], options, GoogleImagesDomElements);
         });
         const event = new MouseEvent("click", {
             view: window,

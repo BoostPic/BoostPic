@@ -286,6 +286,38 @@
 .P9ipme .SWjzY {
   width: 314px;
   margin: auto;
+  display: flex;
+  position: relative;
+}
+.P9ipme .SWjzY .qrBSb {
+  width: 3rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transform: scale(0.6);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.P9ipme .SWjzY .qrBSb::after {
+  content: "📁";
+}
+.P9ipme .SWjzY .qrBSb:hover::after {
+  content: "📂";
+}
+.P9ipme .SWjzY .qrBSb input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.5rem;
+  opacity: 0;
+  overflow: hidden;
+  cursor: pointer;
+  width: 2rem;
 }
 .P9ipme .TIjxY {
   width: 100%;
