@@ -24,10 +24,10 @@
   "homepage": "https://github.com/Leslie-Wong-H/BoostPic#readme",
   "devDependencies": {
     "@types/chrome": "0.0.157",
-    "chrome-webstore-upload-cli": "^2.1.0",
+    "chrome-webstore-upload-cli": "2.1.0",
     "husky": "^4.3.8",
     "typescript": "^4.4.2",
-    "web-ext-submit": "^6.1.0"
+    "web-ext-submit": "6.1.0"
   },
   "husky": {
     "hooks": {
