@@ -1,3 +1,25 @@
+/*- scrollbar -*/
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:vertical:hover {
+  background-color: #666;
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  background-color: #333;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+/*- scrollbar -*/
 .gr-popup-wrapper {
   margin: 0;
   overflow: hidden;
@@ -351,7 +373,7 @@
   font-weight: bold;
   height: 27px;
   line-height: 27px;
-  margin: 8px 0;
+  margin: 8px 0 18px;
   min-width: 54px;
   padding: 0 8px;
   text-align: center;
