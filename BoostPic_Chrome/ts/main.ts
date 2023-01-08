@@ -24,6 +24,7 @@ interface Options {
   eventOneType: string;
   eventTwoType: string;
   eventThreeType: string;
+  eventFourType: string;
   keystrokeDelay: number;
 }
 
@@ -209,6 +210,9 @@ function keyMapper(
   const eventThreeType =
     (options.hasOwnProperty("eventThreeType") && options.eventThreeType) ||
     "click";
+  const eventFourType =
+    (options.hasOwnProperty("eventFourType") && options.eventFourType) ||
+    "change";
 
   let state = {
     buffer: [],
@@ -288,6 +292,32 @@ function keyMapper(
       }
     }, 300);
   });
+
+  // Listen to input file upload event and get image data
+  const inputFileIcon = document.querySelector('.qrBSb input[type="file"]');
+  inputFileIcon.addEventListener(
+    eventFourType,
+    (event) => {
+      event.stopPropagation();
+      event.preventDefault();
+      // make sure that Search By Image Box is displayed and focuses on Paste image URL.
+      var searchbyimageDiv = document.querySelector<HTMLElement>(
+        GoogleImagesDomElements.searchbyimageDivId
+      );
+      if (
+        searchbyimageDiv.style.display == "block" ||
+        searchbyimageDiv.style.display == ""
+      ) {
+        const uploadImageInstance = new uploadImage(GoogleImagesDomElements);
+        callbackList[2](
+          event,
+          uploadImageInstance.imageBlobSetter.bind(uploadImageInstance),
+          GoogleImagesDomElements
+        );
+      }
+    },
+    false
+  );
 }
 
 function retrieveImageFromClipboardAsBlob(
@@ -366,12 +396,52 @@ function retrieveImageFromClipboardAsBlob(
   }
 }
 
+const debouncedRetrieveImageFromClipboardAsBlob = debounce(
+  retrieveImageFromClipboardAsBlob,
+  1500
+);
+
 function detectEnter(keySequence: string[]): void {
   const userInput = keySequence.join("").toLowerCase();
   if (userInput == "enter") {
     console.log('Detect "Enter"');
   }
 }
+
+async function retrieveImageFromInputFileIconAsBlob(
+  changeEvent: Event,
+  callback: Function,
+  GoogleImagesDomElements: GoogleImagesDomElements
+): Promise<void> {
+  const file = (changeEvent.target as HTMLInputElement).files[0];
+  if (!file || !file.type.match("image.*")) {
+    if (typeof callback == "function") {
+      callback(null);
+    } else {
+      var imgUrlText = document.querySelector<HTMLInputElement>(
+        GoogleImagesDomElements.imgUrlTextBoxId
+      );
+      imgUrlText.value = "  Failed to upload image ";
+      console.log("Failed to upload image");
+    }
+  }
+  const blobURL = URL.createObjectURL(file);
+  const blob = await fetch(blobURL).then((r) => r.blob());
+  if (typeof callback == "function") {
+    callback(blob);
+  } else {
+    var imgUrlText = document.querySelector<HTMLInputElement>(
+      GoogleImagesDomElements.imgUrlTextBoxId
+    );
+    imgUrlText.value = "  Failed to upload image ";
+    console.log("Failed to upload image");
+  }
+}
+
+const debouncedRetrieveImageFromInputFileIconAsBlob = debounce(
+  retrieveImageFromInputFileIconAsBlob,
+  1500
+);
 
 /**
  * Convert a base64 string into a Blob according to the data and contentType.
@@ -470,11 +540,6 @@ else {
 
 // console.log(GoogleImagesDomElements);
 
-const debouncedRetrieveImageFromClipboardAsBlob = debounce(
-  retrieveImageFromClipboardAsBlob,
-  1500
-);
-
 GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
   setTimeout(() => {
     const imgUrlTextBox = document.querySelector<HTMLInputElement>(
@@ -494,11 +559,16 @@ GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
         eventOneType: "keydown",
         eventTwoType: "paste",
         eventThreeType: "click",
+        eventFourType: "change",
         keystrokeDelay: 1000,
       };
 
       keyMapper(
-        [debouncedRetrieveImageFromClipboardAsBlob, detectEnter],
+        [
+          debouncedRetrieveImageFromClipboardAsBlob,
+          detectEnter,
+          debouncedRetrieveImageFromInputFileIconAsBlob,
+        ],
         options,
         GoogleImagesDomElements
       );

@@ -219,7 +219,7 @@ class chromeSmmsMessageListener {
             // const imgUrl = getSMMSImageUrl(blobData, apiToken, sendResponse);
             const object = this.cancelableFetch(blobData, apiToken);
             // main
-            this.timeoutPromise(object.promise, 8000)
+            this.timeoutPromise(object.promise, 60000)
                 .then((contents) => {
                 this.smmsResponseUrl = "";
                 if (contents != "") {

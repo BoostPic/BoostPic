@@ -1,3 +1,25 @@
+/*- scrollbar -*/
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:vertical:hover {
+  background-color: #666;
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  background-color: #333;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+/*- scrollbar -*/
 .gr-popup-wrapper {
   margin: 0;
   overflow: hidden;
@@ -286,6 +308,38 @@
 .P9ipme .SWjzY {
   width: 314px;
   margin: auto;
+  display: flex;
+  position: relative;
+}
+.P9ipme .SWjzY .qrBSb {
+  width: 3rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transform: scale(0.6);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.P9ipme .SWjzY .qrBSb::after {
+  content: "📁";
+}
+.P9ipme .SWjzY .qrBSb:hover::after {
+  content: "📂";
+}
+.P9ipme .SWjzY .qrBSb input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.5rem;
+  opacity: 0;
+  overflow: hidden;
+  cursor: pointer;
+  width: 2rem;
 }
 .P9ipme .TIjxY {
   width: 100%;
@@ -319,7 +373,7 @@
   font-weight: bold;
   height: 27px;
   line-height: 27px;
-  margin: 8px 0;
+  margin: 8px 0 18px;
   min-width: 54px;
   padding: 0 8px;
   text-align: center;
