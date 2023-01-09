@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "BoostPic - Search Google Images on the fly",
   "version": "4.2.2",
   "description": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.",
@@ -970,7 +970,7 @@
     "48": "images/boostPic_48.png",
     "128": "images/boostPic_128.png"
   },
-  "action": {
+  "browser_action": {
     "default_icon": {
       "19": "images/boostPic_19_gray.png",
       "38": "images/boostPic_38_gray.png"
@@ -979,9 +979,8 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "service_worker": "js/background.js",
-    "type": "module"
+    "scripts": ["js/background.js"],
+    "persistent": true
   },
-  "permissions": ["tabs"],
-  "host_permissions": ["https://sm.ms/api/v2/upload"]
+  "permissions": ["https://sm.ms/api/v2/upload", "tabs"]
 }

@@ -1,15 +1,16 @@
 {
   "name": "boostpic",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.",
   "main": "BoostPic_Chrome/manifest.json",
   "scripts": {
-    "dev": "tsc --watch --preserveWatchOutput",
+    "dev:chrome": "tsc --project ./BoostPic_Chrome/tsconfig.json --watch --preserveWatchOutput",
+    "dev:firefox": "tsc --project ./BoostPic_FireFox/tsconfig.json --watch --preserveWatchOutput",
     "build": "sh build.sh",
     "release": "npm run build && npm run release:chrome && npm run release:firefox",
     "release:chrome": "chrome-webstore-upload upload --source=BoostPic_Chrome.zip --auto-publish",
-    "release:firefox": "web-ext-submit --source-dir BoostPic_Chrome",
-    "lint": "tsc --noEmit --skipLibCheck",
+    "release:firefox": "web-ext-submit --source-dir BoostPic_FireFox",
+    "lint": "tsc --project ./BoostPic_Chrome/tsconfig.json --noEmit --skipLibCheck && tsc --project ./BoostPic_FireFox/tsconfig.json --noEmit --skipLibCheck",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {

@@ -268,7 +268,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 17px;
   padding-top: 16px;
   padding-bottom: 16px;
   display: -ms-flexbox;
@@ -318,7 +318,7 @@
   cursor: pointer;
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 9px;
   transform: scale(0.6);
   background-color: white;
   display: flex;
