@@ -40,7 +40,7 @@ class chromeTabDetector {
 
   private chromeTabsQuery() {
     chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-      this.tabURL = tabs[0].url;
+      this.tabURL = tabs[0].url as string;
       this.matchIndicator = false;
       for (let tempUrl in this.matchURL) {
         const re = new RegExp(this.matchURL[tempUrl]);
@@ -136,7 +136,7 @@ function copyOwnFrom(target: any, source: any): any {
     Object.defineProperty(
       target,
       propName,
-      Object.getOwnPropertyDescriptor(source, propName)
+      Object.getOwnPropertyDescriptor(source, propName) as PropertyDescriptor
     );
   });
   return target;
@@ -169,7 +169,7 @@ class chromeSmmsMessageListener {
     sliceSize: number = 512
   ): Blob {
     const byteCharacters = atob(b64Data);
-    let byteArrays = [];
+    let byteArrays: Uint8Array[] = [];
 
     for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
       const slice = byteCharacters.slice(offset, offset + sliceSize);
@@ -318,7 +318,7 @@ class chromeSmmsMessageListener {
           const reader = new FileReader();
           reader.readAsDataURL(res);
           reader.onloadend = () => {
-            const base64data = reader.result;
+            const base64data = reader.result as string;
             this.smmsUrlPromiseRacer(base64data, sendResponse);
           };
         });
