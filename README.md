@@ -34,6 +34,12 @@ Uncover the possibility to search Google Images quickly and incredibly, with cli
 
 ![Architecture](https://s2.loli.net/2022/09/28/3FgBOJtfUK8ICTA.png)
 
+# Development Note
+
+Difference between BoostPic_Chrome and BoostPic_FireFox:
+
+> BoostPic_Chrome is Manifest V3 and BoostPic_FireFox is Manifest V2. The corresponding background.ts files are a little different.
+
 # LICENSE
 
 Copyleft © [Leslie Wong](https://github.com/Leslie-Wong-H)
