@@ -146,7 +146,7 @@ class uploadImage {
           imgUrlText.value = "  Timeout Error. Please try again";
         }
       }
-    }, 12000);
+    }, 60000);
 
     // Prepare image blob url to send to background.js
 
