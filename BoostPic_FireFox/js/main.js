@@ -118,7 +118,7 @@ class uploadImage {
                     imgUrlText.value = "  Timeout Error. Please try again";
                 }
             }
-        }, 12000);
+        }, 60000);
         // Prepare image blob url to send to background.js
         /* (Browser specific. For Chrome we need to convert Blob to a blobUrl
             so as to trigger runtime.sendMessage, while for firefox runtime.sendMessage can send blob file directly.)
