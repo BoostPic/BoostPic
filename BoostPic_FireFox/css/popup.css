@@ -3,21 +3,21 @@
   width: 0px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #999;
+  background-color: #fff;
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:vertical:hover {
-  background-color: #666;
+  background-color: #fff;
 }
 ::-webkit-scrollbar-thumb:vertical:active {
-  background-color: #333;
+  background-color: #fff;
 }
 ::-webkit-scrollbar-button {
   display: none;
 }
 ::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+  background-color: #fff;
 }
 /*- scrollbar -*/
 .gr-popup-wrapper {
