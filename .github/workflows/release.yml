@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    # branches: [master]
+    tags:
+    - '*'
+
+env:
+    CLIENT_ID: '${{ secrets.CLIENT_ID }}'
+    CLIENT_SECRET: '${{ secrets.CLIENT_SECRET }}'
+    EXTENSION_ID: '${{ secrets.EXTENSION_ID }}'
+    REFRESH_TOKEN: '${{ secrets.REFRESH_TOKEN }}'
+    WEB_EXT_API_KEY: '${{ secrets.WEB_EXT_API_KEY }}'
+    WEB_EXT_API_SECRET: '${{ secrets.WEB_EXT_API_SECRET }}'
+    WEB_EXT_ID: '${{ secrets.WEB_EXT_ID }}'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Before install
+        run: npm i -g chrome-webstore-upload-cli@2.1.0 web-ext-submit@6.1.0
+      - name: Release
+        run: npm run release
