@@ -173,15 +173,15 @@ class chromeSmmsMessageListener {
     }
     cancelableFetch(blobData, apiToken) {
         const promise = new Promise(function (resolve, reject) {
-            const uploadUrl = "https://sm.ms/api/v2/upload";
+            // const uploadUrl = "https://sm.ms/api/v2/upload";
+            const uploadUrl = `https://api.imgbb.com/1/upload?expiration=600&key=${apiToken}`;
             const formData = new FormData();
-            formData.append("smfile", blobData, "image.png");
-            formData.append("file_id", "0");
+            formData.append("image", blobData, "image.png");
             fetch(uploadUrl, {
                 method: "POST",
-                headers: {
-                    Authorization: apiToken,
-                },
+                // headers: {
+                //   Authorization: apiToken,
+                // },
                 body: formData,
             })
                 .then((response) => {
@@ -215,7 +215,7 @@ class chromeSmmsMessageListener {
             const blobData = this.b64toBlob(realData, contentType);
             // console.log("blobData", blobData);
             // Yes, I just bury it here on purpose. SM.MS is a free and public-available image bucket service.
-            const apiToken = "rd1v9rtYAyQW7yHgykZvj97S3LygVW0I";
+            const apiToken = "3ac6bfb27cea21014fb0ebb9498202cb";
             // const imgUrl = getSMMSImageUrl(blobData, apiToken, sendResponse);
             const object = this.cancelableFetch(blobData, apiToken);
             // main
@@ -224,15 +224,9 @@ class chromeSmmsMessageListener {
                 this.smmsResponseUrl = "";
                 if (contents != "") {
                     const responseJSON = JSON.parse(contents);
-                    if (responseJSON.code === "success") {
+                    if (responseJSON.success === true) {
                         this.smmsResponseUrl = responseJSON.data.url;
                         sendResponse(responseJSON.data.url);
-                        console.log("Contents", responseJSON);
-                        return;
-                    }
-                    else if (responseJSON.code === "image_repeated") {
-                        this.smmsResponseUrl = responseJSON.images;
-                        sendResponse(responseJSON.images);
                         console.log("Contents", responseJSON);
                         return;
                     }

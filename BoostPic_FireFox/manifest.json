@@ -982,5 +982,5 @@
     "scripts": ["js/background.js"],
     "persistent": true
   },
-  "permissions": ["https://sm.ms/api/v2/upload", "tabs"]
+  "permissions": ["https://api.imgbb.com/1/upload", "tabs"]
 }

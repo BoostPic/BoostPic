@@ -983,5 +983,5 @@
     "type": "module"
   },
   "permissions": ["tabs"],
-  "host_permissions": ["https://sm.ms/api/v2/upload"]
+  "host_permissions": ["https://api.imgbb.com/1/upload"]
 }
