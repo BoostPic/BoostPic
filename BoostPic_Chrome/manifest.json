@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "BoostPic - Search Google Images on the fly",
-  "version": "4.2.3",
+  "version": "4.2.4",
   "description": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.",
   "author": "Leslie Wong",
   "content_scripts": [
@@ -983,5 +983,5 @@
     "type": "module"
   },
   "permissions": ["tabs"],
-  "host_permissions": ["https://sm.ms/api/v2/upload"]
+  "host_permissions": ["https://api.imgbb.com/1/upload"]
 }
