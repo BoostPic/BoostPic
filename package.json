@@ -9,7 +9,7 @@
     "build": "sh build.sh",
     "release": "npm run build && npm run release:chrome && npm run release:firefox",
     "release:chrome": "chrome-webstore-upload upload --source=BoostPic_Chrome.zip --auto-publish",
-    "release:firefox": "web-ext-submit --source-dir BoostPic_FireFox",
+    "release:firefox": "web-ext sign --use-submission-api --channel listed --source-dir BoostPic_FireFox",
     "lint": "tsc --project ./BoostPic_Chrome/tsconfig.json --noEmit --skipLibCheck && tsc --project ./BoostPic_FireFox/tsconfig.json --noEmit --skipLibCheck",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
@@ -28,7 +28,7 @@
     "chrome-webstore-upload-cli": "2.1.0",
     "husky": "^4.3.8",
     "typescript": "^4.4.2",
-    "web-ext-submit": "6.1.0"
+    "web-ext": "7.11.0"
   },
   "husky": {
     "hooks": {
