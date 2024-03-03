@@ -4,6 +4,12 @@
   "version": "4.2.6",
   "description": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.",
   "author": "Leslie Wong",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "boostpic",
+      "strict_min_version": "42.0"
+    }
+  },
   "content_scripts": [
     {
       "matches": [
