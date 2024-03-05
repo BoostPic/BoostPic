@@ -6,8 +6,8 @@
   "author": "Leslie Wong",
   "browser_specific_settings": {
     "gecko": {
-      "id": "boostpic",
-      "strict_min_version": "42.0"
+      "id": "{fdb7b440-6597-467d-80cf-e0a197ca7411}",
+      "strict_min_version": "100.0"
     }
   },
   "content_scripts": [
