@@ -380,6 +380,13 @@
   text-align: center;
   transition: all 0.218s, visibility 0s;
 }
+.P9ipme .asfTh:focus {
+  box-shadow: 0 0 15px 5px rgba(13, 110, 253, 0.2);
+  border: 2px solid #98c1fe;
+}
+.P9ipme .asfTh:focus-visible {
+  outline: 2px solid #98c1fe;
+}
 .ZaSLh {
   border-top: 1px solid #f0f2fc;
   height: 56px;

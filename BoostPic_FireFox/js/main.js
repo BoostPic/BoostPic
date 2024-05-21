@@ -64,6 +64,11 @@ class uploadImage {
             setTimeout(() => {
                 var imgUrlText = document.querySelector(this.GoogleImagesDomElements.imgUrlTextBoxId);
                 imgUrlText.value = this.imgUrl;
+                document.querySelector("input.asfTh").focus();
+                // Another setTimetout to auto search after 0.5 second
+                setTimeout(() => {
+                    document.querySelector("input.asfTh").click();
+                }, 500);
             }, 1000);
             // double check to clear interval to prevent infinite error loop of LoadingStateOne
             // Hope it works.
