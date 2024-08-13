@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Déposez une image ici"
+  },
+  "usage_guide": {
+    "message": "Guide d'utilisation"
+  },
+  "usage_guide_one": {
+    "message": "1. Pour win10/11 : win+shift+s pour découper une image même en dehors du navigateur, et pour mac : shift+control+command+4 ;"
+  },
+  "usage_guide_two": {
+    "message": "2. Accédez à Google Images, cliquez sur l’icône de recherche par image (ou sur l’entrée ci-dessous), puis appuyez sur ctrl+v ou commande+v ;"
+  },
+  "usage_guide_three": {
+    "message": "3. Attendez un instant jusqu'à ce qu'une URL vous soit renvoyée. Si une erreur de dépassement de délai se produit, supprimez le message d'erreur et appuyez à nouveau sur ctrl+v ou command+v."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Collez ou déposez une image ici"
+  },
+  "search_by_image": {
+    "message": "Recherche par image"
+  },
+  "built_in_love": {
+    "message": "Construit avec amour avec GitHub et imgBB"
+  }
+}

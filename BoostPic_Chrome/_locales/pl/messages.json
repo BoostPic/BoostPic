@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Upuść obraz tutaj"
+  },
+  "usage_guide": {
+    "message": "Instrukcja użytkowania"
+  },
+  "usage_guide_one": {
+    "message": "1. W systemach Win10/11: win+shift+s, aby przyciąć obraz nawet poza przeglądarką, a w systemach Mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Wejdź na stronę Google Images, kliknij ikonę wyszukiwania obrazem (lub pole poniżej), a następnie naciśnij ctrl+v lub command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Poczekaj chwilę, aż zwróci adres URL. Jeśli wystąpi błąd limitu czasu, usuń komunikat o błędzie i ponownie naciśnij ctrl+v lub command+v."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Wklej lub upuść obraz tutaj"
+  },
+  "search_by_image": {
+    "message": "Szukaj według obrazu"
+  },
+  "built_in_love": {
+    "message": "Zbudowany z miłości do GitHub i imgBB"
+  }
+}

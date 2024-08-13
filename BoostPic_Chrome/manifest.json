@@ -983,5 +983,6 @@
     "type": "module"
   },
   "permissions": ["tabs"],
-  "host_permissions": ["https://api.imgbb.com/1/upload"]
+  "host_permissions": ["https://api.imgbb.com/1/upload"],
+  "default_locale": "en"
 }

@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Dondosha picha hapa"
+  },
+  "usage_guide": {
+    "message": "Mwongozo wa Matumizi"
+  },
+  "usage_guide_one": {
+    "message": "1. Kwa win10/11: win+shift+s ili kunakili picha hata nje ya kivinjari, na kwa mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Ingiza Picha za Google, bofya kwenye utafutaji kwa aikoni ya picha (au ingizo hapa chini), kisha ubonyeze ctrl+v au command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Subiri kidogo hadi irejeshe URL. Hitilafu ya kuisha ikitokea, tafadhali futa ujumbe wa hitilafu na ctrl+v au command+v tena."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Bandika au udondoshe picha hapa"
+  },
+  "search_by_image": {
+    "message": "Tafuta kwa picha"
+  },
+  "built_in_love": {
+    "message": "Imejengwa kwa upendo na GitHub na imgBB"
+  }
+}

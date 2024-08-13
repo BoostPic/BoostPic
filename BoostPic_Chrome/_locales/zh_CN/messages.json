@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "将图片拖放到此处"
+  },
+  "usage_guide": {
+    "message": "使用指南"
+  },
+  "usage_guide_one": {
+    "message": "1. 对于 win10/11：win+shift+s 甚至可以在浏览器外剪切图像，对于 mac：shift+control+command+4；"
+  },
+  "usage_guide_two": {
+    "message": "2. 进入Google Images，点击按图片搜索图标（或下方输入），然后按ctrl+v或command+v；"
+  },
+  "usage_guide_three": {
+    "message": "3. 等待片刻，直到返回 URL。如果发生超时错误，请删除错误消息，然后再次按 ctrl+v 或 command+v。"
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "在此处粘贴或拖放图片"
+  },
+  "search_by_image": {
+    "message": "按图片搜索"
+  },
+  "built_in_love": {
+    "message": "热爱 GitHub 和 imgBB"
+  }
+}

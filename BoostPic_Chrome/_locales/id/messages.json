@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Jatuhkan gambar di sini"
+  },
+  "usage_guide": {
+    "message": "Panduan Penggunaan"
+  },
+  "usage_guide_one": {
+    "message": "1. Untuk win10/11: win+shift+s untuk memotong gambar bahkan di luar browser, dan untuk mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Masuk ke Google Images, klik ikon pencarian berdasarkan gambar (atau input di bawah), lalu tekan ctrl+v atau command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Tunggu beberapa saat hingga URL muncul. Jika terjadi kesalahan batas waktu, hapus pesan kesalahan dan tekan ctrl+v atau command+v lagi."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Tempel atau jatuhkan gambar di sini"
+  },
+  "search_by_image": {
+    "message": "Pencarian berdasarkan gambar"
+  },
+  "built_in_love": {
+    "message": "Dibangun karena cinta dengan GitHub dan imgBB"
+  }
+}

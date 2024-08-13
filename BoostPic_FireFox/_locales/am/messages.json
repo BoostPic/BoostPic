@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "እዚህ ምስል ጣል ያድርጉ"
+  },
+  "usage_guide": {
+    "message": "የአጠቃቀም መመሪያ"
+  },
+  "usage_guide_one": {
+    "message": "1. win10/11፡ win + shift+s ከአሳሹ ውጭም ቢሆን ምስል ለመቁረጥ እና ለማክ፡ shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. ጎግል ምስሎችን አስገባ፣ ፍለጋውን በምስል አዶ(ወይንም ከታች ያለውን ግቤት) ተጫን እና ከዛ ctrl+v ወይም Command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. URL እስኪመልስ ድረስ ትንሽ ቆይ። የማለፊያ ስህተት ከተፈጠረ፣ እባክዎን የስህተት መልዕክቱን እና ctrl+vን ይሰርዙ ወይም እንደገና ያዝዙ።"
+  },
+  "paste_image_here": {
+    "message": "ምስሉን እዚህ ለጥፍ"
+  },
+  "search_by_image": {
+    "message": "በምስል ይፈልጉ"
+  },
+  "built_in_love": {
+    "message": "ከ GitHub እና imgBB ጋር በፍቅር የተገነባ"
+  }
+}

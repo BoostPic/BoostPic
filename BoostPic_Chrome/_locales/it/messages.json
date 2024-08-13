@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Rilascia un'immagine qui"
+  },
+  "usage_guide": {
+    "message": "Guida all'uso"
+  },
+  "usage_guide_one": {
+    "message": "1. Per win10/11: win+shift+s per ritagliare un'immagine anche al di fuori del browser e per mac: shift+control+comando+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Accedi a Google Immagini, clicca sull'icona di ricerca per immagine (o sul campo sottostante), quindi premi ctrl+v o comando+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Attendi un momento finché non viene restituito un URL. Se si verifica un errore di timeout, elimina il messaggio di errore e premi di nuovo ctrl+v o command+v."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Incolla o trascina un'immagine qui"
+  },
+  "search_by_image": {
+    "message": "Cerca per immagine"
+  },
+  "built_in_love": {
+    "message": "Costruito con amore con GitHub e imgBB"
+  }
+}

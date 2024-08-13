@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Smid et billede her"
+  },
+  "usage_guide": {
+    "message": "Brugsvejledning"
+  },
+  "usage_guide_one": {
+    "message": "1. For win10/11: win+shift+s for at klippe et billede selv uden for browseren, og for mac: shift+control+kommando+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Gå ind i Google Billeder, klik på ikonet Søg efter billede (eller indtastningen nedenfor), og tryk derefter på ctrl+v eller kommando+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Vent et øjeblik, indtil den returnerer en URL. Hvis der opstår timeout-fejl, skal du slette fejlmeddelelsen og ctrl+v eller command+v igen."
+  },
+  "paste_image_here": {
+    "message": "Indsæt billedet her"
+  },
+  "search_by_image": {
+    "message": "Søg efter billede"
+  },
+  "built_in_love": {
+    "message": "Bygget forelsket i GitHub og imgBB"
+  }
+}

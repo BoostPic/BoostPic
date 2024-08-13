@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Suelta una imagen aquí"
+  },
+  "usage_guide": {
+    "message": "Guía de uso"
+  },
+  "usage_guide_one": {
+    "message": "1. Para win10/11: win+shift+s para recortar una imagen incluso fuera del navegador, y para mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Ingrese a Google Imágenes, haga clic en el ícono de búsqueda por imagen (o la entrada a continuación) y luego presione Ctrl+V o Comando+V;"
+  },
+  "usage_guide_three": {
+    "message": "3. Espere un momento hasta que se devuelva una URL. Si se produce un error de tiempo de espera, elimine el mensaje de error y vuelva a presionar Ctrl+V o Comando+V."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Pegue o suelte una imagen aquí"
+  },
+  "search_by_image": {
+    "message": "Buscar por imagen"
+  },
+  "built_in_love": {
+    "message": "Creado con amor por GitHub e imgBB"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Drop an image here"
+  },
+  "usage_guide": {
+    "message": "Usage Guide"
+  },
+  "usage_guide_one": {
+    "message": "1. For win10/11: win+shift+s to clip an image even outside the browser, and for mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Enter <i><b><a href=\"https://images.google.com/\" target=\"_blank\">Google Images</a></b></i>, click at the search by image icon(or the input below), and then press ctrl+v or command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Wait a moment until it returns an URL. If timeout error happens, please delete the error message and ctrl+v or command+v again."
+  },
+  "paste_image_here": {
+    "message": "Paste image here"
+  },
+  "search_by_image": {
+    "message": "Search by image"
+  },
+  "built_in_love": {
+    "message": "Built in &#9829; with GitHub and imgBB"
+  }
+}

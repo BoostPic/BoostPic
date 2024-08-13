@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Buraya bir resim bırakın"
+  },
+  "usage_guide": {
+    "message": "Kullanım Kılavuzu"
+  },
+  "usage_guide_one": {
+    "message": "1. Win10/11 için: win+shift+s, tarayıcının dışında bile bir resmi kesmek için, mac için: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Google Görseller'e girin, resimle arama simgesine (veya alttaki girdiye) tıklayın ve ardından ctrl+v veya command+v tuşlarına basın;"
+  },
+  "usage_guide_three": {
+    "message": "3. Bir URL dönene kadar bir an bekleyin. Zaman aşımı hatası oluşursa, lütfen hata mesajını silin ve ctrl+v veya command+v'yi tekrar yapın."
+  },
+  "paste_image_here": {
+    "message": "Resmi buraya yapıştır"
+  },
+  "search_by_image": {
+    "message": "Resimle ara"
+  },
+  "built_in_love": {
+    "message": "GitHub ve imgBB'ye aşık olarak oluşturuldu"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "שחרר כאן תמונה"
+  },
+  "usage_guide": {
+    "message": "מדריך שימוש"
+  },
+  "usage_guide_one": {
+    "message": "1. עבור win10/11: win+shift+s כדי לחתוך תמונה גם מחוץ לדפדפן, ול-mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. היכנס ל-Google Images, לחץ על סמל החיפוש לפי תמונה (או הקלט למטה), ולאחר מכן הקש ctrl+v או command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. המתן רגע עד שהוא יחזיר כתובת URL. אם מתרחשת שגיאת פסק זמן, אנא מחק את הודעת השגיאה ו-ctrl+v או command+v שוב."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "הדבק או שחרר תמונה כאן"
+  },
+  "search_by_image": {
+    "message": "חפש לפי תמונה"
+  },
+  "built_in_love": {
+    "message": "נבנה באהבה עם GitHub ו-imgBB"
+  }
+}

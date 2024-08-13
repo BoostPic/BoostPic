@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "यहाँ एक छवि डालें"
+  },
+  "usage_guide": {
+    "message": "उपयोग गाइड"
+  },
+  "usage_guide_one": {
+    "message": "1. win10/11 के लिए: win+shift+s ब्राउज़र के बाहर भी छवि क्लिप करने के लिए, और mac के लिए: Shift+Control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Google Images में जाएं, सर्च बाय इमेज आइकन (या नीचे दिए गए इनपुट) पर क्लिक करें, और फिर ctrl+v या command+v दबाएं;"
+  },
+  "usage_guide_three": {
+    "message": "3. जब तक यह URL वापस न कर दे, तब तक कुछ देर प्रतीक्षा करें। यदि टाइमआउट त्रुटि होती है, तो कृपया त्रुटि संदेश हटा दें और ctrl+v या command+v फिर से दबाएँ।"
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "यहां एक छवि चिपकाएं या छोड़ें"
+  },
+  "search_by_image": {
+    "message": "छवि द्वारा खोजें"
+  },
+  "built_in_love": {
+    "message": "GitHub और imgBB के साथ प्यार में बनाया गया"
+  }
+}

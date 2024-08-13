@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "ここに画像をドロップ"
+  },
+  "usage_guide": {
+    "message": "ご利用ガイド"
+  },
+  "usage_guide_one": {
+    "message": "1. Win10/11 の場合: win+shift+s を押すとブラウザー外でも画像をクリップできます。Mac の場合: shift+control+command+4 です。"
+  },
+  "usage_guide_two": {
+    "message": "2. Google 画像検索にアクセスし、画像による検索アイコン (または以下の入力) をクリックして、Ctrl + V または Command + V を押します。"
+  },
+  "usage_guide_three": {
+    "message": "3. URL が返されるまでしばらくお待ちください。タイムアウト エラーが発生した場合は、エラー メッセージを削除して、もう一度 ctrl+v または command+v を押してください。"
+  },
+  "paste_image_here": {
+    "message": "ここに画像を貼り付けます"
+  },
+  "search_by_image": {
+    "message": "画像で検索"
+  },
+  "built_in_love": {
+    "message": "GitHubとimgBBへの愛を込めて"
+  }
+}

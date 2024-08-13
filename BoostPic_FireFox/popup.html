@@ -11,7 +11,9 @@
     <div style="margin: 0; overflow: hidden; min-height: 200px">
       <div class="popup">
         <div class="_98szx">
-          <div class="ZeVBtc">Drop an image here</div>
+          <div class="ZeVBtc" data-locale="drop_an_image_here">
+            Drop an image here
+          </div>
         </div>
         <div class="_18flg">
           <div class="_36NTm">
@@ -38,12 +40,12 @@
             <div class="_2BkNA">
               <div class="_2LPPC">
                 <div class="uyO-m">
-                  <div>Usage Guide</div>
+                  <div data-locale="usage_guide">Usage Guide</div>
                 </div>
                 <div class="_2LaDH"></div>
                 <div class="_2KZQq _3JLH2">
                   <label class="_3jXk9"
-                    ><div>
+                    ><div data-locale="usage_guide_one">
                       1. For win10/11: win+shift+s to clip an image even outside
                       the browser, and for mac: shift+control+command+4;
                     </div>
@@ -52,7 +54,7 @@
                 <div class="_2LaDH"></div>
                 <div class="_29_cp _3JLH2">
                   <label class="_3jXk9"
-                    ><div>
+                    ><div data-locale="usage_guide_two">
                       2. Enter
                       <i
                         ><b
@@ -69,7 +71,7 @@
                 <div class="_2LaDH"></div>
                 <div class="_29_cp _3JLH2 _11JXH">
                   <label class="_3jXk9"
-                    ><div>
+                    ><div data-locale="usage_guide_three">
                       3. Wait a moment until it returns an URL. If timeout error
                       happens, please delete the error message and ctrl+v or
                       command+v again.
@@ -100,6 +102,7 @@
                     type="text"
                     class="TIjxY"
                     placeholder="Paste image here"
+                    data-locale="paste_image_here"
                     autofocus
                   />
                   <!-- Hide input file icon at FireFox. The same reason as above -->
@@ -107,14 +110,21 @@
                     <input type="file" name="files[]" accept="image/*" />
                   </div> -->
                 </div>
-                <input type="button" class="asfTh" value="Search by image" />
+                <input
+                  type="button"
+                  class="asfTh"
+                  value="Search by image"
+                  data-locale="search_by_image"
+                />
               </div>
               <div class="P9ipme" jsname="EBSqGc" style="display: none"></div>
             </div>
             <div class="ZaSLh">
               <div class="_3_9Kq">
                 <!-- Built in &#9829; with GitHub and SM.MS -->
-                Built in &#9829; with GitHub and imgBB
+                <span data-locale="built_in_love"
+                  >Built in &#9829; with GitHub and imgBB</span
+                >
                 <a
                   target="_blank"
                   rel="noopener"
