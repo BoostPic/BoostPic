@@ -646,6 +646,19 @@ if (
     const helperText = document.querySelector("._2BkNA");
 
     helperText.classList.toggle("_FG352");
+
+    helperBtn.addEventListener("click", () => {
+      const helperText = document.querySelector("._2BkNA");
+
+      helperText.classList.toggle("_FG352");
+      if (helperText.getAttribute("style")) {
+        helperText.removeAttribute("style");
+      } else {
+        const height = (document.querySelector("._2LPPC") as HTMLElement)
+          .offsetHeight;
+        helperText.setAttribute("style", `height: ${height + 25}px;`);
+      }
+    });
   });
 
   /* Detecting drop event starts */

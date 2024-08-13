@@ -486,6 +486,14 @@ if (GoogleImagesDomElements.searchbyimagebtn &&
     helperBtn.addEventListener("click", () => {
         const helperText = document.querySelector("._2BkNA");
         helperText.classList.toggle("_FG352");
+        if (helperText.getAttribute("style")) {
+            helperText.removeAttribute("style");
+        }
+        else {
+            const height = document.querySelector("._2LPPC")
+                .offsetHeight;
+            helperText.setAttribute("style", `height: ${height + 25}px;`);
+        }
     });
     /* Detecting drop event starts */
     const popupArea = document.querySelector("div.popup");
