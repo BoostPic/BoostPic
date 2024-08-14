@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "ضع صورة هنا"
+  },
+  "usage_guide": {
+    "message": "دليل الاستخدام"
+  },
+  "usage_guide_one": {
+    "message": "1. بالنسبة لنظامي التشغيل win10/11: win+shift+s لقص صورة حتى خارج المتصفح، وبالنسبة لنظام التشغيل Mac: shift+control+command+4؛"
+  },
+  "usage_guide_two": {
+    "message": "2. أدخل صور Google، وانقر فوق أيقونة البحث عن طريق الصورة (أو الإدخال أدناه)، ثم اضغط على ctrl+v أو command+v؛"
+  },
+  "usage_guide_three": {
+    "message": "3. انتظر لحظة حتى يتم إرجاع عنوان URL. إذا حدث خطأ انتهاء المهلة، فيرجى حذف رسالة الخطأ ثم الضغط على ctrl+v أو command+v مرة أخرى."
+  },
+  "paste_image_here": {
+    "message": "ألصق الصورة هنا"
+  },
+  "search_by_image": {
+    "message": "البحث بالصورة"
+  },
+  "built_in_love": {
+    "message": "تم إنشاؤه بحب مع GitHub و imgBB"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "અહીં એક છબી મૂકો"
+  },
+  "usage_guide": {
+    "message": "ઉપયોગ માર્ગદર્શિકા"
+  },
+  "usage_guide_one": {
+    "message": "1. win10/11 માટે: બ્રાઉઝરની બહાર પણ ઇમેજ ક્લિપ કરવા માટે win+shift+s, અને mac માટે: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. ગૂગલ ઈમેજીસ દાખલ કરો, ઈમેજ આઈકોન દ્વારા શોધ પર ક્લિક કરો (અથવા નીચે આપેલ ઇનપુટ), અને પછી ctrl+v અથવા કમાન્ડ+v દબાવો;"
+  },
+  "usage_guide_three": {
+    "message": "3. જ્યાં સુધી તે URL પરત ન કરે ત્યાં સુધી થોડી ક્ષણ રાહ જુઓ. જો સમયસમાપ્તિ ભૂલ થાય, તો કૃપા કરીને ભૂલ સંદેશ કાઢી નાખો અને ફરીથી ctrl+v અથવા આદેશ+v કરો."
+  },
+  "paste_image_here": {
+    "message": "અહીં છબી પેસ્ટ કરો"
+  },
+  "search_by_image": {
+    "message": "છબી દ્વારા શોધો"
+  },
+  "built_in_love": {
+    "message": "GitHub અને imgBB સાથે પ્રેમમાં બિલ્ટ"
+  }
+}

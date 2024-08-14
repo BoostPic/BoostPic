@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Lepaskan imej di sini"
+  },
+  "usage_guide": {
+    "message": "Panduan Penggunaan"
+  },
+  "usage_guide_one": {
+    "message": "1. Untuk win10/11: win+shift+s untuk klip imej walaupun di luar penyemak imbas, dan untuk mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Masukkan Imej Google, klik pada ikon carian mengikut imej (atau input di bawah), dan kemudian tekan ctrl+v atau command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Tunggu seketika sehingga ia mengembalikan URL. Jika ralat tamat masa berlaku, sila padamkan mesej ralat dan ctrl+v atau command+v sekali lagi."
+  },
+  "paste_image_here": {
+    "message": "Tampal gambar di sini"
+  },
+  "search_by_image": {
+    "message": "Cari mengikut imej"
+  },
+  "built_in_love": {
+    "message": "Dibina dalam cinta dengan GitHub dan imgBB"
+  }
+}

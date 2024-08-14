@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Deixa una imatge aquí"
+  },
+  "usage_guide": {
+    "message": "Guia d'ús"
+  },
+  "usage_guide_one": {
+    "message": "1. Per a win10/11: win+shift+s per retallar una imatge fins i tot fora del navegador, i per a Mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Introduïu Imatges de Google, feu clic a la icona de cerca per imatge (o l'entrada següent) i, a continuació, premeu ctrl+v o comanda+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Espereu un moment fins que torni un URL. Si es produeix un error de temps d'espera, suprimiu el missatge d'error i torneu a ctrl+v o comanda+v."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Enganxeu o deixeu anar una imatge aquí"
+  },
+  "search_by_image": {
+    "message": "Cerca per imatge"
+  },
+  "built_in_love": {
+    "message": "Creat enamorat de GitHub i imgBB"
+  }
+}

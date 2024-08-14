@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Sem vložte obrázek"
+  },
+  "usage_guide": {
+    "message": "Návod k použití"
+  },
+  "usage_guide_one": {
+    "message": "1. Pro win10/11: win+shift+s pro oříznutí obrázku i mimo prohlížeč a pro mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Zadejte Google Images, klikněte na ikonu vyhledávání podle obrázku (nebo vstup níže) a poté stiskněte ctrl+v nebo command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Chvíli počkejte, než vrátí adresu URL. Pokud dojde k chybě vypršení časového limitu, odstraňte prosím chybovou zprávu a znovu stiskněte ctrl+v nebo command+v."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Sem vložte nebo vložte obrázek"
+  },
+  "search_by_image": {
+    "message": "Vyhledávání podle obrázku"
+  },
+  "built_in_love": {
+    "message": "Postaveno v lásce s GitHub a imgBB"
+  }
+}

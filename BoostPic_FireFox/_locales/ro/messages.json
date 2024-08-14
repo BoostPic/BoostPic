@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Aruncă o imagine aici"
+  },
+  "usage_guide": {
+    "message": "Ghid de utilizare"
+  },
+  "usage_guide_one": {
+    "message": "1. Pentru win10/11: win+shift+s pentru a decupa o imagine chiar și în afara browserului, iar pentru mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Introduceți Google Images, faceți clic pe pictograma de căutare după imagine (sau intrarea de mai jos), apoi apăsați ctrl+v sau comanda+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Așteptați un moment până când returnează o adresă URL. Dacă apare o eroare de timeout, ștergeți mesajul de eroare și ctrl+v sau comanda+v din nou."
+  },
+  "paste_image_here": {
+    "message": "Lipiți imaginea aici"
+  },
+  "search_by_image": {
+    "message": "Căutați după imagine"
+  },
+  "built_in_love": {
+    "message": "Construit în dragoste cu GitHub și imgBB"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Spustite sliko sem"
+  },
+  "usage_guide": {
+    "message": "Navodila za uporabo"
+  },
+  "usage_guide_one": {
+    "message": "1. Za win10/11: win+shift+s za izrez slike tudi zunaj brskalnika in za mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Vnesite Google Slike, kliknite ikono za iskanje po slikah (ali spodnji vnos) in nato pritisnite ctrl+v ali command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Počakajte trenutek, da vrne URL. Če pride do napake časovne omejitve, izbrišite sporočilo o napaki in znova pritisnite ctrl+v ali command+v."
+  },
+  "paste_image_here": {
+    "message": "Tukaj prilepite sliko"
+  },
+  "search_by_image": {
+    "message": "Išči po sliki"
+  },
+  "built_in_love": {
+    "message": "Zgrajen v ljubezni z GitHub in imgBB"
+  }
+}

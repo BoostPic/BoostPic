@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "येथे एक प्रतिमा टाका"
+  },
+  "usage_guide": {
+    "message": "वापर मार्गदर्शक"
+  },
+  "usage_guide_one": {
+    "message": "1. win10/11 साठी: ब्राउझरच्या बाहेरही इमेज क्लिप करण्यासाठी win+shift+s आणि mac साठी: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Google Images एंटर करा, इमेज आयकॉन (किंवा खालील इनपुट) द्वारे शोध वर क्लिक करा आणि नंतर ctrl+v किंवा command+v दाबा;"
+  },
+  "usage_guide_three": {
+    "message": "3. URL परत येईपर्यंत काही क्षण प्रतीक्षा करा. कालबाह्य त्रुटी आढळल्यास, कृपया त्रुटी संदेश आणि ctrl+v किंवा कमांड+v पुन्हा हटवा."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "येथे प्रतिमा पेस्ट करा किंवा ड्रॉप करा"
+  },
+  "search_by_image": {
+    "message": "प्रतिमेनुसार शोधा"
+  },
+  "built_in_love": {
+    "message": "GitHub आणि imgBB च्या प्रेमात बांधलेले"
+  }
+}

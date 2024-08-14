@@ -227,12 +227,13 @@
 ._FG352 {
   background-color: #fff;
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.16);
-  height: 303px;
+  /* height: 303px; */
   overflow: hidden;
 }
 ._2LPPC {
   max-width: 284px;
   margin: auto;
+  height: auto;
 }
 ._2LPPC .uyO-m {
   color: #0e101a;

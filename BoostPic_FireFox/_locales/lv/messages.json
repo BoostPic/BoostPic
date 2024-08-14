@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Nometiet attēlu šeit"
+  },
+  "usage_guide": {
+    "message": "Lietošanas rokasgrāmata"
+  },
+  "usage_guide_one": {
+    "message": "1. Win10/11: win+shift+s, lai izgrieztu attēlu pat ārpus pārlūkprogrammas, un Mac: Shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Ievadiet Google attēli, noklikšķiniet uz meklēšanas pēc attēla ikonas (vai ievades zemāk) un pēc tam nospiediet ctrl+v vai command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Pagaidiet brīdi, līdz tas atgriež URL. Ja rodas taimauta kļūda, lūdzu, izdzēsiet kļūdas ziņojumu un vēlreiz ctrl+v vai command+v."
+  },
+  "paste_image_here": {
+    "message": "Ielīmējiet attēlu šeit"
+  },
+  "search_by_image": {
+    "message": "Meklēt pēc attēla"
+  },
+  "built_in_love": {
+    "message": "Izveidots iemīlējies GitHub un imgBB"
+  }
+}

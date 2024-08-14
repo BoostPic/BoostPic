@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Ispustite sliku ovdje"
+  },
+  "usage_guide": {
+    "message": "Vodič za korištenje"
+  },
+  "usage_guide_one": {
+    "message": "1. Za win10/11: win+shift+s za isječak slike čak i izvan preglednika, a za mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Uđite u Google slike, kliknite ikonu pretraživanja po slici (ili unos ispod), a zatim pritisnite ctrl+v ili command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Pričekajte trenutak dok ne vrati URL. Ako se dogodi pogreška isteka vremena, izbrišite poruku o pogrešci i ponovno pritisnite ctrl+v ili command+v."
+  },
+  "paste_image_here": {
+    "message": "Ovdje zalijepite sliku"
+  },
+  "search_by_image": {
+    "message": "Traži po slici"
+  },
+  "built_in_love": {
+    "message": "Izgrađen u ljubavi s GitHub i imgBB"
+  }
+}

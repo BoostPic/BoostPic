@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Перетащите изображение сюда"
+  },
+  "usage_guide": {
+    "message": "Руководство по использованию"
+  },
+  "usage_guide_one": {
+    "message": "1. Для win10/11: win+shift+s, чтобы обрезать изображение даже за пределами браузера, а для mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Войдите в Google Картинки, щелкните значок поиска по изображению (или поле ввода ниже), а затем нажмите ctrl+v или command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Подождите немного, пока не вернется URL. Если произойдет ошибка тайм-аута, удалите сообщение об ошибке и снова нажмите ctrl+v или command+v."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Вставьте или перетащите изображение сюда"
+  },
+  "search_by_image": {
+    "message": "Поиск по изображению"
+  },
+  "built_in_love": {
+    "message": "Создано с любовью к GitHub и imgBB"
+  }
+}

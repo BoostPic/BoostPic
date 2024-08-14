@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "將圖像拖放到此處"
+  },
+  "usage_guide": {
+    "message": "使用指南"
+  },
+  "usage_guide_one": {
+    "message": "1. 對於win10/11：win+shift+s 即使在瀏覽器之外也可以剪切圖像，對於mac：shift+control+command+4；"
+  },
+  "usage_guide_two": {
+    "message": "2.進入Google Images，點選按圖片搜尋圖示（或下方輸入），然後按ctrl+v或command+v；"
+  },
+  "usage_guide_three": {
+    "message": "3. 稍等片刻，直到返回 URL。如果出現逾時錯誤，請刪除錯誤訊息並再次按ctrl+v或command+v。"
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "在此處貼上或放置圖像"
+  },
+  "search_by_image": {
+    "message": "按圖片搜尋"
+  },
+  "built_in_love": {
+    "message": "對 GitHub 和 imgBB 的熱愛"
+  }
+}

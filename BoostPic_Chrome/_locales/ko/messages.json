@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "여기에 이미지를 놓으세요"
+  },
+  "usage_guide": {
+    "message": "사용 가이드"
+  },
+  "usage_guide_one": {
+    "message": "1. win10/11의 경우: 브라우저 밖에서도 이미지를 잘라내려면 win+shift+s, Mac의 경우: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Google 이미지에 들어가서 이미지로 검색 아이콘(또는 아래 입력란)을 클릭한 다음, ctrl+v 또는 command+v를 누릅니다."
+  },
+  "usage_guide_three": {
+    "message": "3. URL이 반환될 때까지 잠시 기다리세요. 시간 초과 오류가 발생하면 오류 메시지를 삭제하고 ctrl+v 또는 command+v를 다시 하세요."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "여기에 이미지를 붙여넣거나 놓으세요"
+  },
+  "search_by_image": {
+    "message": "이미지로 검색"
+  },
+  "built_in_love": {
+    "message": "GitHub 및 imgBB를 사랑하여 구축됨"
+  }
+}

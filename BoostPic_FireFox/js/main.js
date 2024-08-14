@@ -486,6 +486,18 @@ if (GoogleImagesDomElements.searchbyimagebtn &&
     helperBtn.addEventListener("click", () => {
         const helperText = document.querySelector("._2BkNA");
         helperText.classList.toggle("_FG352");
+        helperBtn.addEventListener("click", () => {
+            const helperText = document.querySelector("._2BkNA");
+            helperText.classList.toggle("_FG352");
+            if (helperText.getAttribute("style")) {
+                helperText.removeAttribute("style");
+            }
+            else {
+                const height = document.querySelector("._2LPPC")
+                    .offsetHeight;
+                helperText.setAttribute("style", `height: ${height + 25}px;`);
+            }
+        });
     });
     /* Detecting drop event starts */
     const popupArea = document.querySelector("div.popup");
@@ -575,4 +587,38 @@ if (GoogleImagesDomElements.searchbyimagebtn &&
         });
     }, true);
     /* Detecting drop event ends */
+}
+document.querySelectorAll("[data-locale]").forEach((elem) => {
+    if (elem.getAttribute("value") === "Search by image") {
+        elem.setAttribute("value", chrome.i18n.getMessage(elem.dataset.locale));
+    }
+    else if (elem.getAttribute("data-locale") === "paste_image_here") {
+        elem.setAttribute("placeholder", chrome.i18n.getMessage(elem.dataset.locale));
+    }
+    else {
+        elem.innerHTML = chrome.i18n.getMessage(elem.dataset.locale);
+    }
+});
+// Direction rtl for Arabic, Persian, and Hebrew
+function getBrowserLanguage() {
+    // Prioritize navigator.languages for modern browsers
+    if (navigator.languages && navigator.languages.length) {
+        return navigator.languages[0];
+    }
+    else {
+        // Fallback to navigator.language for older browsers
+        return navigator.language;
+    }
+}
+if (["ar", "fa", "he"].some((el) => el === getBrowserLanguage())) {
+    const usageBox = document.querySelector("._2LPPC");
+    usageBox.setAttribute("style", "direction: rtl;");
+    const textInputBox = document.querySelector(".TIjxY");
+    textInputBox.setAttribute("style", "direction: rtl;");
+    const fileInputBox = document.querySelector(".qrBSb");
+    fileInputBox.setAttribute("style", "left: 10px;");
+    const buttonInputBox = document.querySelector(".asfTh");
+    buttonInputBox.setAttribute("dir", "rtl");
+    const bottomTextBox = document.querySelector("._3_9Kq span");
+    bottomTextBox.setAttribute("style", "direction: rtl;");
 }

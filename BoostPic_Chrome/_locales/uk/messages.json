@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Опустіть сюди зображення"
+  },
+  "usage_guide": {
+    "message": "Інструкція з використання"
+  },
+  "usage_guide_one": {
+    "message": "1. Для win10/11: win+shift+s, щоб вирізати зображення навіть поза браузером, а для mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Увійдіть у Google Images, клацніть піктограму пошуку за зображенням (або введення нижче), а потім натисніть ctrl+v або command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Зачекайте трохи, поки він не поверне URL-адресу. Якщо сталася помилка тайм-ауту, видаліть повідомлення про помилку та знову натисніть ctrl+v або command+v."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Вставте або перетягніть зображення сюди"
+  },
+  "search_by_image": {
+    "message": "Пошук за зображенням"
+  },
+  "built_in_love": {
+    "message": "Створено в захваті від GitHub і imgBB"
+  }
+}

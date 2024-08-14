@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Ziehen Sie hier ein Bild ab"
+  },
+  "usage_guide": {
+    "message": "Gebrauchsanweisung"
+  },
+  "usage_guide_one": {
+    "message": "1. Für Win10/11: Win+Umschalt+S, um ein Bild auch außerhalb des Browsers auszuschneiden, und für Mac: Umschalt+Strg+Befehl+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Rufen Sie Google Bilder auf, klicken Sie auf das Symbol zum Suchen nach Bildern (oder auf die Eingabe unten) und drücken Sie dann Strg+V oder Befehlstaste+V."
+  },
+  "usage_guide_three": {
+    "message": "3. Warten Sie einen Moment, bis eine URL zurückgegeben wird. Wenn ein Timeout-Fehler auftritt, löschen Sie bitte die Fehlermeldung und drücken Sie erneut Strg+V oder Befehl+V."
+  },
+  "paste_image_here": {
+    "message": "Bild hier einfügen"
+  },
+  "search_by_image": {
+    "message": "Suche anhand des Bildes"
+  },
+  "built_in_love": {
+    "message": "Entwickelt mit GitHub und imgBB"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Viska pilt siia"
+  },
+  "usage_guide": {
+    "message": "Kasutusjuhend"
+  },
+  "usage_guide_one": {
+    "message": "1. Win10/11 puhul: win+shift+s pildi lõikamiseks isegi väljaspool brauserit ja maci puhul: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Sisestage Google Images, klõpsake pildi järgi otsimise ikoonil (või alloleval sisendil) ja seejärel vajutage klahvikombinatsiooni ctrl+v või käsk+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Oodake veidi, kuni see tagastab URL-i. Kui ilmneb ajalõpu viga, kustutage veateade ja uuesti ctrl+v või käsk+v."
+  },
+  "paste_image_here": {
+    "message": "Kleebi pilt siia"
+  },
+  "search_by_image": {
+    "message": "Otsi pildi järgi"
+  },
+  "built_in_love": {
+    "message": "Armunud GitHubisse ja imgBB-sse"
+  }
+}

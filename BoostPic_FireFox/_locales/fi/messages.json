@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Pudota kuva tähän"
+  },
+  "usage_guide": {
+    "message": "Käyttöopas"
+  },
+  "usage_guide_one": {
+    "message": "1. Win10/11: win+shift+s kuvan leikkaamiseen jopa selaimen ulkopuolella, ja mac: shift+control+komento+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Kirjoita Google-kuvahaku, napsauta hakukuvaketta (tai alla olevaa syötettä) ja paina sitten ctrl+v tai komento+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Odota hetki, kunnes se palauttaa URL-osoitteen. Jos aikakatkaisuvirhe tapahtuu, poista virheilmoitus ja ctrl+v tai komento+v uudelleen."
+  },
+  "paste_image_here": {
+    "message": "Liitä kuva tähän"
+  },
+  "search_by_image": {
+    "message": "Hae kuvan mukaan"
+  },
+  "built_in_love": {
+    "message": "Rakennettu rakastunut GitHubiin ja imgBB:hen"
+  }
+}

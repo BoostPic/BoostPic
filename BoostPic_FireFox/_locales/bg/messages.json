@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Пуснете изображение тук"
+  },
+  "usage_guide": {
+    "message": "Ръководство за употреба"
+  },
+  "usage_guide_one": {
+    "message": "1. За win10/11: win+shift+s за изрязване на изображение дори извън браузъра, а за mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Влезте в Google Images, щракнете върху иконата за търсене по изображение (или въвеждането по-долу) и след това натиснете ctrl+v или command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Изчакайте малко, докато върне URL. Ако възникне грешка при изчакване, моля, изтрийте съобщението за грешка и отново натиснете ctrl+v или command+v."
+  },
+  "paste_image_here": {
+    "message": "Поставете изображение тук"
+  },
+  "search_by_image": {
+    "message": "Търсене по изображение"
+  },
+  "built_in_love": {
+    "message": "Създаден влюбен в GitHub и imgBB"
+  }
+}

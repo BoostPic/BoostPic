@@ -1,0 +1,26 @@
+{
+  "drop_an_image_here": {
+    "message": "Thả một hình ảnh ở đây"
+  },
+  "usage_guide": {
+    "message": "Hướng dẫn sử dụng"
+  },
+  "usage_guide_one": {
+    "message": "1. Đối với win10/11: win+shift+s để cắt ảnh ngay cả khi không có trình duyệt, và đối với mac: shift+control+command+4;"
+  },
+  "usage_guide_two": {
+    "message": "2. Vào Google Images, nhấp vào biểu tượng tìm kiếm theo hình ảnh (hoặc mục nhập bên dưới), sau đó nhấn ctrl+v hoặc command+v;"
+  },
+  "usage_guide_three": {
+    "message": "3. Đợi một lát cho đến khi nó trả về URL. Nếu lỗi hết thời gian xảy ra, vui lòng xóa thông báo lỗi và nhấn ctrl+v hoặc command+v một lần nữa."
+  },
+  "paste_or_drop_an_image_here": {
+    "message": "Dán hoặc thả hình ảnh vào đây"
+  },
+  "search_by_image": {
+    "message": "Tìm kiếm theo hình ảnh"
+  },
+  "built_in_love": {
+    "message": "Được xây dựng bằng tình yêu với GitHub và imgBB"
+  }
+}
