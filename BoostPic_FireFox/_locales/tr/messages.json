@@ -14,6 +14,9 @@
   "usage_guide_three": {
     "message": "3. Bir URL dönene kadar bir an bekleyin. Zaman aşımı hatası oluşursa, lütfen hata mesajını silin ve ctrl+v veya command+v'yi tekrar yapın."
   },
+  "usage_guide_four": {
+    "message": "Merhaba! Eğer yardımsever ve istekliyseniz bana PayPal üzerinden bir kahve ısmarlayın. :)"
+  },
   "paste_image_here": {
     "message": "Resmi buraya yapıştır"
   },

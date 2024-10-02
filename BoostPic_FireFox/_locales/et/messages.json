@@ -14,6 +14,9 @@
   "usage_guide_three": {
     "message": "3. Oodake veidi, kuni see tagastab URL-i. Kui ilmneb ajalõpu viga, kustutage veateade ja uuesti ctrl+v või käsk+v."
   },
+  "usage_guide_four": {
+    "message": "Tere! Ostke mulle PayPali kaudu kohvi, kui olete abivalmis ja nõus. :)"
+  },
   "paste_image_here": {
     "message": "Kleebi pilt siia"
   },

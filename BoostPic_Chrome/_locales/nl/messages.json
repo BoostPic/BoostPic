@@ -14,6 +14,9 @@
   "usage_guide_three": {
     "message": "3. Wacht even tot er een URL wordt geretourneerd. Als er een time-outfout optreedt, verwijder dan de foutmelding en druk nogmaals op ctrl+v of command+v."
   },
+  "usage_guide_four": {
+    "message": "Hoi! Koop me een kopje koffie via PayPal, als je wilt en kunt helpen. :)"
+  },
   "paste_or_drop_an_image_here": {
     "message": "Plak of sleep hier een afbeelding"
   },
