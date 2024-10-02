@@ -14,6 +14,9 @@
   "usage_guide_three": {
     "message": "3. Espereu un moment fins que torni un URL. Si es produeix un error de temps d'espera, suprimiu el missatge d'error i torneu a ctrl+v o comanda+v."
   },
+  "usage_guide_four": {
+    "message": "hola! Compra'm un cafè a través de PayPal, si és útil i disposat. :)"
+  },
   "paste_image_here": {
     "message": "Enganxeu la imatge aquí"
   },

@@ -14,6 +14,9 @@
   "usage_guide_three": {
     "message": "3. 等待片刻，直到返回 URL。如果发生超时错误，请删除错误消息，然后再次按 ctrl+v 或 command+v。"
   },
+  "usage_guide_four": {
+    "message": "嗨！如果有帮助并且愿意的话，请通过 PayPal 给我买杯咖啡。:)"
+  },
   "paste_image_here": {
     "message": "在此处拖放图片"
   },

@@ -14,6 +14,9 @@
   "usage_guide_three": {
     "message": "3. Palaukite, kol jis grąžins URL. Jei įvyksta skirtojo laiko klaida, ištrinkite klaidos pranešimą ir dar kartą ctrl+v arba komanda+v."
   },
+  "usage_guide_four": {
+    "message": "Sveiki! Nupirk man kavos per PayPal, jei būsi naudinga ir nori. :)"
+  },
   "paste_or_drop_an_image_here": {
     "message": "Įklijuokite arba numeskite vaizdą čia"
   },

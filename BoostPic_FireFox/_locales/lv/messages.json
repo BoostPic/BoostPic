@@ -14,6 +14,9 @@
   "usage_guide_three": {
     "message": "3. Pagaidiet brīdi, līdz tas atgriež URL. Ja rodas taimauta kļūda, lūdzu, izdzēsiet kļūdas ziņojumu un vēlreiz ctrl+v vai command+v."
   },
+  "usage_guide_four": {
+    "message": "Sveiki! Pērciet man kafiju, izmantojot PayPal, ja esat izpalīdzīgs un vēlaties. :)"
+  },
   "paste_image_here": {
     "message": "Ielīmējiet attēlu šeit"
   },

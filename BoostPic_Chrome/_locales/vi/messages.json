@@ -14,6 +14,9 @@
   "usage_guide_three": {
     "message": "3. Đợi một lát cho đến khi nó trả về URL. Nếu lỗi hết thời gian xảy ra, vui lòng xóa thông báo lỗi và nhấn ctrl+v hoặc command+v một lần nữa."
   },
+  "usage_guide_four": {
+    "message": "Xin chào! Nếu hữu ích và sẵn lòng, hãy mua cho tôi một cốc cà phê qua PayPal nhé. :)"
+  },
   "paste_or_drop_an_image_here": {
     "message": "Dán hoặc thả hình ảnh vào đây"
   },

@@ -14,6 +14,9 @@
   "usage_guide_three": {
     "message": "3. Poczekaj chwilę, aż zwróci adres URL. Jeśli wystąpi błąd limitu czasu, usuń komunikat o błędzie i ponownie naciśnij ctrl+v lub command+v."
   },
+  "usage_guide_four": {
+    "message": "Cześć! Postaw mi kawę przez PayPal, jeśli będziesz pomocny i chętny. :)"
+  },
   "paste_image_here": {
     "message": "Wklej obrazek tutaj"
   },

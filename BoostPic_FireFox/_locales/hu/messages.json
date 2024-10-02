@@ -14,6 +14,9 @@
   "usage_guide_three": {
     "message": "3. Várjon egy pillanatot, amíg visszaad egy URL-t. Ha időtúllépési hiba történik, törölje a hibaüzenetet, és ismételje meg a ctrl+v vagy a command+v billentyűket."
   },
+  "usage_guide_four": {
+    "message": "Szia! Vegyél nekem egy kávét PayPalon keresztül, ha segítőkész és hajlandó. :)"
+  },
   "paste_image_here": {
     "message": "Illessze be a képet ide"
   },
