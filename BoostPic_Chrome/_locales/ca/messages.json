@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Cerca Google Imatges sobre la marxa"
+  },
+  "description": {
+    "message": "Descobriu la possibilitat de cercar imatges de Google de manera ràpida i increïble, amb clip i enganxa."
+  },
   "drop_an_image_here": {
     "message": "Deixa una imatge aquí"
   },

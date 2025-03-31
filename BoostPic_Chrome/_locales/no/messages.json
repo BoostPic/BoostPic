@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "Søk i Google Bilder på farten"
+  },
+  "description": {
+    "message": "Oppdag muligheten for å søke i Google Bilder raskt og utrolig, med klipp og lim."
+  },
   "drop_an_image_here": {
     "message": "Slipp et bilde her"
   },

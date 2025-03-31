@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Pretražujte Google slike u hodu"
+  },
+  "description": {
+    "message": "Otkrijte mogućnost brzog i nevjerojatnog pretraživanja Google slika uz isječak i lijepljenje."
+  },
   "drop_an_image_here": {
     "message": "Ispustite sliku ovdje"
   },

@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Durchsuchen Sie Google Bilder im Handumdrehen"
+  },
+  "description": {
+    "message": "Entdecken Sie die Möglichkeit, mit Ausschneiden und Einfügen schnell und unglaublich schnell in Google Bilder zu suchen."
+  },
   "drop_an_image_here": {
     "message": "Ziehen Sie hier ein Bild ab"
   },

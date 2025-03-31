@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Meklējiet pakalpojumā Google attēli lidojumā"
+  },
+  "description": {
+    "message": "Atklājiet iespēju ātri un neticami meklēt pakalpojumā Google attēli, izmantojot klipu un ielīmēšanu."
+  },
   "drop_an_image_here": {
     "message": "Nometiet attēlu šeit"
   },

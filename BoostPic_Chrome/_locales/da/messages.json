@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Søg i Google Billeder i farten"
+  },
+  "description": {
+    "message": "Afdække muligheden for at søge i Google Billeder hurtigt og utroligt med klip og indsæt."
+  },
   "drop_an_image_here": {
     "message": "Smid et billede her"
   },

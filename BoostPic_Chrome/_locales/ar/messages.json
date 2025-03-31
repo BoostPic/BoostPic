@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - ابحث في صور Google أثناء التنقل"
+  },
+  "description": {
+    "message": "اكتشف إمكانية البحث عن صور Google بسرعة وبشكل لا يصدق، باستخدام ميزة القص واللصق."
+  },
   "drop_an_image_here": {
     "message": "ضع صورة هنا"
   },

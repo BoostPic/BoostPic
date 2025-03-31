@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Vyhledávání obrázků Google za běhu"
+  },
+  "description": {
+    "message": "Odhalte možnost rychle a neuvěřitelně vyhledávat v Obrázcích Google pomocí funkce klip a vložení."
+  },
   "drop_an_image_here": {
     "message": "Sem vložte obrázek"
   },

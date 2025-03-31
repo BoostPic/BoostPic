@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - 即時搜尋 Google 圖片"
+  },
+  "description": {
+    "message": "發現使用剪輯和貼上功能快速且令人難以置信地搜尋 Google 圖片的可能性。"
+  },
   "drop_an_image_here": {
     "message": "將圖像拖放到此處"
   },
