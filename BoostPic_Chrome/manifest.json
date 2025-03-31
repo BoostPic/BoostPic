@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "BoostPic - Search Google Images on the fly",
-  "version": "4.5.0",
-  "description": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.",
+  "name": "__MSG_name__",
+  "version": "4.5.1",
+  "description": "__MSG_description__",
   "author": "Leslie Wong",
   "content_scripts": [
     {

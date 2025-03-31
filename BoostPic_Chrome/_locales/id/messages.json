@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Cari Gambar Google dengan cepat"
+  },
+  "description": {
+    "message": "Temukan kemungkinan untuk mencari Gambar Google dengan cepat dan luar biasa, dengan klip & tempel."
+  },
   "drop_an_image_here": {
     "message": "Jatuhkan gambar di sini"
   },

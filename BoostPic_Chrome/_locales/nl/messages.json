@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Zoek direct in Google Afbeeldingen"
+  },
+  "description": {
+    "message": "Ontdek de mogelijkheid om snel en eenvoudig te zoeken in Google Afbeeldingen, met knippen en plakken."
+  },
   "drop_an_image_here": {
     "message": "Plaats hier een afbeelding"
   },

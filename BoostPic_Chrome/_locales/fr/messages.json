@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Recherchez des images Google à la volée"
+  },
+  "description": {
+    "message": "Découvrez la possibilité de rechercher des images Google rapidement et de manière incroyable, avec le clip & paste."
+  },
   "drop_an_image_here": {
     "message": "Déposez une image ici"
   },

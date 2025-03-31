@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Keressen a Google Képek között menet közben"
+  },
+  "description": {
+    "message": "Fedezze fel a lehetőséget, hogy gyorsan és hihetetlenül keressen a Google Képek között a clip & paste segítségével."
+  },
   "drop_an_image_here": {
     "message": "Dobj ide egy képet"
   },

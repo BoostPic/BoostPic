@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Tafuta Picha za Google kwa haraka"
+  },
+  "description": {
+    "message": "Fichua uwezekano wa kutafuta Picha za Google haraka na kwa njia ya ajabu, kwa klipu na ubandike."
+  },
   "drop_an_image_here": {
     "message": "Dondosha picha hapa"
   },

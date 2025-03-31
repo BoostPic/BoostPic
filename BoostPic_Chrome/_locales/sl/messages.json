@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Iščite v Google Images sproti"
+  },
+  "description": {
+    "message": "Odkrijte možnost hitrega in neverjetnega iskanja po Googlovih slikah s funkcijo izrezka in lepljenja."
+  },
   "drop_an_image_here": {
     "message": "Spustite sliko sem"
   },

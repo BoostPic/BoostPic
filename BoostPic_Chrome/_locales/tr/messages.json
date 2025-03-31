@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Anında Google Görseller'de arama yapın"
+  },
+  "description": {
+    "message": "Google Görseller'de hızlı ve inanılmaz bir şekilde arama yapma olanağını, kes ve yapıştır özelliğiyle keşfedin."
+  },
   "drop_an_image_here": {
     "message": "Buraya bir resim bırakın"
   },

@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Tìm kiếm hình ảnh Google ngay lập tức"
+  },
+  "description": {
+    "message": "Khám phá khả năng tìm kiếm trên Google Images nhanh chóng và đáng kinh ngạc bằng chức năng cắt và dán."
+  },
   "drop_an_image_here": {
     "message": "Thả một hình ảnh ở đây"
   },

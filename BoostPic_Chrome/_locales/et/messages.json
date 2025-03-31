@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Otsige Google Images käigult"
+  },
+  "description": {
+    "message": "Avastage võimalus klipi ja kleepimise abil kiiresti ja uskumatult Google Imagesist otsida."
+  },
   "drop_an_image_here": {
     "message": "Viska pilt siia"
   },

@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - Hae Google Kuvahakua lennossa"
+  },
+  "description": {
+    "message": "Löydä mahdollisuus tehdä Google-kuvahakuja nopeasti ja uskomattomalla tavalla clip & paste -toiminnolla."
+  },
   "drop_an_image_here": {
     "message": "Pudota kuva tähän"
   },

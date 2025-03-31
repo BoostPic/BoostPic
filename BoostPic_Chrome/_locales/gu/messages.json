@@ -1,4 +1,10 @@
 {
+  "name": {
+    "message": "BoostPic - તરત જ Google છબીઓ શોધો"
+  },
+  "description": {
+    "message": "ક્લિપ અને પેસ્ટ વડે ગૂગલ ઈમેજીસમાં ઝડપથી અને અદ્ભુત રીતે શોધવાની શક્યતા શોધો."
+  },
   "drop_an_image_here": {
     "message": "અહીં એક છબી મૂકો"
   },
