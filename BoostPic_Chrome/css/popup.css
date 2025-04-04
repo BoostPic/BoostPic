@@ -95,6 +95,11 @@
   background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/boostpic-logo.svg);
   background-repeat: no-repeat;
 }
+@supports (-ms-ime-align: auto) {
+  ._1nt1u .Y7Uju:before {
+    background-image: url(extension://gbceodegcdpdjhppfmkekfnhaibaiail/images/boostpic-logo.svg);
+  }
+}
 @supports (-moz-appearance: none) {
   ._1nt1u .Y7Uju:before {
     background-image: url(../images/boostpic-logo.svg);
@@ -114,6 +119,15 @@
   background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/for-chrome.png);
   background-repeat: no-repeat;
 }
+@supports (-ms-ime-align: auto) {
+  ._1nt1u .Y7Uju._3nuMC:after {
+    width: 79px;
+    height: 11px;
+    background-size: 79px 11px;
+    background-image: url(extension://gbceodegcdpdjhppfmkekfnhaibaiail/images/for-edge.png);
+    background-repeat: no-repeat;
+  }
+}
 @supports (-moz-appearance: none) {
   ._1nt1u .Y7Uju._3nuMC:after {
     width: 79px;
@@ -130,6 +144,17 @@
   ._1nt1u .Y7Uju._3nuMC:after {
     background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/for-chrome@2x.png);
     background-size: 79px 11px;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+    (-webkit-min-device-pixel-ratio: 1.4375),
+    (min-resolution: 1.5dppx),
+    (min-resolution: 138dpi) {
+    ._1nt1u .Y7Uju._3nuMC:after {
+      background-image: url(extension://gbceodegcdpdjhppfmkekfnhaibaiail/images/for-edge@2x.png);
+      background-size: 79px 11px;
+    }
   }
 }
 @supports (-moz-appearance: none) {
