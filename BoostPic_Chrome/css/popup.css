@@ -95,7 +95,7 @@
   background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/boostpic-logo.svg);
   background-repeat: no-repeat;
 }
-@supports (-ms-ime-align: auto) {
+@supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) {
   ._1nt1u .Y7Uju:before {
     background-image: url(extension://gbceodegcdpdjhppfmkekfnhaibaiail/images/boostpic-logo.svg);
   }
@@ -119,7 +119,7 @@
   background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/for-chrome.png);
   background-repeat: no-repeat;
 }
-@supports (-ms-ime-align: auto) {
+@supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) {
   ._1nt1u .Y7Uju._3nuMC:after {
     width: 79px;
     height: 11px;
@@ -146,7 +146,7 @@
     background-size: 79px 11px;
   }
 }
-@supports (-ms-ime-align: auto) {
+@supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) {
   @media (-webkit-min-device-pixel-ratio: 1.5),
     (-webkit-min-device-pixel-ratio: 1.4375),
     (min-resolution: 1.5dppx),
