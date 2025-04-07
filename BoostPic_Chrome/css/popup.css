@@ -97,7 +97,7 @@
 }
 @supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) {
   ._1nt1u .Y7Uju:before {
-    background-image: url(extension://gbceodegcdpdjhppfmkekfnhaibaiail/images/boostpic-logo.svg);
+    background-image: url(../images/boostpic-logo.svg);
   }
 }
 @supports (-moz-appearance: none) {
@@ -124,7 +124,7 @@
     width: 79px;
     height: 11px;
     background-size: 79px 11px;
-    background-image: url(extension://gbceodegcdpdjhppfmkekfnhaibaiail/images/for-edge.png);
+    background-image: url(../images/for-edge.png);
     background-repeat: no-repeat;
   }
 }
@@ -152,7 +152,7 @@
     (min-resolution: 1.5dppx),
     (min-resolution: 138dpi) {
     ._1nt1u .Y7Uju._3nuMC:after {
-      background-image: url(extension://gbceodegcdpdjhppfmkekfnhaibaiail/images/for-edge@2x.png);
+      background-image: url(../images/for-edge@2x.png);
       background-size: 79px 11px;
     }
   }
