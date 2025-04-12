@@ -618,3 +618,11 @@ if (["ar", "fa", "he"].some((el) => el === getBrowserLanguage())) {
     const bottomTextBox = document.querySelector("._3_9Kq span");
     bottomTextBox.setAttribute("style", "direction: rtl;");
 }
+// Detect Edge
+if (navigator.userAgent.includes("Edg")) {
+    document.documentElement.classList.add("edge");
+}
+// Detect Chrome
+else if (navigator.userAgent.includes("Chrome")) {
+    document.documentElement.classList.add("chrome");
+}
