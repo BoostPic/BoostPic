@@ -95,8 +95,9 @@
   background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/boostpic-logo.svg);
   background-repeat: no-repeat;
 }
+/* Note: this css hack doesn't work to detect Edge or Chrome, so use JS logic instead */
 @supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) {
-  ._1nt1u .Y7Uju:before {
+  .edge ._1nt1u .Y7Uju:before {
     background-image: url(../images/boostpic-logo.svg);
   }
 }
@@ -119,8 +120,9 @@
   background-image: url(chrome-extension://pmpogggmiaehmjempogkkklfckignfgl/images/for-chrome.png);
   background-repeat: no-repeat;
 }
+/* Note: this css hack doesn't work to detect Edge or Chrome, so use JS logic instead */
 @supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) {
-  ._1nt1u .Y7Uju._3nuMC:after {
+  .edge ._1nt1u .Y7Uju._3nuMC:after {
     width: 79px;
     height: 11px;
     background-size: 79px 11px;
@@ -146,12 +148,13 @@
     background-size: 79px 11px;
   }
 }
+/* Note: this css hack doesn't work to detect Edge or Chrome, so use JS logic instead */
 @supports (not (-webkit-hyphens: none)) and (not (-moz-appearance: none)) {
   @media (-webkit-min-device-pixel-ratio: 1.5),
     (-webkit-min-device-pixel-ratio: 1.4375),
     (min-resolution: 1.5dppx),
     (min-resolution: 138dpi) {
-    ._1nt1u .Y7Uju._3nuMC:after {
+    .edge ._1nt1u .Y7Uju._3nuMC:after {
       background-image: url(../images/for-edge@2x.png);
       background-size: 79px 11px;
     }
