@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Leslie-Wong-H/BoostPic.git"
+    "url": "git+https://github.com/BoostPic/BoostPic.git"
   },
   "author": "Leslie Wong",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Leslie-Wong-H/BoostPic/issues"
+    "url": "https://github.com/BoostPic/BoostPic/issues"
   },
-  "homepage": "https://github.com/Leslie-Wong-H/BoostPic#readme",
+  "homepage": "https://github.com/BoostPic/BoostPic#readme",
   "devDependencies": {
     "@types/chrome": "0.0.157",
     "chrome-webstore-upload-cli": "2.1.0",
