@@ -47,3 +47,7 @@ Copyleft © [BoostPic](https://github.com/boostpic/boostpic)
 [Apache II](./LICENSE)
 
 # Enjoy! &#9829;&#9829;&#9829;
+
+<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+
+[boostpic.github.io](https://boostpic.github.io/BoostPic/)
