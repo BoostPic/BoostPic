@@ -3,15 +3,15 @@
 ![BoostPic-landscape-1280.png](backup/SLKfIsvX9ikBWry.png)
 
 <p align="center">
-  </br></br>
+  <br/><br/>
   <a href="https://chrome.google.com/webstore/detail/boostpic/pmpogggmiaehmjempogkkklfckignfgl">
     <img src="backup/6h5OLE48wzolUFk.png" alt="Chrome Web Store"></a>
   <a href="https://addons.mozilla.org/addon/boostpic/">
     <img src="backup/4JM8Gkh92RCmFbu.png" alt="Firefox add-ons"></a>
-  <a href="https://chrome.google.com/webstore/detail/boostpic/pmpogggmiaehmjempogkkklfckignfgl">
-    <img src="backup/9SWFjvkNafyu3Kq.png" alt="Opera add-ons">
+  <a href="https://microsoftedge.microsoft.com/addons/detail/boostpic-search-google-/gbceodegcdpdjhppfmkekfnhaibaiail">
+    <img src="backup/X9SWFjvkNafyu3Kq.png" alt="Opera add-ons">
 </a>
-  </br></br>
+  <br/><br/>
 </p>
 
 Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.
@@ -42,7 +42,7 @@ Difference between BoostPic_Chrome and BoostPic_FireFox:
 
 # LICENSE
 
-Copyleft © [Leslie Wong](https://github.com/Leslie-Wong-H)
+Copyleft © [BoostPic](https://github.com/boostpic/boostpic)
 
 [Apache II](./LICENSE)
 
