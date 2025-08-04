@@ -15,7 +15,7 @@
     "message": "1. Win10/11: win+shift+s, kad iškirptumėte vaizdą net ne naršyklėje, o mac: Shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Įveskite Google Images, spustelėkite paieškos pagal paveikslėlį piktogramą (arba įvestį žemiau), tada paspauskite ctrl+v arba command+v;"
+    "message": "2. Spustelėkite žemiau esantį įvesties laukelį (jei norite, apačioje pasirinkite kitą vaizdinės paieškos sistemą nei „Google Images“) ir paspauskite Ctrl+v arba Command+v;"
   },
   "usage_guide_three": {
     "message": "3. Palaukite, kol jis grąžins URL. Jei įvyksta skirtojo laiko klaida, ištrinkite klaidos pranešimą ir dar kartą ctrl+v arba komanda+v."

@@ -15,7 +15,7 @@
     "message": "1. För win10/11: win+shift+s för att klippa en bild även utanför webbläsaren, och för mac: shift+control+kommando+4;"
   },
   "usage_guide_two": {
-    "message": "2. Gå in i Google Bilder, klicka på ikonen för sök efter bild (eller inmatningen nedan) och tryck sedan på ctrl+v eller kommando+v;"
+    "message": "2. Klicka i inmatningsrutan nedan (välj en annan visuell sökmotor än Google Bilder längst ner om du föredrar det) och tryck sedan på ctrl+v eller command+v;"
   },
   "usage_guide_three": {
     "message": "3. Vänta ett ögonblick tills det returnerar en URL. Om timeout-fel inträffar, ta bort felmeddelandet och ctrl+v eller kommando+v igen."

@@ -15,7 +15,7 @@
     "message": "1. Za win10/11: win+shift+s za izrez slike tudi zunaj brskalnika in za mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Vnesite Google Slike, kliknite ikono za iskanje po slikah (ali spodnji vnos) in nato pritisnite ctrl+v ali command+v;"
+    "message": "2. Kliknite spodnje vnosno polje (če želite, izberite drug vizualni iskalnik, ki ni Google Images na dnu) in nato pritisnite ctrl+v ali command+v;"
   },
   "usage_guide_three": {
     "message": "3. Počakajte trenutek, da vrne URL. Če pride do napake časovne omejitve, izbrišite sporočilo o napaki in znova pritisnite ctrl+v ali command+v."

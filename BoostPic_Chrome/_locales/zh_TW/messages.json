@@ -15,7 +15,7 @@
     "message": "1. 對於win10/11：win+shift+s 即使在瀏覽器之外也可以剪切圖像，對於mac：shift+control+command+4；"
   },
   "usage_guide_two": {
-    "message": "2.進入Google Images，點選按圖片搜尋圖示（或下方輸入），然後按ctrl+v或command+v；"
+    "message": "2. 點選下方的輸入方塊（如果願意，可以在底部選擇Google Images以外的其他視覺搜尋引擎），然後按ctrl+v或command+v；"
   },
   "usage_guide_three": {
     "message": "3. 稍等片刻，直到返回 URL。如果出現逾時錯誤，請刪除錯誤訊息並再次按ctrl+v或command+v。"

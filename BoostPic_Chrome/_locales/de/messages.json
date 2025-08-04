@@ -15,7 +15,7 @@
     "message": "1. Für Win10/11: Win+Umschalt+S, um ein Bild auch außerhalb des Browsers auszuschneiden, und für Mac: Umschalt+Strg+Befehl+4;"
   },
   "usage_guide_two": {
-    "message": "2. Rufen Sie Google Bilder auf, klicken Sie auf das Symbol zum Suchen nach Bildern (oder auf die Eingabe unten) und drücken Sie dann Strg+V oder Befehlstaste+V."
+    "message": "2. Klicken Sie auf das Eingabefeld unten (wählen Sie unten eine andere visuelle Suchmaschine als Google Bilder aus, wenn Sie möchten) und drücken Sie dann Strg+V oder Befehl+V."
   },
   "usage_guide_three": {
     "message": "3. Warten Sie einen Moment, bis eine URL zurückgegeben wird. Wenn ein Timeout-Fehler auftritt, löschen Sie bitte die Fehlermeldung und drücken Sie erneut Strg+V oder Befehl+V."
