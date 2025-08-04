@@ -15,7 +15,7 @@
     "message": "1. Per a win10/11: win+shift+s per retallar una imatge fins i tot fora del navegador, i per a Mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Introduïu Imatges de Google, feu clic a la icona de cerca per imatge (o l'entrada següent) i, a continuació, premeu ctrl+v o comanda+v;"
+    "message": "2. Feu clic al quadre d'entrada següent (seleccioneu un altre motor de cerca visual que no sigui Google Images a la part inferior si ho preferiu) i, a continuació, premeu Ctrl+V o Command+V;"
   },
   "usage_guide_three": {
     "message": "3. Espereu un moment fins que torni un URL. Si es produeix un error de temps d'espera, suprimiu el missatge d'error i torneu a ctrl+v o comanda+v."

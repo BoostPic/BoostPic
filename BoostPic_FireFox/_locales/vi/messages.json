@@ -9,7 +9,7 @@
     "message": "1. Đối với win10/11: win+shift+s để cắt ảnh ngay cả khi không có trình duyệt, và đối với mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Vào Google Images, nhấp vào biểu tượng tìm kiếm theo hình ảnh (hoặc mục nhập bên dưới), sau đó nhấn ctrl+v hoặc command+v;"
+    "message": "2. Nhấp vào hộp nhập liệu bên dưới (chọn một công cụ tìm kiếm hình ảnh khác ngoài Google Images ở cuối nếu bạn muốn), sau đó nhấn ctrl+v hoặc command+v;"
   },
   "usage_guide_three": {
     "message": "3. Đợi một lát cho đến khi nó trả về URL. Nếu lỗi hết thời gian xảy ra, vui lòng xóa thông báo lỗi và nhấn ctrl+v hoặc command+v một lần nữa."

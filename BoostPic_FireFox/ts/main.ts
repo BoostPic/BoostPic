@@ -610,16 +610,48 @@ if (
     const textString = imgUrlTextBox.value;
 
     if (textString.startsWith("http")) {
-      // window.open(
-      //   `https://images.google.com/searchbyimage?image_url=${textString}&encoded_image=&image_content=&filename=&hl=en`,
-      //   "_blank"
-      // );
-      window.open(
-        `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(
-          textString
-        )}&hl=en`,
-        "_blank"
-      );
+      const activeSearchEngine = document
+        .querySelector<HTMLImageElement>("img.active")
+        .getAttribute("title");
+      switch (activeSearchEngine) {
+        case "Bing":
+          window.open(
+            `https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:${encodeURIComponent(
+              textString
+            )}`,
+            "_blank"
+          );
+          break;
+        case "Yandex":
+          window.open(
+            `https://yandex.com/images/search?rpt=imageview&from=undefined&url=${encodeURIComponent(
+              textString
+            )}`,
+            "_blank"
+          );
+          break;
+        case "Sogou":
+          window.open(
+            `https://ris.sogou.com/ris?query=https%3A%2F%2Fimg04.sogoucdn.com%2Fv2%2Fthumb%2Fretype_exclude_gif%2Fext%2Fauto%3Fappid%3D122%26url%3D${encodeURIComponent(
+              textString
+            )}&flag=1&drag=1`,
+            "_blank"
+          );
+          break;
+        case "Google":
+        default:
+          // window.open(
+          //   `https://images.google.com/searchbyimage?image_url=${textString}&encoded_image=&image_content=&filename=&hl=en`,
+          //   "_blank"
+          // );
+          window.open(
+            `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(
+              textString
+            )}&hl=en`,
+            "_blank"
+          );
+          break;
+      }
     }
   };
 
@@ -813,3 +845,45 @@ if (["ar", "fa", "he"].some((el) => el === getBrowserLanguage())) {
   const bottomTextBox = document.querySelector("._3_9Kq span");
   bottomTextBox.setAttribute("style", "direction: rtl;");
 }
+
+// Bind certain image search engine according to the popup click event
+const googleLogo = document.querySelector("img[title=Google]");
+const bingLogo = document.querySelector("img[title=Bing]");
+const yandexLogo = document.querySelector("img[title=Yandex]");
+const sogouLogo = document.querySelector("img[title=Sogou]");
+googleLogo &&
+  googleLogo.addEventListener("click", (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    googleLogo.classList.add("active");
+    bingLogo.classList.remove("active");
+    yandexLogo.classList.remove("active");
+    sogouLogo.classList.remove("active");
+  });
+bingLogo &&
+  bingLogo.addEventListener("click", (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    googleLogo.classList.remove("active");
+    bingLogo.classList.add("active");
+    yandexLogo.classList.remove("active");
+    sogouLogo.classList.remove("active");
+  });
+yandexLogo &&
+  yandexLogo.addEventListener("click", (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    googleLogo.classList.remove("active");
+    bingLogo.classList.remove("active");
+    yandexLogo.classList.add("active");
+    sogouLogo.classList.remove("active");
+  });
+sogouLogo &&
+  sogouLogo.addEventListener("click", (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    googleLogo.classList.remove("active");
+    bingLogo.classList.remove("active");
+    yandexLogo.classList.remove("active");
+    sogouLogo.classList.add("active");
+  });

@@ -9,7 +9,7 @@
     "message": "1. Pour win10/11 : win+shift+s pour découper une image même en dehors du navigateur, et pour mac : shift+control+command+4 ;"
   },
   "usage_guide_two": {
-    "message": "2. Accédez à Google Images, cliquez sur l’icône de recherche par image (ou sur l’entrée ci-dessous), puis appuyez sur ctrl+v ou commande+v ;"
+    "message": "2. Cliquez sur la zone de saisie ci-dessous (sélectionnez un autre moteur de recherche visuelle que Google Images en bas si vous préférez), puis appuyez sur ctrl+v ou commande+v ;"
   },
   "usage_guide_three": {
     "message": "3. Attendez un instant jusqu'à ce qu'une URL vous soit renvoyée. Si une erreur de dépassement de délai se produit, supprimez le message d'erreur et appuyez à nouveau sur ctrl+v ou command+v."

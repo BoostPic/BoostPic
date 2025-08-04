@@ -15,7 +15,7 @@
     "message": "1. Win10/11: win+shift+s kuvan leikkaamiseen jopa selaimen ulkopuolella, ja mac: shift+control+komento+4;"
   },
   "usage_guide_two": {
-    "message": "2. Kirjoita Google-kuvahaku, napsauta hakukuvaketta (tai alla olevaa syötettä) ja paina sitten ctrl+v tai komento+v;"
+    "message": "2. Napsauta alla olevaa syöttöruutua (valitse halutessasi jokin muu visuaalinen hakukone kuin Google Kuvahaku alhaalta) ja paina sitten ctrl+v tai command+v;"
   },
   "usage_guide_three": {
     "message": "3. Odota hetki, kunnes se palauttaa URL-osoitteen. Jos aikakatkaisuvirhe tapahtuu, poista virheilmoitus ja ctrl+v tai komento+v uudelleen."

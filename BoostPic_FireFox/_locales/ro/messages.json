@@ -9,7 +9,7 @@
     "message": "1. Pentru win10/11: win+shift+s pentru a decupa o imagine chiar și în afara browserului, iar pentru mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Introduceți Google Images, faceți clic pe pictograma de căutare după imagine (sau intrarea de mai jos), apoi apăsați ctrl+v sau comanda+v;"
+    "message": "2. Faceți clic în caseta de introducere a textului de mai jos (selectați un alt motor de căutare vizuală în afară de Google Images în partea de jos, dacă preferați), apoi apăsați ctrl+v sau command+v;"
   },
   "usage_guide_three": {
     "message": "3. Așteptați un moment până când returnează o adresă URL. Dacă apare o eroare de timeout, ștergeți mesajul de eroare și ctrl+v sau comanda+v din nou."

@@ -9,7 +9,7 @@
     "message": "1. Voor win10/11: win+shift+s om een ​​afbeelding te knippen, zelfs buiten de browser, en voor mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Ga naar Google Afbeeldingen, klik op het pictogram Zoeken op afbeelding (of op de invoer hieronder) en druk vervolgens op ctrl+v of command+v;"
+    "message": "2. Klik op het invoerveld hieronder (selecteer onderaan eventueel een andere visuele zoekmachine dan Google Afbeeldingen) en druk vervolgens op ctrl+v of command+v;"
   },
   "usage_guide_three": {
     "message": "3. Wacht even tot er een URL wordt geretourneerd. Als er een time-outfout optreedt, verwijder dan de foutmelding en druk nogmaals op ctrl+v of command+v."

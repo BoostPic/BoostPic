@@ -9,7 +9,7 @@
     "message": "1. Para sa win10/11: win+shift+s para i-clip ang isang larawan kahit sa labas ng browser, at para sa mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Ipasok ang Google Images, mag-click sa icon ng paghahanap sa pamamagitan ng imahe (o ang input sa ibaba), at pagkatapos ay pindutin ang ctrl+v o command+v;"
+    "message": "2. Mag-click sa input box sa ibaba (pumili ng isa pang visual na search engine maliban sa Google Images sa ibaba kung gusto mo), at pagkatapos ay pindutin ang ctrl+v o command+v;"
   },
   "usage_guide_three": {
     "message": "3. Maghintay ng ilang sandali hanggang sa magbalik ito ng URL. Kung mangyari ang error sa timeout, mangyaring tanggalin ang mensahe ng error at ctrl+v o command+v muli."

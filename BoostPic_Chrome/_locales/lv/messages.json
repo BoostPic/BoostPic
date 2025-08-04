@@ -15,7 +15,7 @@
     "message": "1. Win10/11: win+shift+s, lai izgrieztu attēlu pat ārpus pārlūkprogrammas, un Mac: Shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Ievadiet Google attēli, noklikšķiniet uz meklēšanas pēc attēla ikonas (vai ievades zemāk) un pēc tam nospiediet ctrl+v vai command+v;"
+    "message": "2. Noklikšķiniet uz ievades lodziņa zemāk (ja vēlaties, apakšā atlasiet citu vizuālo meklētājprogrammu, nevis Google attēlus) un pēc tam nospiediet taustiņu kombināciju Ctrl+v vai Command+v;"
   },
   "usage_guide_three": {
     "message": "3. Pagaidiet brīdi, līdz tas atgriež URL. Ja rodas taimauta kļūda, lūdzu, izdzēsiet kļūdas ziņojumu un vēlreiz ctrl+v vai command+v."
