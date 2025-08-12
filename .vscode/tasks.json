@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev:chrome",
+      "problemMatcher": [],
+      "label": "npm: dev:chrome",
+      "detail": "tsc --project ./BoostPic_Chrome/tsconfig.json --watch --preserveWatchOutput"
+    },
+    {
+      "type": "npm",
+      "script": "dev:firefox",
+      "problemMatcher": [],
+      "label": "npm: dev:firefox",
+      "detail": "tsc --project ./BoostPic_FireFox/tsconfig.json --watch --preserveWatchOutput"
+    }
+  ]
+}
