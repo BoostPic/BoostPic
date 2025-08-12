@@ -647,7 +647,7 @@ else if (navigator.userAgent.includes("Chrome")) {
 const googleLogo = document.querySelector("img[title=Google]");
 const bingLogo = document.querySelector("img[title=Bing]");
 const yandexLogo = document.querySelector("img[title=Yandex]");
-const sogouLogo = document.querySelector("img[title=Sogou]");
+// const sogouLogo = document.querySelector("img[title=Sogou]");
 googleLogo &&
     googleLogo.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -655,7 +655,7 @@ googleLogo &&
         googleLogo.classList.add("active");
         bingLogo.classList.remove("active");
         yandexLogo.classList.remove("active");
-        sogouLogo.classList.remove("active");
+        // sogouLogo.classList.remove("active");
     });
 bingLogo &&
     bingLogo.addEventListener("click", (e) => {
@@ -664,7 +664,7 @@ bingLogo &&
         googleLogo.classList.remove("active");
         bingLogo.classList.add("active");
         yandexLogo.classList.remove("active");
-        sogouLogo.classList.remove("active");
+        // sogouLogo.classList.remove("active");
     });
 yandexLogo &&
     yandexLogo.addEventListener("click", (e) => {
@@ -673,14 +673,14 @@ yandexLogo &&
         googleLogo.classList.remove("active");
         bingLogo.classList.remove("active");
         yandexLogo.classList.add("active");
-        sogouLogo.classList.remove("active");
+        // sogouLogo.classList.remove("active");
     });
-sogouLogo &&
-    sogouLogo.addEventListener("click", (e) => {
-        e.stopPropagation();
-        e.preventDefault();
-        googleLogo.classList.remove("active");
-        bingLogo.classList.remove("active");
-        yandexLogo.classList.remove("active");
-        sogouLogo.classList.add("active");
-    });
+// sogouLogo &&
+//   sogouLogo.addEventListener("click", (e) => {
+//     e.stopPropagation();
+//     e.preventDefault();
+//     googleLogo.classList.remove("active");
+//     bingLogo.classList.remove("active");
+//     yandexLogo.classList.remove("active");
+//     sogouLogo.classList.add("active");
+//   });
