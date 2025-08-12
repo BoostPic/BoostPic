@@ -4,3 +4,4 @@ BoostPic_FireFox.zip
 *.un~
 node_modules
 .env
+.env.submit
