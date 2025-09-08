@@ -293,6 +293,27 @@
 ._1Sp_7 ._3jXk9 {
   color: #9fa6bf;
 }
+.fgksx {
+  flex-basis: 108px;
+  flex-shrink: 0;
+  height: 32px;
+  background: linear-gradient(90deg, #ba88fa 0, #635bff 100%);
+  text-align: center; /* align-self: center; */
+  vertical-align: middle;
+  align-content: center;
+  border-radius: 16px;
+}
+.fgksx:hover {
+  cursor: pointer;
+  background: linear-gradient(90deg, #a77ae1 0, #5a53e5 100%);
+}
+.fgksx .bgzxc {
+  color: white;
+}
+.fgksx .bgzxc:hover {
+  color: white;
+  background: linear-gradient(90deg, #a77ae1 0, #5a53e5 100%);
+}
 .fWfAye {
   padding-top: 16px;
 }
