@@ -4,11 +4,11 @@
 
 <p align="center">
   <br/><br/>
-  <a href="https://chrome.google.com/webstore/detail/boostpic/pmpogggmiaehmjempogkkklfckignfgl">
+  <a href="https://chrome.google.com/webstore/detail/boostpic/pmpogggmiaehmjempogkkklfckignfgl" target="_blank">
     <img src="backup/6h5OLE48wzolUFk.png" alt="Chrome Web Store"></a>
-  <a href="https://addons.mozilla.org/addon/boostpic/">
+  <a href="https://addons.mozilla.org/addon/boostpic/" target="_blank">
     <img src="backup/4JM8Gkh92RCmFbu.png" alt="Firefox add-ons"></a>
-  <a href="https://microsoftedge.microsoft.com/addons/detail/boostpic-search-google-/gbceodegcdpdjhppfmkekfnhaibaiail">
+  <a href="https://microsoftedge.microsoft.com/addons/detail/boostpic-search-google-/gbceodegcdpdjhppfmkekfnhaibaiail" target="_blank">
     <img src="backup/X9SWFjvkNafyu3Kq.png" alt="Opera add-ons">
 </a>
   <br/><br/>
@@ -18,17 +18,17 @@ Uncover the possibility to search Google Images quickly and incredibly, with cli
 
 # How it works
 
-1. For win10/11: win+shift+s to clip an image even outside the browser, and for mac: shift+control+command+4
+1.  For win10/11: win+shift+s to clip an image even outside the browser, and for mac: shift+control+command+4
 
-   ![BoostPicKeyChain_final.png](backup/KMokcDyd1nWjBe9.png)
+    ![BoostPicKeyChain_final.png](backup/KMokcDyd1nWjBe9.png)
 
-2. Enter Google Images, click at the search by image icon (or the input box at the extension popup), and then press ctrl+v or command+v.
+2.  Click at the input box below(select another visual search engine other than Google Images at the bottom if you prefer), and then press ctrl+v or command+v.
 
-   ![Step1](backup/tmUM26hDsRX7Lf9.png)
+    ![Step1](backup/tmUM26hDsRX7Lf9.png)
 
-3. Wait a moment until it returns an URL. If timeout error happens, please delete the error message and ctrl+v or command+v again.
+3.  Wait a moment until it returns an URL. If timeout error happens, please delete the error message and ctrl+v or command+v again.
 
-   ![step3](backup/6zhQKJNR3XskGB2.png)
+    ![step3](backup/6zhQKJNR3XskGB2.png)
 
 # Architecture
 
