@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Căutați Google Imagini din mers"
+    "message": "BoostPic - Căutare inversă de imagini Google din mers"
   },
   "description": {
-    "message": "Descoperiți posibilitatea de a căuta în Google Imagini rapid și incredibil, cu clip & paste."
+    "message": "Descoperă posibilitatea de a efectua căutarea inversă de imagini pe Google rapid și incredibil, cu ajutorul funcției de decupare și lipire."
   },
   "drop_an_image_here": {
     "message": "Aruncă o imagine aici"

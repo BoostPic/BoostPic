@@ -1,7 +1,7 @@
 {
   "name": "boostpic",
   "version": "4.6.4",
-  "description": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.",
+  "description": "Uncover the possibility to perform Google Reverse Image Search quickly and incredibly, with clip & paste.",
   "main": "BoostPic_Chrome/manifest.json",
   "scripts": {
     "dev:chrome": "tsc --project ./BoostPic_Chrome/tsconfig.json --watch --preserveWatchOutput",

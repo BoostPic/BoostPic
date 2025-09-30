@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Ieškokite „Google“ vaizdų"
+    "message": "BoostPic - „Google“ atvirkštinė vaizdų paieška akimirksniu"
   },
   "description": {
-    "message": "Atraskite galimybę greitai ir neįtikėtinai ieškoti „Google“ vaizdų naudodami klipą ir įklijavimą."
+    "message": "Atraskite galimybę greitai ir neįtikėtinai atlikti atvirkštinę „Google“ vaizdų paiešką naudojant iškirpimo ir įklijavimo funkciją."
   },
   "drop_an_image_here": {
     "message": "Numeskite paveikslėlį čia"

@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Search Google Images on the fly"
+    "message": "BoostPic - Google Reverse Image Search on the fly"
   },
   "description": {
-    "message": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste."
+    "message": "Uncover the possibility to perform Google Reverse Image Search quickly and incredibly, with clip & paste."
   },
   "drop_an_image_here": {
     "message": "Drop an image here"

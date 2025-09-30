@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Cerca immagini Google al volo"
+    "message": "BoostPic - Ricerca immagini inversa di Google al volo"
   },
   "description": {
-    "message": "Scopri la possibilità di cercare le immagini di Google in modo rapido e incredibile, con la funzione \"clip & paste\"."
+    "message": "Scopri la possibilità di eseguire la Ricerca inversa delle immagini di Google in modo rapido e incredibile, con la funzione \"Clip & Incolla\"."
   },
   "drop_an_image_here": {
     "message": "Rilascia un'immagine qui"

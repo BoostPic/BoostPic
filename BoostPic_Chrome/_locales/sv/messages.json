@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Sök på Google Bilder i farten"
+    "message": "BoostPic - Googles omvända bildsökning i realtid"
   },
   "description": {
-    "message": "Upptäck möjligheten att söka i Google Bilder snabbt och otroligt, med klipp och klistra."
+    "message": "Upptäck möjligheten att utföra Googles omvända bildsökning snabbt och otroligt, med klipp och klistra."
   },
   "drop_an_image_here": {
     "message": "Släpp en bild här"

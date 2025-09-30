@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Iščite v Google Images sproti"
+    "message": "BoostPic - Google Reverse Image Search na poti"
   },
   "description": {
-    "message": "Odkrijte možnost hitrega in neverjetnega iskanja po Googlovih slikah s funkcijo izrezka in lepljenja."
+    "message": "Odkrijte možnost hitrega in neverjetnega iskanja slik v Googlu z možnostjo izrezovanja in lepljenja."
   },
   "drop_an_image_here": {
     "message": "Spustite sliko sem"

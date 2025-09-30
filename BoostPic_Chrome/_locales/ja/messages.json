@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Google 画像を即座に検索"
+    "message": "BoostPic - Google 逆画像検索"
   },
   "description": {
-    "message": "クリップ＆ペーストを使用して、Google 画像をすばやく驚くほど検索する可能性を発見してください。"
+    "message": "クリップ & ペーストを使用して、Google リバース イメージ検索を迅速かつ驚くほど実行する可能性を発見します。"
   },
   "drop_an_image_here": {
     "message": "ここに画像をドロップ"

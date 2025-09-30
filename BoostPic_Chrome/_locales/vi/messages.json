@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Tìm kiếm hình ảnh Google ngay lập tức"
+    "message": "BoostPic - Tìm kiếm hình ảnh ngược của Google ngay lập tức"
   },
   "description": {
-    "message": "Khám phá khả năng tìm kiếm trên Google Images nhanh chóng và đáng kinh ngạc bằng chức năng cắt và dán."
+    "message": "Khám phá khả năng thực hiện Tìm kiếm hình ảnh ngược của Google một cách nhanh chóng và đáng kinh ngạc bằng cách cắt và dán."
   },
   "drop_an_image_here": {
     "message": "Thả một hình ảnh ở đây"
