@@ -14,7 +14,7 @@
   <br/><br/>
 </p>
 
-Uncover the possibility to search Google Images quickly and incredibly, with clip & paste.
+Uncover the possibility to perform Google Reverse Image Search quickly and incredibly, with clip & paste.
 
 # How it works
 

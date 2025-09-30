@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Google 이미지를 즉석에서 검색하세요"
+    "message": "BoostPic - 즉석에서 Google 역방향 이미지 검색"
   },
   "description": {
-    "message": "클립 앤 페이스트 기능을 사용해 Google 이미지를 빠르고 놀라울 정도로 검색할 가능성을 발견해 보세요."
+    "message": "클립 앤 페이스트를 이용해 Google 역이미지 검색을 빠르고 놀라울 정도로 수행할 수 있는 가능성을 발견해 보세요."
   },
   "drop_an_image_here": {
     "message": "여기에 이미지를 놓으세요"

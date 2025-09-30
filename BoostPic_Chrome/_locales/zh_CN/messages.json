@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - 即时搜索 Google 图片"
+    "message": "BoostPic - 谷歌即时反向图像搜索"
   },
   "description": {
-    "message": "发现使用剪辑和粘贴功能快速且令人难以置信地搜索 Google 图片的可能性。"
+    "message": "发现使用剪辑和粘贴功能快速且令人难以置信地执行 Google 反向图像搜索的可能性。"
   },
   "drop_an_image_here": {
     "message": "将图片拖放到此处"

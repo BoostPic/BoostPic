@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Przeszukuj obrazy Google w locie"
+    "message": "BoostPic - Odwrotne wyszukiwanie obrazów Google w locie"
   },
   "description": {
-    "message": "Odkryj możliwość szybkiego i niesamowitego przeszukiwania obrazów Google za pomocą funkcji wycinania i wklejania."
+    "message": "Odkryj możliwość wykonania szybkiego i niesamowitego odwrotnego wyszukiwania obrazami Google za pomocą opcji wycinania i wklejania."
   },
   "drop_an_image_here": {
     "message": "Upuść obraz tutaj"

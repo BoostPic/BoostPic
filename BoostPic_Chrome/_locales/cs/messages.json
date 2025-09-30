@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Vyhledávání obrázků Google za běhu"
+    "message": "BoostPic - Reverzní vyhledávání obrázků Google za pochodu"
   },
   "description": {
-    "message": "Odhalte možnost rychle a neuvěřitelně vyhledávat v Obrázcích Google pomocí funkce klip a vložení."
+    "message": "Objevte možnost rychlého a neuvěřitelného zpětného vyhledávání obrázků Google pomocí funkce „Kopnout a vložit“."
   },
   "drop_an_image_here": {
     "message": "Sem vložte obrázek"

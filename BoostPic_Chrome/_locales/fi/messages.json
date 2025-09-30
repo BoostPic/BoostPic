@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Hae Google Kuvahakua lennossa"
+    "message": "BoostPic - Googlen käänteinen kuvahaku lennossa"
   },
   "description": {
-    "message": "Löydä mahdollisuus tehdä Google-kuvahakuja nopeasti ja uskomattomalla tavalla clip & paste -toiminnolla."
+    "message": "Paljasta mahdollisuus suorittaa Googlen käänteinen kuvahaku nopeasti ja uskomattoman nopeasti leikkaa ja liitä -toiminnolla."
   },
   "drop_an_image_here": {
     "message": "Pudota kuva tähän"

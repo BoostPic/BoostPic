@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Otsige Google Images käigult"
+    "message": "BoostPic - Google'i pöördpildiotsing lennult"
   },
   "description": {
-    "message": "Avastage võimalus klipi ja kleepimise abil kiiresti ja uskumatult Google Imagesist otsida."
+    "message": "Avastage võimalus Google'i pöördpildiotsingut kiiresti ja uskumatult teha, kasutades lõikamise ja kleepimise funktsiooni."
   },
   "drop_an_image_here": {
     "message": "Viska pilt siia"

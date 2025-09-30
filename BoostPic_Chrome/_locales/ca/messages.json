@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Cerca Google Imatges sobre la marxa"
+    "message": "BoostPic - Cerca inversa d'imatges de Google sobre la marxa"
   },
   "description": {
-    "message": "Descobriu la possibilitat de cercar imatges de Google de manera ràpida i increïble, amb clip i enganxa."
+    "message": "Descobreix la possibilitat de realitzar la cerca inversa d'imatges de Google de manera ràpida i increïble, amb la funció de retallar i enganxar."
   },
   "drop_an_image_here": {
     "message": "Deixa una imatge aquí"

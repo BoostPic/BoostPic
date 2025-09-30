@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Meklējiet pakalpojumā Google attēli lidojumā"
+    "message": "BoostPic - Google apgrieztā attēlu meklēšana acumirklī"
   },
   "description": {
-    "message": "Atklājiet iespēju ātri un neticami meklēt pakalpojumā Google attēli, izmantojot klipu un ielīmēšanu."
+    "message": "Atklājiet iespēju ātri un neticami veikt Google apgriezto attēlu meklēšanu, izmantojot izgriešanu un ielīmēšanu."
   },
   "drop_an_image_here": {
     "message": "Nometiet attēlu šeit"
