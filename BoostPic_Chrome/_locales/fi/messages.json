@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Hae Google Kuvahakua lennossa"
+    "message": "BoostPic - Googlen käänteinen kuvahaku lennossa"
   },
   "description": {
-    "message": "Löydä mahdollisuus tehdä Google-kuvahakuja nopeasti ja uskomattomalla tavalla clip & paste -toiminnolla."
+    "message": "Paljasta mahdollisuus suorittaa Googlen käänteinen kuvahaku nopeasti ja uskomattoman nopeasti leikkaa ja liitä -toiminnolla."
   },
   "drop_an_image_here": {
     "message": "Pudota kuva tähän"
@@ -15,13 +15,13 @@
     "message": "1. Win10/11: win+shift+s kuvan leikkaamiseen jopa selaimen ulkopuolella, ja mac: shift+control+komento+4;"
   },
   "usage_guide_two": {
-    "message": "2. Kirjoita Google-kuvahaku, napsauta hakukuvaketta (tai alla olevaa syötettä) ja paina sitten ctrl+v tai komento+v;"
+    "message": "2. Napsauta alla olevaa syöttöruutua (valitse halutessasi jokin muu visuaalinen hakukone kuin Google Kuvahaku alhaalta) ja paina sitten ctrl+v tai command+v;"
   },
   "usage_guide_three": {
     "message": "3. Odota hetki, kunnes se palauttaa URL-osoitteen. Jos aikakatkaisuvirhe tapahtuu, poista virheilmoitus ja ctrl+v tai komento+v uudelleen."
   },
   "usage_guide_four": {
-    "message": "Hei! Osta minulle kahvi PayPalin kautta, jos olet avulias ja halukas. :)"
+    "message": "Bonussuositus: Art Pic -widget iPhonellesi/iPadillesi elämäntyylin parantamiseksi"
   },
   "paste_or_drop_an_image_here": {
     "message": "Liitä tai pudota kuva tähän"

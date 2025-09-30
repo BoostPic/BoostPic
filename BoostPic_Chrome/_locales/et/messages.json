@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Otsige Google Images käigult"
+    "message": "BoostPic - Google'i pöördpildiotsing lennult"
   },
   "description": {
-    "message": "Avastage võimalus klipi ja kleepimise abil kiiresti ja uskumatult Google Imagesist otsida."
+    "message": "Avastage võimalus Google'i pöördpildiotsingut kiiresti ja uskumatult teha, kasutades lõikamise ja kleepimise funktsiooni."
   },
   "drop_an_image_here": {
     "message": "Viska pilt siia"
@@ -15,13 +15,13 @@
     "message": "1. Win10/11 puhul: win+shift+s pildi lõikamiseks isegi väljaspool brauserit ja maci puhul: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Sisestage Google Images, klõpsake pildi järgi otsimise ikoonil (või alloleval sisendil) ja seejärel vajutage klahvikombinatsiooni ctrl+v või käsk+v;"
+    "message": "2. Klõpsa alloleval sisestusväljal (soovi korral vali allosas Google Imagesi asemel mõni muu visuaalne otsingumootor) ja seejärel vajuta Ctrl+V või Command+V;"
   },
   "usage_guide_three": {
     "message": "3. Oodake veidi, kuni see tagastab URL-i. Kui ilmneb ajalõpu viga, kustutage veateade ja uuesti ctrl+v või käsk+v."
   },
   "usage_guide_four": {
-    "message": "Tere! Ostke mulle PayPali kaudu kohvi, kui olete abivalmis ja nõus. :)"
+    "message": "Boonussoovitus: kunstividin teie iPhone'ile/iPadile elustiili tõstmiseks"
   },
   "paste_or_drop_an_image_here": {
     "message": "Kleebi või pukseeri pilt siia"

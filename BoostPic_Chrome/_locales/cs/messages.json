@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Vyhledávání obrázků Google za běhu"
+    "message": "BoostPic - Reverzní vyhledávání obrázků Google za pochodu"
   },
   "description": {
-    "message": "Odhalte možnost rychle a neuvěřitelně vyhledávat v Obrázcích Google pomocí funkce klip a vložení."
+    "message": "Objevte možnost rychlého a neuvěřitelného zpětného vyhledávání obrázků Google pomocí funkce „Kopnout a vložit“."
   },
   "drop_an_image_here": {
     "message": "Sem vložte obrázek"
@@ -15,13 +15,13 @@
     "message": "1. Pro win10/11: win+shift+s pro oříznutí obrázku i mimo prohlížeč a pro mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Zadejte Google Images, klikněte na ikonu vyhledávání podle obrázku (nebo vstup níže) a poté stiskněte ctrl+v nebo command+v;"
+    "message": "2. Klikněte do vstupního pole níže (pokud chcete, vyberte dole jiný vizuální vyhledávač než Obrázky Google) a poté stiskněte ctrl+v nebo command+v;"
   },
   "usage_guide_three": {
     "message": "3. Chvíli počkejte, než vrátí adresu URL. Pokud dojde k chybě vypršení časového limitu, odstraňte prosím chybovou zprávu a znovu stiskněte ctrl+v nebo command+v."
   },
   "usage_guide_four": {
-    "message": "Ahoj! Kupte mi kávu přes PayPal, budete-li nápomocný a ochotný. :)"
+    "message": "Bonusové doporučení: Widget Art Pic pro váš iPhone/iPad pro pozvednutí životního stylu"
   },
   "paste_or_drop_an_image_here": {
     "message": "Sem vložte nebo vložte obrázek"

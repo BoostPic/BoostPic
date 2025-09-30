@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Cerca Google Imatges sobre la marxa"
+    "message": "BoostPic - Cerca inversa d'imatges de Google sobre la marxa"
   },
   "description": {
-    "message": "Descobriu la possibilitat de cercar imatges de Google de manera ràpida i increïble, amb clip i enganxa."
+    "message": "Descobreix la possibilitat de realitzar la cerca inversa d'imatges de Google de manera ràpida i increïble, amb la funció de retallar i enganxar."
   },
   "drop_an_image_here": {
     "message": "Deixa una imatge aquí"
@@ -15,13 +15,13 @@
     "message": "1. Per a win10/11: win+shift+s per retallar una imatge fins i tot fora del navegador, i per a Mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Introduïu Imatges de Google, feu clic a la icona de cerca per imatge (o l'entrada següent) i, a continuació, premeu ctrl+v o comanda+v;"
+    "message": "2. Feu clic al quadre d'entrada següent (seleccioneu un altre motor de cerca visual que no sigui Google Images a la part inferior si ho preferiu) i, a continuació, premeu Ctrl+V o Command+V;"
   },
   "usage_guide_three": {
     "message": "3. Espereu un moment fins que torni un URL. Si es produeix un error de temps d'espera, suprimiu el missatge d'error i torneu a ctrl+v o comanda+v."
   },
   "usage_guide_four": {
-    "message": "hola! Compra'm un cafè a través de PayPal, si és útil i disposat. :)"
+    "message": "Recomanació extra: widget Art Pic per al teu iPhone/iPad per millorar l'estil de vida"
   },
   "paste_or_drop_an_image_here": {
     "message": "Enganxeu o deixeu anar una imatge aquí"

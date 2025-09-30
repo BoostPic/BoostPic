@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Search Google Images on the fly"
+    "message": "BoostPic - Google Reverse Image Search on the fly"
   },
   "description": {
-    "message": "Uncover the possibility to search Google Images quickly and incredibly, with clip & paste."
+    "message": "Uncover the possibility to perform Google Reverse Image Search quickly and incredibly, with clip & paste."
   },
   "drop_an_image_here": {
     "message": "Drop an image here"
@@ -15,13 +15,13 @@
     "message": "1. For win10/11: win+shift+s to clip an image even outside the browser, and for mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Enter <i><b><a href=\"https://images.google.com/\" target=\"_blank\">Google Images</a></b></i>, click at the search by image icon(or the input below), and then press ctrl+v or command+v;"
+    "message": "2. Click at the input box below(select another visual search engine other than Google Images at the bottom if you prefer), and then press ctrl+v or command+v;"
   },
   "usage_guide_three": {
     "message": "3. Wait a moment until it returns an URL. If timeout error happens, please delete the error message and ctrl+v or command+v again."
   },
   "usage_guide_four": {
-    "message": "Hi! Buy me a coffee via PayPal, if helpful and willing. :)"
+    "message": "Bonus Recommendation: Art Pic Widget for Your iPhone/iPad to Elevate Lifestyle"
   },
   "paste_or_drop_an_image_here": {
     "message": "Paste or drop an image here"

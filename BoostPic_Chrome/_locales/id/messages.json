@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Cari Gambar Google dengan cepat"
+    "message": "BoostPic - Google fordított képkeresés menet közben"
   },
   "description": {
-    "message": "Temukan kemungkinan untuk mencari Gambar Google dengan cepat dan luar biasa, dengan klip & tempel."
+    "message": "Temukan kemungkinan untuk melakukan Pencarian Gambar Terbalik Google dengan cepat dan luar biasa, dengan klip & tempel."
   },
   "drop_an_image_here": {
     "message": "Jatuhkan gambar di sini"
@@ -15,13 +15,13 @@
     "message": "1. Untuk win10/11: win+shift+s untuk memotong gambar bahkan di luar browser, dan untuk mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Masuk ke Google Images, klik ikon pencarian berdasarkan gambar (atau input di bawah), lalu tekan ctrl+v atau command+v;"
+    "message": "2. Klik kotak input di bawah (pilih mesin pencari visual lain selain Google Images di bagian bawah jika Anda mau), lalu tekan ctrl+v atau command+v;"
   },
   "usage_guide_three": {
     "message": "3. Tunggu beberapa saat hingga URL muncul. Jika terjadi kesalahan batas waktu, hapus pesan kesalahan dan tekan ctrl+v atau command+v lagi."
   },
   "usage_guide_four": {
-    "message": "Hai! Belikan saya kopi melalui PayPal, jika Anda bersedia dan membantu. :)"
+    "message": "Rekomendasi Bonus: Widget Gambar Seni untuk iPhone/iPad Anda untuk Meningkatkan Gaya Hidup"
   },
   "paste_or_drop_an_image_here": {
     "message": "Tempel atau jatuhkan gambar di sini"

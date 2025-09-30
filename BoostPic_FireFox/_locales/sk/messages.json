@@ -9,13 +9,13 @@
     "message": "1. Pre win10/11: win+shift+s na orezanie obrázka aj mimo prehliadača a pre mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Zadajte Google Images, kliknite na ikonu vyhľadávania podľa obrázka (alebo na vstup nižšie) a potom stlačte ctrl+v alebo command+v;"
+    "message": "2. Kliknite na vstupné pole nižšie (ak chcete, vyberte v dolnej časti iný vizuálny vyhľadávací nástroj ako Obrázky Google) a potom stlačte klávesy Ctrl+V alebo Command+V;"
   },
   "usage_guide_three": {
     "message": "3. Chvíľu počkajte, kým vráti adresu URL. Ak dôjde k chybe časového limitu, odstráňte chybové hlásenie a znova stlačte ctrl+v alebo command+v."
   },
   "usage_guide_four": {
-    "message": "Ahoj! Kúpte mi kávu cez PayPal, ak budete nápomocní a ochotní. :)"
+    "message": "Bonusové odporúčanie: Widget Art Pic pre váš iPhone/iPad na zlepšenie životného štýlu"
   },
   "paste_image_here": {
     "message": "Tu vložte obrázok"

@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Przeszukuj obrazy Google w locie"
+    "message": "BoostPic - Odwrotne wyszukiwanie obrazów Google w locie"
   },
   "description": {
-    "message": "Odkryj możliwość szybkiego i niesamowitego przeszukiwania obrazów Google za pomocą funkcji wycinania i wklejania."
+    "message": "Odkryj możliwość wykonania szybkiego i niesamowitego odwrotnego wyszukiwania obrazami Google za pomocą opcji wycinania i wklejania."
   },
   "drop_an_image_here": {
     "message": "Upuść obraz tutaj"
@@ -15,13 +15,13 @@
     "message": "1. W systemach Win10/11: win+shift+s, aby przyciąć obraz nawet poza przeglądarką, a w systemach Mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Wejdź na stronę Google Images, kliknij ikonę wyszukiwania obrazem (lub pole poniżej), a następnie naciśnij ctrl+v lub command+v;"
+    "message": "2. Kliknij pole wprowadzania poniżej (jeśli wolisz, wybierz na dole inną wyszukiwarkę wizualną niż Google Images), a następnie naciśnij ctrl+v lub command+v;"
   },
   "usage_guide_three": {
     "message": "3. Poczekaj chwilę, aż zwróci adres URL. Jeśli wystąpi błąd limitu czasu, usuń komunikat o błędzie i ponownie naciśnij ctrl+v lub command+v."
   },
   "usage_guide_four": {
-    "message": "Cześć! Postaw mi kawę przez PayPal, jeśli będziesz pomocny i chętny. :)"
+    "message": "Dodatkowa rekomendacja: widżet Art Pic na iPhone'a/iPada, który podniesie poziom Twojego życia"
   },
   "paste_or_drop_an_image_here": {
     "message": "Wklej lub upuść obraz tutaj"

@@ -9,13 +9,13 @@
     "message": "1. Win10/11 için: win+shift+s, tarayıcının dışında bile bir resmi kesmek için, mac için: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Google Görseller'e girin, resimle arama simgesine (veya alttaki girdiye) tıklayın ve ardından ctrl+v veya command+v tuşlarına basın;"
+    "message": "2. Aşağıdaki giriş kutusuna tıklayın (eğer isterseniz alt taraftaki Google Görseller dışında başka bir görsel arama motoru seçin) ve ardından ctrl+v veya command+v tuşlarına basın;"
   },
   "usage_guide_three": {
     "message": "3. Bir URL dönene kadar bir an bekleyin. Zaman aşımı hatası oluşursa, lütfen hata mesajını silin ve ctrl+v veya command+v'yi tekrar yapın."
   },
   "usage_guide_four": {
-    "message": "Merhaba! Eğer yardımsever ve istekliyseniz bana PayPal üzerinden bir kahve ısmarlayın. :)"
+    "message": "Bonus Öneri: iPhone/iPad'iniz için Yaşam Tarzınızı Geliştirecek Sanat Resim Widget'ı"
   },
   "paste_image_here": {
     "message": "Resmi buraya yapıştır"

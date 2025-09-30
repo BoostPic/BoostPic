@@ -321,6 +321,27 @@
 ._1Sp_7 ._3jXk9 {
   color: #9fa6bf;
 }
+.fgksx {
+  flex-basis: 108px;
+  flex-shrink: 0;
+  height: 32px;
+  background: linear-gradient(90deg, #ba88fa 0, #635bff 100%);
+  text-align: center; /* align-self: center; */
+  vertical-align: middle;
+  align-content: center;
+  border-radius: 16px;
+}
+.fgksx:hover {
+  cursor: pointer;
+  background: linear-gradient(90deg, #a77ae1 0, #5a53e5 100%);
+}
+.fgksx .bgzxc {
+  color: white;
+}
+.fgksx .bgzxc:hover {
+  color: white;
+  background: linear-gradient(90deg, #a77ae1 0, #5a53e5 100%);
+}
 .fWfAye {
   padding-top: 16px;
 }
@@ -457,4 +478,47 @@
 ._3_9Kq ._3j9NB svg path {
   /* stroke: #6d758d; */
   transition: stroke 0.1s;
+}
+.ZaZLh {
+  border-top: 1px solid #f0f2fc;
+  height: 56px;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+._3_8Kq,
+.ZaZLh {
+  display: -ms-flexbox;
+  display: flex;
+}
+._3_8Kq {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-flex-align: center;
+  align-items: end;
+  font-family: Inter;
+  font-size: 12px;
+  line-height: 18px;
+  color: #6d758d;
+  transition: color 0.1s;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+._3_8Kq:hover {
+  color: #353847;
+}
+._3_8Kq ._3j8NB {
+  height: 40px;
+  width: 40px;
+  color: #353847;
+  background-color: transparent;
+  margin-left: 4px;
+}
+._3_8Kq ._3j8NB img {
+  cursor: pointer;
+  border-radius: 50%;
+}
+._3_8Kq ._3j8NB img.active {
+  box-shadow: 0 0 15px 5px rgba(13, 110, 253, 0.4);
 }

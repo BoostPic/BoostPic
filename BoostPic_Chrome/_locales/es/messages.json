@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Busque imágenes de Google sobre la marcha"
+    "message": "BoostPic - Búsqueda inversa de imágenes de Google sobre la marcha"
   },
   "description": {
-    "message": "Descubre la posibilidad de buscar imágenes en Google de forma rápida e increíble, con recortar y pegar."
+    "message": "Descubra la posibilidad de realizar una búsqueda inversa de imágenes en Google de forma rápida e increíble, con solo recortar y pegar."
   },
   "drop_an_image_here": {
     "message": "Suelta una imagen aquí"
@@ -15,13 +15,13 @@
     "message": "1. Para win10/11: win+shift+s para recortar una imagen incluso fuera del navegador, y para mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Ingrese a Google Imágenes, haga clic en el ícono de búsqueda por imagen (o la entrada a continuación) y luego presione Ctrl+V o Comando+V;"
+    "message": "2. Haga clic en el cuadro de entrada a continuación (seleccione otro motor de búsqueda visual que no sea Google Imágenes en la parte inferior si lo prefiere) y luego presione Ctrl+V o Comando+V;"
   },
   "usage_guide_three": {
     "message": "3. Espere un momento hasta que se devuelva una URL. Si se produce un error de tiempo de espera, elimine el mensaje de error y vuelva a presionar Ctrl+V o Comando+V."
   },
   "usage_guide_four": {
-    "message": "Hola, invítame a un café a través de PayPal si eres servicial y estás dispuesto a ayudar. :)"
+    "message": "Recomendación adicional: Widget de imágenes artísticas para tu iPhone/iPad para mejorar tu estilo de vida"
   },
   "paste_or_drop_an_image_here": {
     "message": "Pegue o suelte una imagen aquí"

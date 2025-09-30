@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - በጉዞ ላይ ጎግል ምስሎችን ይፈልጉ"
+    "message": "BoostPic - ጎግል በግልባጭ ምስል ፍለጋ በመብረር ላይ"
   },
   "description": {
-    "message": "ጎግል ምስሎችን በፍጥነት እና በሚያስገርም ሁኔታ በቅንጥብ እና በመለጠፍ የመፈለግ እድልን ያውጡ።"
+    "message": "በፍጥነት እና በሚያስደንቅ ሁኔታ ፣በቅንጥብ እና በመለጠፍ ጎግልን የተገላቢጦሽ ምስል የማከናወን እድልን ግለጽ።"
   },
   "drop_an_image_here": {
     "message": "እዚህ ምስል ጣል ያድርጉ"
@@ -15,13 +15,13 @@
     "message": "1. win10/11፡ win + shift+s ከአሳሹ ውጭም ቢሆን ምስል ለመቁረጥ እና ለማክ፡ shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. ጎግል ምስሎችን አስገባ፣ ፍለጋውን በምስል አዶ(ወይንም ከታች ያለውን ግቤት) ተጫን እና ከዛ ctrl+v ወይም Command+v;"
+    "message": "2. ከታች ባለው የግቤት ሳጥን ላይ ጠቅ ያድርጉ (ከፈለጉ ከ Google ምስሎች ሌላ ሌላ ቪዥዋል የፍለጋ ሞተር ይምረጡ) እና በመቀጠል ctrl+v ወይም Command+v;"
   },
   "usage_guide_three": {
     "message": "3. URL እስኪመልስ ድረስ ትንሽ ቆይ። የማለፊያ ስህተት ከተፈጠረ፣ እባክዎን የስህተት መልዕክቱን እና ctrl+vን ይሰርዙ ወይም እንደገና ያዝዙ።"
   },
   "usage_guide_four": {
-    "message": "ሃይ! ጠቃሚ እና ፈቃደኛ ከሆነ በ PayPal በኩል ቡና ይግዙኝ. :)"
+    "message": "የጉርሻ ምክር፡ የArt Pic Widget ለእርስዎ አይፎን/አይፓድ የህይወት ዘይቤን ከፍ ለማድረግ"
   },
   "paste_or_drop_an_image_here": {
     "message": "እዚህ ምስል ለጥፍ ወይም ጣል"

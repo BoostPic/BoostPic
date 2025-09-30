@@ -9,13 +9,13 @@
     "message": "1. For win10/11: win+shift+s for å klippe et bilde selv utenfor nettleseren, og for mac: shift+control+kommando+4;"
   },
   "usage_guide_two": {
-    "message": "2. Gå inn i Google Bilder, klikk på søk etter bilde-ikonet (eller inndataene nedenfor), og trykk deretter ctrl+v eller kommando+v;"
+    "message": "2. Klikk i inndataboksen nedenfor (velg en annen visuell søkemotor enn Google Bilder nederst hvis du foretrekker det), og trykk deretter ctrl+v eller command+v;"
   },
   "usage_guide_three": {
     "message": "3. Vent et øyeblikk til den returnerer en URL. Hvis det oppstår en tidsavbruddsfeil, må du slette feilmeldingen og ctrl+v eller kommando+v igjen."
   },
   "usage_guide_four": {
-    "message": "Hei! Kjøp meg en kaffe via PayPal, hvis du er hjelpsom og villig. :)"
+    "message": "Bonusanbefaling: Art Pic Widget for iPhone/iPad for å forbedre livsstilen din"
   },
   "paste_image_here": {
     "message": "Lim inn bildet her"

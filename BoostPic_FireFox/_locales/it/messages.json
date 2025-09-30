@@ -9,13 +9,13 @@
     "message": "1. Per win10/11: win+shift+s per ritagliare un'immagine anche al di fuori del browser e per mac: shift+control+comando+4;"
   },
   "usage_guide_two": {
-    "message": "2. Accedi a Google Immagini, clicca sull'icona di ricerca per immagine (o sul campo sottostante), quindi premi ctrl+v o comando+v;"
+    "message": "2. Fare clic sulla casella di input sottostante (se si preferisce, selezionare un altro motore di ricerca visivo diverso da Google Immagini in basso), quindi premere ctrl+v o comando+v;"
   },
   "usage_guide_three": {
     "message": "3. Attendi un momento finché non viene restituito un URL. Se si verifica un errore di timeout, elimina il messaggio di errore e premi di nuovo ctrl+v o command+v."
   },
   "usage_guide_four": {
-    "message": "Ciao! Offrimi un caffè tramite PayPal, se sei disponibile e disponibile. :)"
+    "message": "Consiglio bonus: widget Art Pic per il tuo iPhone/iPad per migliorare il tuo stile di vita"
   },
   "paste_image_here": {
     "message": "Incolla l'immagine qui"

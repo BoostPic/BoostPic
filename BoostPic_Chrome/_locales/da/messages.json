@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Søg i Google Billeder i farten"
+    "message": "BoostPic - Google Omvendt Billedsøgning på farten"
   },
   "description": {
-    "message": "Afdække muligheden for at søge i Google Billeder hurtigt og utroligt med klip og indsæt."
+    "message": "Opdag muligheden for at udføre Google Reverse Image Search hurtigt og utroligt med klip og indsæt."
   },
   "drop_an_image_here": {
     "message": "Smid et billede her"
@@ -15,13 +15,13 @@
     "message": "1. For win10/11: win+shift+s for at klippe et billede selv uden for browseren, og for mac: shift+control+kommando+4;"
   },
   "usage_guide_two": {
-    "message": "2. Gå ind i Google Billeder, klik på ikonet Søg efter billede (eller indtastningen nedenfor), og tryk derefter på ctrl+v eller kommando+v;"
+    "message": "2. Klik i inputfeltet nedenfor (vælg en anden visuel søgemaskine end Google Billeder nederst, hvis du foretrækker det), og tryk derefter på ctrl+v eller command+v;"
   },
   "usage_guide_three": {
     "message": "3. Vent et øjeblik, indtil den returnerer en URL. Hvis der opstår timeout-fejl, skal du slette fejlmeddelelsen og ctrl+v eller command+v igen."
   },
   "usage_guide_four": {
-    "message": "Hej! Køb mig en kop kaffe via PayPal, hvis du er hjælpsom og villig. :)"
+    "message": "Bonusanbefaling: Art Pic Widget til din iPhone/iPad for at forbedre din livsstil"
   },
   "paste_or_drop_an_image_here": {
     "message": "Indsæt eller slip et billede her"

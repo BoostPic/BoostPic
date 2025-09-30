@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Recherchez des images Google à la volée"
+    "message": "BoostPic - Recherche d'images inversée Google à la volée"
   },
   "description": {
-    "message": "Découvrez la possibilité de rechercher des images Google rapidement et de manière incroyable, avec le clip & paste."
+    "message": "Découvrez la possibilité d'effectuer une recherche d'image inversée Google rapidement et de manière incroyable, avec clip & paste."
   },
   "drop_an_image_here": {
     "message": "Déposez une image ici"
@@ -15,13 +15,13 @@
     "message": "1. Pour win10/11 : win+shift+s pour découper une image même en dehors du navigateur, et pour mac : shift+control+command+4 ;"
   },
   "usage_guide_two": {
-    "message": "2. Accédez à Google Images, cliquez sur l’icône de recherche par image (ou sur l’entrée ci-dessous), puis appuyez sur ctrl+v ou commande+v ;"
+    "message": "2. Cliquez sur la zone de saisie ci-dessous (sélectionnez un autre moteur de recherche visuelle que Google Images en bas si vous préférez), puis appuyez sur ctrl+v ou commande+v ;"
   },
   "usage_guide_three": {
     "message": "3. Attendez un instant jusqu'à ce qu'une URL vous soit renvoyée. Si une erreur de dépassement de délai se produit, supprimez le message d'erreur et appuyez à nouveau sur ctrl+v ou command+v."
   },
   "usage_guide_four": {
-    "message": "Salut ! Offrez-moi un café via PayPal, si vous êtes serviable et disposé. :)"
+    "message": "Recommandation bonus : Widget d'images artistiques pour iPhone/iPad pour améliorer votre style de vie"
   },
   "paste_or_drop_an_image_here": {
     "message": "Collez ou déposez une image ici"

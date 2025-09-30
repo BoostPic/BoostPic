@@ -14,6 +14,9 @@ env:
   WEB_EXT_API_KEY: "${{ secrets.WEB_EXT_API_KEY }}"
   WEB_EXT_API_SECRET: "${{ secrets.WEB_EXT_API_SECRET }}"
   WEB_EXT_ID: "${{ secrets.WEB_EXT_ID }}"
+  EDGE_PRODUCT_ID: "${{secrets.EDGE_PRODUCT_ID}}"
+  EDGE_CLIENT_ID: "${{secrets.EDGE_CLIENT_ID}}"
+  EDGE_API_KEY: "${{secrets.EDGE_API_KEY}}"
 
 jobs:
   publish:
@@ -22,6 +25,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Before install
-        run: npm i -g chrome-webstore-upload-cli@2.1.0 web-ext@7.11.0
+        run: npm i -g chrome-webstore-upload-cli@2.1.0 web-ext@7.11.0 publish-browser-extension@3.0.1
       - name: Release
         run: npm run release

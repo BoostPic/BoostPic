@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Keressen a Google Képek között menet közben"
+    "message": "BoostPic - Google fordított képkeresés menet közben"
   },
   "description": {
-    "message": "Fedezze fel a lehetőséget, hogy gyorsan és hihetetlenül keressen a Google Képek között a clip & paste segítségével."
+    "message": "Fedezd fel a Google fordított képkeresés gyors és hihetetlen végrehajtásának lehetőségét a kivágás és beillesztés funkcióval."
   },
   "drop_an_image_here": {
     "message": "Dobj ide egy képet"
@@ -15,13 +15,13 @@
     "message": "1. Win10/11 esetén: win+shift+s a kép kivágásához még a böngészőn kívül is, mac esetén pedig: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Írja be a Google Képeket, kattintson a kép szerinti keresés ikonra (vagy az alábbi bevitelre), majd nyomja meg a ctrl+v vagy a command+v billentyűkombinációt;"
+    "message": "2. Kattintson az alábbi beviteli mezőre (ha szeretne, válasszon egy másik vizuális keresőmotort a Google Képek helyett alul), majd nyomja meg a ctrl+v vagy a command+v billentyűkombinációt;"
   },
   "usage_guide_three": {
     "message": "3. Várjon egy pillanatot, amíg visszaad egy URL-t. Ha időtúllépési hiba történik, törölje a hibaüzenetet, és ismételje meg a ctrl+v vagy a command+v billentyűket."
   },
   "usage_guide_four": {
-    "message": "Szia! Vegyél nekem egy kávét PayPalon keresztül, ha segítőkész és hajlandó. :)"
+    "message": "Bónusz ajánlás: Art Pic Widget iPhone/iPad készülékre az életstílus felemeléséhez"
   },
   "paste_or_drop_an_image_here": {
     "message": "Illesszen be vagy dobjon ide egy képet"

@@ -1,9 +1,9 @@
 {
   "name": {
-    "message": "BoostPic - Cari Imej Google dengan cepat"
+    "message": "BoostPic - Carian Imej Songsang Google dengan cepat"
   },
   "description": {
-    "message": "Temui kemungkinan untuk mencari Imej Google dengan cepat dan luar biasa, dengan klip & tampal."
+    "message": "Temui kemungkinan untuk melakukan Carian Imej Songsang Google dengan cepat dan luar biasa, dengan klip & tampal."
   },
   "drop_an_image_here": {
     "message": "Lepaskan imej di sini"
@@ -15,13 +15,13 @@
     "message": "1. Untuk win10/11: win+shift+s untuk klip imej walaupun di luar penyemak imbas, dan untuk mac: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Masukkan Imej Google, klik pada ikon carian mengikut imej (atau input di bawah), dan kemudian tekan ctrl+v atau command+v;"
+    "message": "2. Klik pada kotak input di bawah (pilih enjin carian visual lain selain daripada Imej Google di bahagian bawah jika anda mahu), dan kemudian tekan ctrl+v atau command+v;"
   },
   "usage_guide_three": {
     "message": "3. Tunggu seketika sehingga ia mengembalikan URL. Jika ralat tamat masa berlaku, sila padamkan mesej ralat dan ctrl+v atau command+v sekali lagi."
   },
   "usage_guide_four": {
-    "message": "Hai! Belikan saya kopi melalui PayPal, jika bermanfaat dan sudi. :)"
+    "message": "Syor Bonus: Widget Gambar Seni untuk iPhone/iPad Anda untuk Meningkatkan Gaya Hidup"
   },
   "paste_or_drop_an_image_here": {
     "message": "Tampal atau lepaskan imej di sini"

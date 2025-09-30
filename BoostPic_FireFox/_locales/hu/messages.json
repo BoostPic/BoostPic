@@ -9,13 +9,13 @@
     "message": "1. Win10/11 esetén: win+shift+s a kép kivágásához még a böngészőn kívül is, mac esetén pedig: shift+control+command+4;"
   },
   "usage_guide_two": {
-    "message": "2. Írja be a Google Képeket, kattintson a kép szerinti keresés ikonra (vagy az alábbi bevitelre), majd nyomja meg a ctrl+v vagy a command+v billentyűkombinációt;"
+    "message": "2. Kattintson az alábbi beviteli mezőre (ha szeretne, válasszon egy másik vizuális keresőmotort a Google Képek helyett alul), majd nyomja meg a ctrl+v vagy a command+v billentyűkombinációt;"
   },
   "usage_guide_three": {
     "message": "3. Várjon egy pillanatot, amíg visszaad egy URL-t. Ha időtúllépési hiba történik, törölje a hibaüzenetet, és ismételje meg a ctrl+v vagy a command+v billentyűket."
   },
   "usage_guide_four": {
-    "message": "Szia! Vegyél nekem egy kávét PayPalon keresztül, ha segítőkész és hajlandó. :)"
+    "message": "Bónusz ajánlás: Art Pic Widget iPhone/iPad készülékre az életstílus felemeléséhez"
   },
   "paste_image_here": {
     "message": "Illessze be a képet ide"
