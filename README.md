@@ -26,7 +26,7 @@ Uncover the possibility to perform Google Reverse Image Search quickly and incre
 
     ![Step1](backup/tmUM26hDsRX7Lf9.png)
 
-3.  Wait a moment until it returns an URL. If timeout error happens, please delete the error message and ctrl+v or command+v again.
+3.  Wait a moment until it returns a URL. If timeout error happens, please delete the error message and ctrl+v or command+v again.
 
     ![step3](backup/6zhQKJNR3XskGB2.png)
 
