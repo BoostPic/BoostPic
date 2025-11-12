@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "Rakennettu rakastunut GitHubiin ja imgBB:hen"
+  },
+  "image_uploading": {
+    "message": "Kuvan lataaminen"
   }
 }

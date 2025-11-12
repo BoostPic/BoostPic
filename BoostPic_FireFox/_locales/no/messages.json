@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "Bygget forelsket i GitHub og imgBB"
+  },
+  "image_uploading": {
+    "message": "Bildeopplasting"
   }
 }

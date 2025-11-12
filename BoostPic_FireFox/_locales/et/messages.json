@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "Armunud GitHubisse ja imgBB-sse"
+  },
+  "image_uploading": {
+    "message": "Pildi üleslaadimine"
   }
 }

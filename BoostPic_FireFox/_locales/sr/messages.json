@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "Заљубљени у ГитХуб и имгББ"
+  },
+  "image_uploading": {
+    "message": "Отпремање слике"
   }
 }

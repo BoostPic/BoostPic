@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "Built in &#9829; with GitHub and imgBB"
+  },
+  "image_uploading": {
+    "message": "Image uploading"
   }
 }

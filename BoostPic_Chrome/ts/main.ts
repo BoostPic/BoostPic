@@ -109,9 +109,9 @@ class uploadImage {
       this.GoogleImagesDomElements.imgUrlTextBoxId
     );
     const uploadState = [
-      "  Image uploading .",
-      "  Image uploading ..",
-      "  Image uploading ...",
+      `  ${chrome.i18n.getMessage("image_uploading")} .`,
+      `  ${chrome.i18n.getMessage("image_uploading")} ..`,
+      `  ${chrome.i18n.getMessage("image_uploading")} ...`,
     ];
     const showLoadingState = new Promise((resolve, reject) => {
       console.log("Showing loading state");
@@ -122,7 +122,7 @@ class uploadImage {
         reject("Image URL received!");
       }
     });
-    imgUrlText.value = "  Image uploading ";
+    imgUrlText.value = `  ${chrome.i18n.getMessage("image_uploading")} `;
     this.refreshIntervalId = setInterval(() => {
       showLoadingState
         .then(

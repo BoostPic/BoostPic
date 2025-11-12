@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "热爱 GitHub 和 imgBB"
+  },
+  "image_uploading": {
+    "message": "图片上传"
   }
 }

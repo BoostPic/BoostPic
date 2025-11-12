@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "Creat enamorat de GitHub i imgBB"
+  },
+  "image_uploading": {
+    "message": "Càrrega d'imatges"
   }
 }
