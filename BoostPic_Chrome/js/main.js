@@ -20,6 +20,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var _a;
 class uploadImage {
     constructor(GoogleImagesDomElements) {
         this.GoogleImagesDomElements = GoogleImagesDomElements;
@@ -419,7 +420,7 @@ else {
     GoogleImagesDomElements.searchbyimageDivId = "div.fWfAye";
 }
 // console.log(GoogleImagesDomElements);
-GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
+(_a = GoogleImagesDomElements.searchbyimagebtn) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => {
     setTimeout(() => {
         const imgUrlTextBox = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
         if (imgUrlTextBox == null) {

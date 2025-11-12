@@ -545,7 +545,7 @@ else {
 
 // console.log(GoogleImagesDomElements);
 
-GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
+GoogleImagesDomElements.searchbyimagebtn?.addEventListener("click", () => {
   setTimeout(() => {
     const imgUrlTextBox = document.querySelector<HTMLInputElement>(
       GoogleImagesDomElements.imgUrlTextBoxId
