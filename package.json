@@ -1,6 +1,6 @@
 {
   "name": "boostpic",
-  "version": "4.6.13",
+  "version": "4.6.14",
   "description": "Uncover the possibility to perform Google Reverse Image Search quickly and incredibly, with clip & paste.",
   "main": "BoostPic_Chrome/manifest.json",
   "scripts": {
