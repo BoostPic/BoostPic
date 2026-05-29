@@ -109,9 +109,9 @@ class uploadImage {
       this.GoogleImagesDomElements.imgUrlTextBoxId
     );
     const uploadState = [
-      "  Image uploading .",
-      "  Image uploading ..",
-      "  Image uploading ...",
+      `  ${chrome.i18n.getMessage("image_uploading")} .`,
+      `  ${chrome.i18n.getMessage("image_uploading")} ..`,
+      `  ${chrome.i18n.getMessage("image_uploading")} ...`,
     ];
     const showLoadingState = new Promise((resolve, reject) => {
       console.log("Showing loading state");
@@ -122,7 +122,7 @@ class uploadImage {
         reject("Image URL received!");
       }
     });
-    imgUrlText.value = "  Image uploading ";
+    imgUrlText.value = `  ${chrome.i18n.getMessage("image_uploading")} `;
     this.refreshIntervalId = setInterval(() => {
       showLoadingState
         .then(
@@ -162,7 +162,7 @@ class uploadImage {
 
     // Crossbrowser support for URL
     const URLObj = window.URL || webkitURL;
-    // Create a DOMString containing an URL representing the object given in the parameter
+    // Create a DOMString containing a URL representing the object given in the parameter
     // namely the original Blob
     const blobUrl = URLObj.createObjectURL(this.imageBlob);
     console.log(blobUrl);
@@ -545,7 +545,7 @@ else {
 
 // console.log(GoogleImagesDomElements);
 
-GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
+GoogleImagesDomElements.searchbyimagebtn?.addEventListener("click", () => {
   setTimeout(() => {
     const imgUrlTextBox = document.querySelector<HTMLInputElement>(
       GoogleImagesDomElements.imgUrlTextBoxId

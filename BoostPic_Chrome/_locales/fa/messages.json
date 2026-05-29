@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "با عشق GitHub و imgBB ساخته شده است"
+  },
+  "image_uploading": {
+    "message": "آپلود تصویر"
   }
 }

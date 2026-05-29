@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "สร้างขึ้นด้วยความรักจาก GitHub และ imgBB"
+  },
+  "image_uploading": {
+    "message": "การอัพโหลดรูปภาพ"
   }
 }

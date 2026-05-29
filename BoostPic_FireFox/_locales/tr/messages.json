@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "GitHub ve imgBB'ye aşık olarak oluşturuldu"
+  },
+  "image_uploading": {
+    "message": "Görüntü Yükleme"
   }
 }

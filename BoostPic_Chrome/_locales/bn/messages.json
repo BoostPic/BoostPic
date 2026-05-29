@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "গিটহাব এবং imgBB এর প্রেমে নির্মিত"
+  },
+  "image_uploading": {
+    "message": "ছবি আপলোড করা হচ্ছে"
   }
 }

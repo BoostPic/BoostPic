@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "GitHubとimgBBへの愛を込めて"
+  },
+  "image_uploading": {
+    "message": "画像のアップロード"
   }
 }

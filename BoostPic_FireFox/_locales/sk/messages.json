@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "Postavený v láske s GitHub a imgBB"
+  },
+  "image_uploading": {
+    "message": "Nahrávanie obrázka"
   }
 }

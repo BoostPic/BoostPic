@@ -20,6 +20,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var _a;
 class uploadImage {
     constructor(GoogleImagesDomElements) {
         this.GoogleImagesDomElements = GoogleImagesDomElements;
@@ -88,9 +89,9 @@ class uploadImage {
         console.log("UploadImage begins");
         const imgUrlText = document.querySelector(this.GoogleImagesDomElements.imgUrlTextBoxId);
         const uploadState = [
-            "  Image uploading .",
-            "  Image uploading ..",
-            "  Image uploading ...",
+            `  ${chrome.i18n.getMessage("image_uploading")} .`,
+            `  ${chrome.i18n.getMessage("image_uploading")} ..`,
+            `  ${chrome.i18n.getMessage("image_uploading")} ...`,
         ];
         const showLoadingState = new Promise((resolve, reject) => {
             console.log("Showing loading state");
@@ -102,7 +103,7 @@ class uploadImage {
                 reject("Image URL received!");
             }
         });
-        imgUrlText.value = "  Image uploading ";
+        imgUrlText.value = `  ${chrome.i18n.getMessage("image_uploading")} `;
         this.refreshIntervalId = setInterval(() => {
             showLoadingState
                 .then(this.LoadingState.bind(this, uploadState[0]), this.chainError.bind(this))
@@ -131,7 +132,7 @@ class uploadImage {
         */
         // Crossbrowser support for URL
         const URLObj = window.URL || webkitURL;
-        // Create a DOMString containing an URL representing the object given in the parameter
+        // Create a DOMString containing a URL representing the object given in the parameter
         // namely the original Blob
         const blobUrl = URLObj.createObjectURL(this.imageBlob);
         console.log(blobUrl);
@@ -419,7 +420,7 @@ else {
     GoogleImagesDomElements.searchbyimageDivId = "div.fWfAye";
 }
 // console.log(GoogleImagesDomElements);
-GoogleImagesDomElements.searchbyimagebtn.addEventListener("click", () => {
+(_a = GoogleImagesDomElements.searchbyimagebtn) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => {
     setTimeout(() => {
         const imgUrlTextBox = document.querySelector(GoogleImagesDomElements.imgUrlTextBoxId);
         if (imgUrlTextBox == null) {

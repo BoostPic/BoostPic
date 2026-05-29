@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "Създаден влюбен в GitHub и imgBB"
+  },
+  "image_uploading": {
+    "message": "Качване на изображение"
   }
 }

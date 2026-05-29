@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "GitHub आणि imgBB च्या प्रेमात बांधलेले"
+  },
+  "image_uploading": {
+    "message": "प्रतिमा अपलोड करणे"
   }
 }

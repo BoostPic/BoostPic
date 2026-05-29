@@ -12,7 +12,7 @@
     "message": "2. Click at the input box below(select another visual search engine other than Google Images at the bottom if you prefer), and then press ctrl+v or command+v;"
   },
   "usage_guide_three": {
-    "message": "3. Wait a moment until it returns an URL. If timeout error happens, please delete the error message and ctrl+v or command+v again."
+    "message": "3. Wait a moment until it returns a URL. If timeout error happens, please delete the error message and ctrl+v or command+v again."
   },
   "usage_guide_four": {
     "message": "Bonus Recommendation: Art Pic Widget for Your iPhone/iPad to Elevate Lifestyle"
@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "Built in &#9829; with GitHub and imgBB"
+  },
+  "image_uploading": {
+    "message": "Image uploading"
   }
 }
