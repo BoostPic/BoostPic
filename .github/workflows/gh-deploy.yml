@@ -31,8 +31,8 @@ jobs:
           # https://github.com/actions/checkout/issues/13#issuecomment-724415212
           # The GH actions bot is used by default if you didn't specify the two fields.
           # You can swap them out with your own user credentials.
-          user-name: github-actions[bot]
-          user-email: 41898282+github-actions[bot]@users.noreply.github.com
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
 
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
@@ -42,6 +42,6 @@ jobs:
           source-directory: '.'
           destination-github-username: 'boostpic'
           destination-repository-name: 'boostpic.github.io'
-          user-name: github-actions[bot]
-          user-email: 41898282+github-actions[bot]@users.noreply.github.com
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
           target-branch: main
