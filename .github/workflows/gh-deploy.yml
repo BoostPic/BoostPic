@@ -40,8 +40,8 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}
         with:
           source-directory: '.'
-          destination-github-username: 'boostpic'
-          destination-repository-name: 'boostpic.github.io'
+          destination-github-username: 'BoostPic'
+          destination-repository-name: 'BoostPic.github.io'
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
           target-branch: main
