@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "GitHub ಮತ್ತು imgBB ಜೊತೆಗೆ ಪ್ರೀತಿಯಲ್ಲಿ ನಿರ್ಮಿಸಲಾಗಿದೆ"
+  },
+  "image_uploading": {
+    "message": "ಚಿತ್ರ ಅಪ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ"
   }
 }

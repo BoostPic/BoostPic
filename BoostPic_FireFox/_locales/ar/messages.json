@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "تم إنشاؤه بحب مع GitHub و imgBB"
+  },
+  "image_uploading": {
+    "message": "تحميل الصور"
   }
 }

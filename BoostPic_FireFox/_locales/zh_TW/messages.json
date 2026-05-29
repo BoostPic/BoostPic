@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "對 GitHub 和 imgBB 的熱愛"
+  },
+  "image_uploading": {
+    "message": "圖片上傳"
   }
 }

@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "Izgrađen u ljubavi s GitHub i imgBB"
+  },
+  "image_uploading": {
+    "message": "Prijenos slike"
   }
 }

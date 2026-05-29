@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "GitHub 및 imgBB를 사랑하여 구축됨"
+  },
+  "image_uploading": {
+    "message": "이미지 업로드"
   }
 }

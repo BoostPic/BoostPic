@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "Dibangun karena cinta dengan GitHub dan imgBB"
+  },
+  "image_uploading": {
+    "message": "Mengunggah Gambar"
   }
 }

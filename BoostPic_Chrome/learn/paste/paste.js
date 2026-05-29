@@ -58,7 +58,7 @@ window.addEventListener(
         // Crossbrowser support for URL
         var URLObj = window.URL || window.webkitURL;
 
-        // Create a DOMString containing an URL representing the object given in the parameter
+        // Create a DOMString containing a URL representing the object given in the parameter
         // namely the original Blob
         img.src = URLObj.createObjectURL(imageBlob);
       }

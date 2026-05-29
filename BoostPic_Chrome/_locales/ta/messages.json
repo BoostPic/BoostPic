@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "GitHub மற்றும் imgBB உடன் காதலில் கட்டப்பட்டது"
+  },
+  "image_uploading": {
+    "message": "படத்தைப் பதிவேற்றுதல்"
   }
 }

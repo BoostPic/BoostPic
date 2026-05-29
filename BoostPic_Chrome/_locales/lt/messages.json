@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "Sukurta įsimylėjus GitHub ir imgBB"
+  },
+  "image_uploading": {
+    "message": "Vaizdo įkėlimas"
   }
 }

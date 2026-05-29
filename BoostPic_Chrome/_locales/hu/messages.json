@@ -31,5 +31,8 @@
   },
   "built_in_love": {
     "message": "A GitHubba és az imgBB-be szerelve épült"
+  },
+  "image_uploading": {
+    "message": "Képfeltöltés"
   }
 }

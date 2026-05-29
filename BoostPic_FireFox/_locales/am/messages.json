@@ -25,5 +25,8 @@
   },
   "built_in_love": {
     "message": "ከ GitHub እና imgBB ጋር በፍቅር የተገነባ"
+  },
+  "image_uploading": {
+    "message": "የምስል ጭነት"
   }
 }
