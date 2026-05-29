@@ -42,6 +42,6 @@ jobs:
           source-directory: '.'
           destination-github-username: 'BoostPic'
           destination-repository-name: 'BoostPic.github.io'
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          user-name: github-actions[bot]
+          user-email: 41898282+github-actions[bot]@users.noreply.github.com
           target-branch: main
