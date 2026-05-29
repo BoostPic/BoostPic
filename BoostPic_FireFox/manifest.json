@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "BoostPic - Reverse Image Search on the fly",
-  "version": "4.6.6",
+  "version": "4.6.7",
   "description": "Uncover the possibility to perform Google Reverse Image Search quickly and incredibly, with clip & paste.",
   "author": "Leslie Wong",
   "browser_specific_settings": {
