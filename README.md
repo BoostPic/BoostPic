@@ -50,4 +50,4 @@ Copyleft © [BoostPic](https://github.com/boostpic/boostpic)
 
 <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
 
-[boostpic.github.io](https://boostpic.github.io/BoostPic/)
+[boostpic.github.io](https://boostpic.github.io/)
