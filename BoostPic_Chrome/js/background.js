@@ -111,6 +111,220 @@ class chromeTabDetector {
 }
 const tabDetector = new chromeTabDetector();
 tabDetector.registerAllTabsListeners();
+/**
+ * Right Click Context Menu options for BoostPic
+ *
+ */
+function contextMenusClickSearch(info, tab) {
+    console.log(info);
+    const textString = info.srcUrl;
+    const activeSearchEngine = info.menuItemId;
+    if (textString.startsWith("http")) {
+        switch (activeSearchEngine) {
+            case "Bing":
+                // window.open(
+                //   `https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:${encodeURIComponent(
+                //     textString
+                //   )}`,
+                //   "_blank"
+                // );
+                chrome.tabs.create({
+                    url: `https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:${encodeURIComponent(textString)}`,
+                });
+                break;
+            case "Yandex":
+                // window.open(
+                //   `https://yandex.com/images/search?rpt=imageview&from=undefined&url=${encodeURIComponent(
+                //     textString
+                //   )}`,
+                //   "_blank"
+                // );
+                chrome.tabs.create({
+                    url: `https://yandex.com/images/search?rpt=imageview&from=undefined&url=${encodeURIComponent(textString)}`,
+                });
+                break;
+            case "Google":
+            default:
+                // window.open(
+                //   `https://images.google.com/searchbyimage?image_url=${textString}&encoded_image=&image_content=&filename=&hl=en`,
+                //   "_blank"
+                // );
+                // window.open(
+                //   `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(
+                //     textString
+                //   )}&hl=en`,
+                //   "_blank"
+                // );
+                chrome.tabs.create({
+                    url: `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(textString)}&hl=en`,
+                });
+                break;
+        }
+    }
+    else if (textString.startsWith("data:") /* base64 image scenario*/) {
+        // base64 to blob object to upload
+        // Split the base64 string in data and contentType
+        const block = textString.split(";");
+        // Get the content type of the image
+        const contentType = block[0].split(":")[1];
+        // get the real base64 content of the file
+        const realData = block[1].split(",")[1]; // In this case "R0lGODlhPQBEAPeoAJosM...."
+        // Convert it to a blob to upload
+        const b64toBlob = (b64Data, contentType = "", sliceSize = 512) => {
+            const byteCharacters = atob(b64Data);
+            let byteArrays = [];
+            for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                const slice = byteCharacters.slice(offset, offset + sliceSize);
+                let byteNumbers = new Array(slice.length);
+                for (let i = 0; i < slice.length; i++) {
+                    byteNumbers[i] = slice.charCodeAt(i);
+                }
+                const byteArray = new Uint8Array(byteNumbers);
+                byteArrays.push(byteArray);
+            }
+            const blob = new Blob(byteArrays, { type: contentType });
+            return blob;
+        };
+        const blobData = b64toBlob(realData, contentType);
+        // console.log("blobData", blobData);
+        // Yes, I just bury it here on purpose. imgBB is a free and public-available image bucket service.
+        const apiToken = "3ac6bfb27cea21014fb0ebb9498202cb";
+        const cancelableFetch = (blobData, apiToken) => {
+            const promise = new Promise(function (resolve, reject) {
+                // const uploadUrl = "https://sm.ms/api/v2/upload";
+                const uploadUrl = `https://api.imgbb.com/1/upload?expiration=600&key=${apiToken}`;
+                const formData = new FormData();
+                formData.append("image", blobData, "image.png");
+                fetch(uploadUrl, {
+                    method: "POST",
+                    // headers: {
+                    //   Authorization: apiToken,
+                    // },
+                    body: formData,
+                })
+                    .then((response) => {
+                    if (!response.ok) {
+                        reject(new Error("Network response was not OK"));
+                    }
+                    return response.json();
+                })
+                    .then((data) => {
+                    resolve(JSON.stringify(data));
+                    console.log(JSON.stringify(data));
+                })
+                    .catch((error) => {
+                    reject(new Error(`Network response was not OK. ${error}`));
+                });
+            });
+            return {
+                promise: promise,
+            };
+        };
+        const object = cancelableFetch(blobData, apiToken);
+        const delayPromise = (ms) => {
+            return new Promise(function (resolve) {
+                setTimeout(resolve, ms);
+            });
+        };
+        const timeoutPromise = (promise, ms) => {
+            const timeout = delayPromise(ms).then(function () {
+                return Promise.reject(new TimeoutError("Operation timed out after " + ms + " ms"));
+            });
+            return Promise.race([promise, timeout]);
+        };
+        let convertedImageURL = "";
+        timeoutPromise(object.promise, 60000)
+            .then((contents) => {
+            convertedImageURL = "";
+            if (contents != "") {
+                const responseJSON = JSON.parse(contents);
+                if (responseJSON.success === true) {
+                    convertedImageURL = responseJSON.data.url;
+                    switch (activeSearchEngine) {
+                        case "Bing":
+                            // window.open(
+                            //   `https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:${encodeURIComponent(
+                            //     convertedImageURL
+                            //   )}`,
+                            //   "_blank"
+                            // );
+                            chrome.tabs.create({
+                                url: `https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:${encodeURIComponent(convertedImageURL)}`,
+                            });
+                            break;
+                        case "Yandex":
+                            // window.open(
+                            //   `https://yandex.com/images/search?rpt=imageview&from=undefined&url=${encodeURIComponent(
+                            //     convertedImageURL
+                            //   )}`,
+                            //   "_blank"
+                            // );
+                            chrome.tabs.create({
+                                url: `https://yandex.com/images/search?rpt=imageview&from=undefined&url=${encodeURIComponent(convertedImageURL)}`,
+                            });
+                            break;
+                        case "Google":
+                        default:
+                            // window.open(
+                            //   `https://images.google.com/searchbyimage?image_url=${convertedImageURL}&encoded_image=&image_content=&filename=&hl=en`,
+                            //   "_blank"
+                            // );
+                            // window.open(
+                            //   `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(
+                            //     convertedImageURL
+                            //   )}&hl=en`,
+                            //   "_blank"
+                            // );
+                            chrome.tabs.create({
+                                url: `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(convertedImageURL)}&hl=en`,
+                            });
+                            break;
+                    }
+                    console.log("Contents", responseJSON);
+                    return;
+                }
+            }
+        })
+            .catch((error) => {
+            if (error instanceof TimeoutError) {
+                if (convertedImageURL.startsWith("http")) {
+                    return;
+                }
+                else {
+                    // promseRaceTimeout = false;
+                    console.log(error);
+                    return;
+                }
+            }
+            console.log("Fetch Error :", error);
+            return;
+        });
+    }
+}
+chrome.runtime.onInstalled.addListener(function () {
+    chrome.contextMenus.create({
+        type: "normal",
+        title: "With Google",
+        id: "Google",
+        contexts: ["image", "video"],
+        // onclick: contextMenusClickSearch, // not available for service worker based V3
+    });
+    chrome.contextMenus.create({
+        type: "normal",
+        title: "With Bing",
+        id: "Bing",
+        contexts: ["image", "video"],
+        // onclick: contextMenusClickSearch, // not available for service worker based V3
+    });
+    chrome.contextMenus.create({
+        type: "normal",
+        title: "With Yandex",
+        id: "Yandex",
+        contexts: ["image", "video"],
+        // onclick: contextMenusClickSearch, // not available for service worker based V3
+    });
+    chrome.contextMenus.onClicked.addListener(contextMenusClickSearch); // for service worker based V3
+});
 function TimeoutError(args) {
     // TypeError: CreateListFromArrayLike called on non-object
     // https://stackoverflow.com/a/41354496/8808175

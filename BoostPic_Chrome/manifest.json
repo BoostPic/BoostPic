@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "__MSG_name__",
-  "version": "4.6.14",
+  "version": "4.6.16",
   "description": "__MSG_description__",
   "author": "Leslie Wong",
   "content_scripts": [
@@ -982,7 +982,7 @@
     "service_worker": "js/background.js",
     "type": "module"
   },
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "contextMenus"],
   "host_permissions": ["https://api.imgbb.com/1/upload"],
   "default_locale": "en"
 }
