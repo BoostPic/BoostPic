@@ -115,6 +115,93 @@ const tabDetector = new chromeTabDetector();
 tabDetector.registerAllTabsListeners();
 
 /**
+ * Right Click Context Menu options for BoostPic
+ *
+ */
+
+function contextMenusClickSearch(info: any, tab: any) {
+  console.log(info);
+  const textString = info.srcUrl;
+  if (textString.startsWith("http")) {
+    const activeSearchEngine = info.menuItemId;
+    switch (activeSearchEngine) {
+      case "Bing":
+        // window.open(
+        //   `https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:${encodeURIComponent(
+        //     textString
+        //   )}`,
+        //   "_blank"
+        // );
+        chrome.tabs.create({
+          url: `https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:${encodeURIComponent(
+            textString
+          )}`,
+        });
+        break;
+      case "Yandex":
+        // window.open(
+        //   `https://yandex.com/images/search?rpt=imageview&from=undefined&url=${encodeURIComponent(
+        //     textString
+        //   )}`,
+        //   "_blank"
+        // );
+        chrome.tabs.create({
+          url: `https://yandex.com/images/search?rpt=imageview&from=undefined&url=${encodeURIComponent(
+            textString
+          )}`,
+        });
+        break;
+      case "Google":
+      default:
+        // window.open(
+        //   `https://images.google.com/searchbyimage?image_url=${textString}&encoded_image=&image_content=&filename=&hl=en`,
+        //   "_blank"
+        // );
+        // window.open(
+        //   `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(
+        //     textString
+        //   )}&hl=en`,
+        //   "_blank"
+        // );
+        chrome.tabs.create({
+          url: `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(
+            textString
+          )}&hl=en`,
+        });
+        break;
+    }
+  }
+}
+
+chrome.runtime.onInstalled.addListener(function () {
+  chrome.contextMenus.create({
+    type: "normal",
+    title: "With Google",
+    id: "Google",
+    contexts: ["image", "video"],
+    // onclick: contextMenusClickSearch, // not available for service worker based V3
+  });
+
+  chrome.contextMenus.create({
+    type: "normal",
+    title: "With Bing",
+    id: "Bing",
+    contexts: ["image", "video"],
+    // onclick: contextMenusClickSearch, // not available for service worker based V3
+  });
+
+  chrome.contextMenus.create({
+    type: "normal",
+    title: "With Yandex",
+    id: "Yandex",
+    contexts: ["image", "video"],
+    // onclick: contextMenusClickSearch, // not available for service worker based V3
+  });
+
+  chrome.contextMenus.onClicked.addListener(contextMenusClickSearch); // for service worker based V3
+});
+
+/**
  * retrive blob url and uplaod image, then send smms url back
  *
  */
