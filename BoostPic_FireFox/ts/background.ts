@@ -122,8 +122,8 @@ tabDetector.registerAllTabsListeners();
 function contextMenusClickSearch(info: any, tab: any) {
   console.log(info);
   const textString = info.srcUrl;
+  const activeSearchEngine = info.menuItemId;
   if (textString.startsWith("http")) {
-    const activeSearchEngine = info.menuItemId;
     switch (activeSearchEngine) {
       case "Bing":
         // window.open(
@@ -170,6 +170,190 @@ function contextMenusClickSearch(info: any, tab: any) {
         });
         break;
     }
+  } else if (textString.startsWith("data:") /* base64 image scenario*/) {
+    // base64 to blob object to upload
+
+    // Split the base64 string in data and contentType
+    const block = textString.split(";");
+    // Get the content type of the image
+    const contentType = block[0].split(":")[1];
+    // get the real base64 content of the file
+    const realData = block[1].split(",")[1]; // In this case "R0lGODlhPQBEAPeoAJosM...."
+    // Convert it to a blob to upload
+
+    const b64toBlob = (
+      b64Data: string,
+      contentType: string = "",
+      sliceSize: number = 512
+    ): Blob => {
+      const byteCharacters = atob(b64Data);
+      let byteArrays: Uint8Array[] = [];
+
+      for (
+        let offset = 0;
+        offset < byteCharacters.length;
+        offset += sliceSize
+      ) {
+        const slice = byteCharacters.slice(offset, offset + sliceSize);
+
+        let byteNumbers = new Array(slice.length);
+        for (let i = 0; i < slice.length; i++) {
+          byteNumbers[i] = slice.charCodeAt(i);
+        }
+
+        const byteArray = new Uint8Array(byteNumbers);
+
+        byteArrays.push(byteArray);
+      }
+      const blob = new Blob(byteArrays, { type: contentType });
+      return blob;
+    };
+
+    const blobData = b64toBlob(realData, contentType);
+
+    // console.log("blobData", blobData);
+
+    // Yes, I just bury it here on purpose. imgBB is a free and public-available image bucket service.
+    const apiToken = "3ac6bfb27cea21014fb0ebb9498202cb";
+
+    const cancelableXHR = (
+      blobData: Blob,
+      apiToken: string
+    ): cancelableXHRObj => {
+      const xhr = new XMLHttpRequest();
+
+      const promise = new Promise(function (
+        resolve: (value: string) => void,
+        reject
+      ) {
+        // const uploadUrl = "https://sm.ms/api/v2/upload";
+        const uploadUrl = `https://api.imgbb.com/1/upload?expiration=600&key=${apiToken}`;
+        const formData = new FormData();
+        formData.append("image", blobData, "image.png");
+        xhr.open("POST", uploadUrl, true);
+        xhr.setRequestHeader("Authorization", apiToken);
+        xhr.send(formData);
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            if (xhr.responseText != "") {
+              resolve(xhr.responseText);
+              console.log(xhr.responseText);
+            }
+          }
+        };
+        xhr.onerror = () => {
+          reject(new Error(xhr.statusText));
+        };
+        xhr.onabort = () => {
+          reject(new Error("abort this request"));
+        };
+      });
+      const abort = function () {
+        // execute abort if request not end
+        if (xhr.readyState !== XMLHttpRequest.UNSENT) {
+          xhr.abort();
+        }
+      };
+      return {
+        promise: promise,
+        abort: abort,
+      };
+    };
+
+    const object = cancelableXHR(blobData, apiToken);
+
+    const delayPromise = (ms: number): Promise<Function> => {
+      return new Promise(function (resolve) {
+        setTimeout(resolve, ms);
+      });
+    };
+
+    const timeoutPromise = (
+      promise: Promise<string>,
+      ms: number
+    ): Promise<string> => {
+      const timeout = delayPromise(ms).then(function () {
+        return Promise.reject(
+          new TimeoutError("Operation timed out after " + ms + " ms")
+        );
+      });
+      return Promise.race([promise, timeout]);
+    };
+
+    let convertedImageURL = "";
+
+    timeoutPromise(object.promise, 60000)
+      .then((contents) => {
+        convertedImageURL = "";
+        if (contents != "") {
+          const responseJSON = JSON.parse(contents);
+          if (responseJSON.success === true) {
+            convertedImageURL = responseJSON.data.url;
+
+            switch (activeSearchEngine) {
+              case "Bing":
+                // window.open(
+                //   `https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:${encodeURIComponent(
+                //     convertedImageURL
+                //   )}`,
+                //   "_blank"
+                // );
+                chrome.tabs.create({
+                  url: `https://www.bing.com/images/search?view=detailv2&iss=SBI&form=SBIVSP&sbisrc=UrlPaste&q=imgurl:${encodeURIComponent(
+                    convertedImageURL
+                  )}`,
+                });
+                break;
+              case "Yandex":
+                // window.open(
+                //   `https://yandex.com/images/search?rpt=imageview&from=undefined&url=${encodeURIComponent(
+                //     convertedImageURL
+                //   )}`,
+                //   "_blank"
+                // );
+                chrome.tabs.create({
+                  url: `https://yandex.com/images/search?rpt=imageview&from=undefined&url=${encodeURIComponent(
+                    convertedImageURL
+                  )}`,
+                });
+                break;
+              case "Google":
+              default:
+                // window.open(
+                //   `https://images.google.com/searchbyimage?image_url=${convertedImageURL}&encoded_image=&image_content=&filename=&hl=en`,
+                //   "_blank"
+                // );
+                // window.open(
+                //   `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(
+                //     convertedImageURL
+                //   )}&hl=en`,
+                //   "_blank"
+                // );
+                chrome.tabs.create({
+                  url: `https://lens.google.com/uploadbyurl?url=${encodeURIComponent(
+                    convertedImageURL
+                  )}&hl=en`,
+                });
+                break;
+            }
+            console.log("Contents", responseJSON);
+            return;
+          }
+        }
+      })
+      .catch((error) => {
+        if (error instanceof TimeoutError) {
+          if (convertedImageURL.startsWith("http")) {
+            return;
+          } else {
+            // promseRaceTimeout = false;
+            console.log(error);
+            return;
+          }
+        }
+        console.log("Fetch Error :", error);
+        return;
+      });
   }
 }
 
